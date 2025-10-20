@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../Assets/css/responsive.css">
 </head>
 <body>
-    <!-- Indicador de carga para PDF -->
     <div class="download-loading" id="downloadLoading">
         <div class="spinner"></div>
         <p>Generando PDF, por favor espere...</p>
@@ -18,10 +17,12 @@
     <header class="embassy-header">
         <div class="header-content">
             <div class="embassy-seal">🛡️</div>
-            <div class="header-titles">
-                <h1>Embajada Virtual Internacional</h1>
-                <p>Departamento de Servicios Consulares y Pasaportes Diplomáticos</p>
-            </div>
+            <a href="../index.html" style="text-decoration: none; color: inherit;">
+                <div class="header-titles">
+                    <h1>Embajada Virtual Internacional</h1>
+                    <p>Departamento de Servicios Consulares y Pasaportes Diplomáticos</p>
+                </div>
+            </a>
         </div>
     </header>
 
@@ -41,14 +42,14 @@
                     <label for="country">País de Destino</label>
                     <select id="country" required>
                         <option value="">Seleccione un país</option>
-                        <option value="IRL">🇮🇪 Irlanda</option>
-                        <option value="USA">🇺🇸 Estados Unidos</option>
-                        <option value="AUS">🇦🇺 Australia</option>
-                        <option value="GBR">🇬🇧 Reino Unido</option>
-                        <option value="DEU">🇩🇪 Alemania</option>
-                        <option value="CAN">🇨🇦 Canadá</option>
-                        <option value="ZAF">🇿🇦 Sudáfrica</option>
-                        <option value="CHE">🇨🇭 Suiza</option>
+                        <option value="IRL" data-view-path="../Vistas/irlanda.html">🇮🇪 Irlanda</option>
+                        <option value="USA" data-view-path="../Vistas/EstadosUnidos.html">🇺🇸 Estados Unidos</option>
+                        <option value="AUS" data-view-path="../Vistas/australia.html">🇦🇺 Australia</option>
+                        <option value="GBR" data-view-path="../Vistas/ReinoUnido.html">🇬🇧 Reino Unido</option>
+                        <option value="DEU" data-view-path="../Vistas/alemania.html">🇩🇪 Alemania</option>
+                        <option value="CAN" data-view-path="../Vistas/canada.html">🇨🇦 Canadá</option>
+                        <option value="ZAF" data-view-path="../Vistas/sudafrica.html">🇿🇦 Sudáfrica</option>
+                        <option value="CHE" data-view-path="../Vistas/suiza.html">🇨🇭 Suiza</option>
                     </select>
                 </div>
 
@@ -114,7 +115,6 @@
             </div>
 
             <div class="passport-container" id="passportElement">
-                <!-- Contenido del pasaporte -->
                 <div class="passport-cover" id="passportCover">
                     <div class="cover-content">
                         <div>
@@ -142,7 +142,6 @@
                 </div>
 
                 <div class="passport-interior">
-                    <!-- NUEVO: Header con foto a la derecha -->
                     <div class="interior-header-with-photo">
                         <div class="header-info">
                             <div class="header-item">
@@ -244,10 +243,11 @@
     <footer>
         <div class="footer-icon">🦘 🇦🇺 🐨</div>
         <p><strong>Embajada Virtual Internacional</strong></p>
-        <p>© 2025 | Departamento de Servicios Consulares</p>
+        <a href="../index.html" style="text-decoration: none; color: inherit;">
+            <p>© 2025 | Departamento de Servicios Consulares</p>
+        </a>
     </footer>
 
-    <!-- Dependencias para la descarga -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
