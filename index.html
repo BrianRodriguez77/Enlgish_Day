@@ -52,6 +52,7 @@
                 <li><a href="#cultura">Cultura</a></li>
                 <li><a href="#paises">Países</a></li>
                 <li><a href="#origen">Origen</a></li>
+                <li><a href="Pasaporte/Login.html" target="_blank">Pasaporte 🛂</a></li>
             </ul>
         </div>
     </nav>
@@ -281,6 +282,7 @@
                         <li><a href="#cultura">Cultura</a></li>
                         <li><a href="#paises">Países</a></li>
                         <li><a href="#origen">Origen</a></li>
+                        <li><a href="Pasaporte/Login.html" target="_blank">Pasaporte 🛂</a></li>
                     </ul>
                 </div>
             </div>
@@ -306,6 +308,7 @@
                 navCultura: "Cultura",
                 navPaises: "Países",
                 navOrigen: "Origen",
+                navPasaporte: "Pasaporte 🛂",
                 inicioTitle: "¿Qué es el English Day?",
                 inicioText1: "El English Day es una celebración dedicada a reconocer la importancia del idioma inglés como lengua global y herramienta de comunicación internacional. Esta festividad promueve el aprendizaje, la práctica y la apreciación del inglés en todo el mundo.",
                 inicioText2: "Se celebra en numerosos países y instituciones educativas, donde se realizan actividades culturales, académicas y recreativas que destacan la riqueza y diversidad del idioma inglés.",
@@ -371,6 +374,7 @@
                 navCultura: "Culture",
                 navPaises: "Countries",
                 navOrigen: "Origin",
+                navPasaporte: "Passport 🛂",
                 inicioTitle: "What is English Day?",
                 inicioText1: "English Day is a celebration dedicated to recognizing the importance of the English language as a global language and international communication tool. This holiday promotes the learning, practice, and appreciation of English worldwide.",
                 inicioText2: "It is celebrated in numerous countries and educational institutions, where cultural, academic, and recreational activities are held that highlight the richness and diversity of the English language.",
@@ -443,6 +447,7 @@
                 document.querySelectorAll('nav a')[2].textContent = texts.navCultura;
                 document.querySelectorAll('nav a')[3].textContent = texts.navPaises;
                 document.querySelectorAll('nav a')[4].textContent = texts.navOrigen;
+                document.querySelectorAll('nav a')[5].textContent = texts.navPasaporte
                 
                 // Actualizar sección de inicio
                 document.querySelector('#inicio h2').textContent = texts.inicioTitle;
@@ -524,6 +529,7 @@
                 document.querySelectorAll('.footer-section p')[0].textContent = texts.footerText;
                 document.querySelectorAll('.footer-section h4')[0].textContent = texts.footerLinks;
                 document.querySelector('.footer-bottom p').innerHTML = texts.footerCopyright;
+                document.querySelector('footer ul li:nth-child(6) a').textContent = texts.navPasaporte;
                 
                 // Actualizar texto del botón
                 translateBtn.textContent = isTranslated ? "Traducir a Inglés" : "Translate to Spanish";
