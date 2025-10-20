@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Day - Celebración del Idioma Inglés</title>
+    <link rel="stylesheet" href="Assets/css/pagina_principal.css">
+    <link rel="stylesheet" href="Assets/css/responsive.css">
+    <style>
+        /* Botón de traducción */
+        .translate-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .translate-btn:hover {
+            background-color: #1a252f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón de traducción -->
+    <button id="translateBtn" class="translate-btn">Traducir a Inglés</button>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>English Day</h1>
+                <p class="subtitle">Celebrando la lengua global que nos conecta</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#motivo">Motivo</a></li>
+                <li><a href="#cultura">Cultura</a></li>
+                <li><a href="#paises">Países</a></li>
+                <li><a href="#origen">Origen</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección de Introducción -->
+        <section id="inicio" class="intro-section">
+            <div class="container">
+                <h2>¿Qué es el English Day?</h2>
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>El English Day es una celebración dedicada a reconocer la importancia del idioma inglés como lengua global y herramienta de comunicación internacional. Esta festividad promueve el aprendizaje, la práctica y la apreciación del inglés en todo el mundo.</p>
+                        <p>Se celebra en numerosos países y instituciones educativas, donde se realizan actividades culturales, académicas y recreativas que destacan la riqueza y diversidad del idioma inglés.</p>
+                    </div>
+                    <div class="image-content">
+                        <div class="image-frame">
+                            <img src="Assets/img/cultura.png" alt="Celebración del English Day" class="content-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del Motivo -->
+        <section id="motivo" class="motivo-section">
+            <div class="container">
+                <h2>Motivo de la Celebración</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>Lengua Global</h3>
+                        <p>El inglés es el tercer idioma más hablado del mundo y la lengua oficial de 67 países, siendo un puente de comunicación entre culturas.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Oportunidades</h3>
+                        <p>Dominar el inglés abre puertas en educación, negocios, tecnología y relaciones internacionales, facilitando el acceso a información global.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Intercambio Cultural</h3>
+                        <p>Permite el intercambio de ideas, tradiciones y conocimientos entre personas de diferentes partes del mundo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Cultural -->
+        <section id="cultura" class="cultura-section">
+            <div class="container">
+                <h2>Aspectos Culturales</h2>
+                <div class="content-grid reverse">
+                    <div class="image-content">
+                        <div class="image-frame">
+                            <img src="Assets/img/inglesa.webp" alt="Cultura Inglesa" class="content-image">
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <h3>Influencia Cultural del Inglés</h3>
+                        <p>El inglés ha influenciado profundamente la cultura global a través de:</p>
+                        <ul>
+                            <li><strong>Literatura:</strong> Obras de Shakespeare, Dickens, Austen y muchos otros autores clásicos y contemporáneos.</li>
+                            <li><strong>Música:</strong> Géneros como el rock, pop, jazz y hip-hop que han trascendido fronteras.</li>
+                            <li><strong>Cine y TV:</strong> La industria cinematográfica de Hollywood y producciones británicas reconocidas mundialmente.</li>
+                            <li><strong>Ciencia y Tecnología:</strong> La mayoría de publicaciones científicas y terminología tecnológica están en inglés.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Países -->
+        <section id="paises" class="paises-section">
+            <div class="container">
+                <h2>Países que Celebran el English Day</h2>
+                <p class="section-subtitle">Una celebración global que une naciones a través del idioma inglés</p>
+                
+                <div class="countries-grid">
+                    <!-- Reino Unido -->
+                    <div class="country-card">
+                        <div class="flag-container">
+                            <img src="Assets/img/ReinoUnido.png" alt="Bandera del Reino Unido" class="flag-image">
+                        </div>
+                        <div class="country-info">
+                            <h4>Reino Unido</h4>
+                            <p>Cuna del idioma inglés con una rica herencia literaria y cultural que ha influenciado al mundo entero. Celebra el English Day con eventos culturales y educativos.</p>
+                            <a href="Vistas/ReinoUnido.html" class="visit-btn">Visitar País</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Estados Unidos -->
+                    <div class="country-card">
+                        <div class="flag-container">
+                            <img src="Assets/img/USA.jpg" alt="Bandera de Estados Unidos" class="flag-image">
+                        </div>
+                        <div class="country-info">
+                            <h4>Estados Unidos</h4>
+                            <p>Mayor influencia cultural global a través del cine, música y tecnología. Celebra el English Day con festivales multiculturales y eventos educativos.</p>
+                            <a href="Vistas/EstadosUnidos.html" class="visit-btn">Visitar País</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Canadá -->
+                    <div class="country-card">
+                        <div class="flag-container">
+                            <img src="Assets/img/canada.jpg" alt="Bandera de Canadá" class="flag-image">
+                        </div>
+                        <div class="country-info">
+                            <h4>Canadá</h4>
+                            <p>País bilingüe donde el inglés convive con el francés. Celebra el English Day promoviendo el intercambio cultural entre comunidades anglófonas y francófonas.</p>
+                            <a href="Vistas/canada.html" class="visit-btn">Visitar País</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Australia -->
+                    <div class="country-card">
+                        <div class="flag-container">
+                            <img src="Assets/img/australia.png" alt="Bandera de Australia" class="flag-image">
+                        </div>
+                        <div class="country-info">
+                            <h4>Australia</h4>
+                            <p>Inglés oceánico con influencias aborígenes. Celebra el English Day con eventos que destacan la diversidad cultural australiana y su variante única del inglés.</p>
+                            <a href="Vistas/australia.html" class="visit-btn">Visitar País</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Irlanda -->
+                    <div class="country-card">
+                        <div class="flag-container">
+                            <img src="Assets/img/irlanda.webp" alt="Bandera de Irlanda" class="flag-image">
+                        </div>
+                        <div class="country-info">
+                            <h4>Irlanda</h4>
+                            <p>Herencia celta y tradición literaria que ha producido algunos de los más grandes escritores en inglés. Celebra el English Day con festivales literarios.</p>
+                            <a href="Vistas/irlanda.html" class="visit-btn">Visitar País</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Sudáfrica -->
+                    <div class="country-card">
+                        <div class="flag-container">
+                            <img src="Assets/img/sudafrica.png" alt="Bandera de Sudáfrica" class="flag-image">
+                        </div>
+                        <div class="country-info">
+                            <h4>Sudáfrica</h4>
+                            <p>País multilingüe donde el inglés une a diversas comunidades. Celebra el English Day como parte de su herencia multicultural y herramienta de unificación nacional.</p>
+                            <a href="Vistas/sudafrica.html" class="visit-btn">Visitar País</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Alemania -->
+                    <div class="country-card">
+                        <div class="flag-container">
+                            <img src="Assets/img/alemania.jpg" alt="Bandera de Alemania" class="flag-image">
+                        </div>
+                        <div class="country-info">
+                            <h4>Alemania</h4>
+                            <p>Como potencia económica europea, Alemania celebra el English Day destacando su importancia en los negocios internacionales, ciencia y educación superior.</p>
+                            <a href="Vistas/alemania.html" class="visit-btn">Visitar País</a>
+                        </div>
+                    </div>
+
+                    <!-- Suiza -->
+                     <div class="country-card">
+                        <div class="flag-container">
+                            <img src="Assets/img/suiza.jpg" alt="Bandera de Suiza" class="flag-image">
+                        </div>
+                        <div class="country-info">
+                            <h4>Suiza</h4>
+                            <p>Como potencia económica europea, Alemania celebra el English Day destacando su importancia en los negocios internacionales, ciencia y educación superior.</p>
+                            <a href="Vistas/suiza.html" class="visit-btn">Visitar País</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Origen -->
+        <section id="origen" class="origen-section">
+            <div class="container">
+                <h2>Origen del Movimiento</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1960s</div>
+                        <div class="timeline-content">
+                            <h3>Nacimiento del Concepto</h3>
+                            <p>Con el aumento de la globalización, el inglés comienza a posicionarse como lengua franca internacional, especialmente en negocios y diplomacia.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1980s</div>
+                        <div class="timeline-content">
+                            <h3>Primeras Celebraciones</h3>
+                            <p>Instituciones educativas en países no anglófonos comienzan a organizar "English Days" para motivar el aprendizaje del idioma.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2000s</div>
+                        <div class="timeline-content">
+                            <h3>Expansión Global</h3>
+                            <p>La celebración se extiende a nivel mundial, con el apoyo de organizaciones como el British Council y embajadas de países anglófonos.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Actualidad</div>
+                        <div class="timeline-content">
+                            <h3>Reconocimiento Internacional</h3>
+                            <p>El English Day se celebra en más de 100 países, promoviendo no solo el idioma sino también el intercambio cultural y la comprensión global.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>English Day</h3>
+                    <p>Celebrando la diversidad y unidad a través del idioma inglés.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#motivo">Motivo</a></li>
+                        <li><a href="#cultura">Cultura</a></li>
+                        <li><a href="#paises">Países</a></li>
+                        <li><a href="#origen">Origen</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 English Day. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script de traducción
+        document.addEventListener('DOMContentLoaded', function() {
+            const translateBtn = document.getElementById('translateBtn');
+            let isTranslated = false;
+            
+            // Textos en español
+            const spanishTexts = {
+                title: "English Day - Celebración del Idioma Inglés",
+                headerTitle: "English Day",
+                headerSubtitle: "Celebrando la lengua global que nos conecta",
+                navInicio: "Inicio",
+                navMotivo: "Motivo",
+                navCultura: "Cultura",
+                navPaises: "Países",
+                navOrigen: "Origen",
+                inicioTitle: "¿Qué es el English Day?",
+                inicioText1: "El English Day es una celebración dedicada a reconocer la importancia del idioma inglés como lengua global y herramienta de comunicación internacional. Esta festividad promueve el aprendizaje, la práctica y la apreciación del inglés en todo el mundo.",
+                inicioText2: "Se celebra en numerosos países y instituciones educativas, donde se realizan actividades culturales, académicas y recreativas que destacan la riqueza y diversidad del idioma inglés.",
+                motivoTitle: "Motivo de la Celebración",
+                motivoCard1Title: "Lengua Global",
+                motivoCard1Text: "El inglés es el tercer idioma más hablado del mundo y la lengua oficial de 67 países, siendo un puente de comunicación entre culturas.",
+                motivoCard2Title: "Oportunidades",
+                motivoCard2Text: "Dominar el inglés abre puertas en educación, negocios, tecnología y relaciones internacionales, facilitando el acceso a información global.",
+                motivoCard3Title: "Intercambio Cultural",
+                motivoCard3Text: "Permite el intercambio de ideas, tradiciones y conocimientos entre personas de diferentes partes del mundo.",
+                culturaTitle: "Aspectos Culturales",
+                culturaSubtitle: "Influencia Cultural del Inglés",
+                culturaText: "El inglés ha influenciado profundamente la cultura global a través de:",
+                culturaList1: "Literatura: Obras de Shakespeare, Dickens, Austen y muchos otros autores clásicos y contemporáneos.",
+                culturaList2: "Música: Géneros como el rock, pop, jazz y hip-hop que han trascendido fronteras.",
+                culturaList3: "Cine y TV: La industria cinematográfica de Hollywood y producciones británicas reconocidas mundialmente.",
+                culturaList4: "Ciencia y Tecnología: La mayoría de publicaciones científicas y terminología tecnológica están en inglés.",
+                paisesTitle: "Países que Celebran el English Day",
+                paisesSubtitle: "Una celebración global que une naciones a través del idioma inglés",
+                pais1Title: "Reino Unido",
+                pais1Text: "Cuna del idioma inglés con una rica herencia literaria y cultural que ha influenciado al mundo entero. Celebra el English Day con eventos culturales y educativos.",
+                pais2Title: "Estados Unidos",
+                pais2Text: "Mayor influencia cultural global a través del cine, música y tecnología. Celebra el English Day con festivales multiculturales y eventos educativos.",
+                pais3Title: "Canadá",
+                pais3Text: "País bilingüe donde el inglés convive con el francés. Celebra el English Day promoviendo el intercambio cultural entre comunidades anglófonas y francófonas.",
+                pais4Title: "Australia",
+                pais4Text: "Inglés oceánico con influencias aborígenes. Celebra el English Day con eventos que destacan la diversidad cultural australiana y su variante única del inglés.",
+                pais5Title: "Irlanda",
+                pais5Text: "Herencia celta y tradición literaria que ha producido algunos de los más grandes escritores en inglés. Celebra el English Day con festivales literarios.",
+                pais6Title: "Sudáfrica",
+                pais6Text: "País multilingüe donde el inglés une a diversas comunidades. Celebra el English Day como parte de su herencia multicultural y herramienta de unificación nacional.",
+                pais7Title: "Alemania",
+                pais7Text: "Como potencia económica europea, Alemania celebra el English Day destacando su importancia en los negocios internacionales, ciencia y educación superior.",
+                pais8Title: "Suiza",
+                pais8Text: "Como potencia económica europea, Alemania celebra el English Day destacando su importancia en los negocios internacionales, ciencia y educación superior.",
+                visitBtn: "Visitar País",
+                origenTitle: "Origen del Movimiento",
+                origen1Year: "1960s",
+                origen1Title: "Nacimiento del Concepto",
+                origen1Text: "Con el aumento de la globalización, el inglés comienza a posicionarse como lengua franca internacional, especialmente en negocios y diplomacia.",
+                origen2Year: "1980s",
+                origen2Title: "Primeras Celebraciones",
+                origen2Text: "Instituciones educativas en países no anglófonos comienzan a organizar 'English Days' para motivar el aprendizaje del idioma.",
+                origen3Year: "2000s",
+                origen3Title: "Expansión Global",
+                origen3Text: "La celebración se extiende a nivel mundial, con el apoyo de organizaciones como el British Council y embajadas de países anglófonos.",
+                origen4Year: "Actualidad",
+                origen4Title: "Reconocimiento Internacional",
+                origen4Text: "El English Day se celebra en más de 100 países, promoviendo no solo el idioma sino también el intercambio cultural y la comprensión global.",
+                footerTitle: "English Day",
+                footerText: "Celebrando la diversidad y unidad a través del idioma inglés.",
+                footerLinks: "Enlaces Rápidos",
+                footerCopyright: "&copy; 2023 English Day. Todos los derechos reservados."
+            };
+            
+            // Textos en inglés
+            const englishTexts = {
+                title: "English Day - English Language Celebration",
+                headerTitle: "English Day",
+                headerSubtitle: "Celebrating the global language that connects us",
+                navInicio: "Home",
+                navMotivo: "Reason",
+                navCultura: "Culture",
+                navPaises: "Countries",
+                navOrigen: "Origin",
+                inicioTitle: "What is English Day?",
+                inicioText1: "English Day is a celebration dedicated to recognizing the importance of the English language as a global language and international communication tool. This holiday promotes the learning, practice, and appreciation of English worldwide.",
+                inicioText2: "It is celebrated in numerous countries and educational institutions, where cultural, academic, and recreational activities are held that highlight the richness and diversity of the English language.",
+                motivoTitle: "Reason for Celebration",
+                motivoCard1Title: "Global Language",
+                motivoCard1Text: "English is the third most spoken language in the world and the official language of 67 countries, serving as a bridge of communication between cultures.",
+                motivoCard2Title: "Opportunities",
+                motivoCard2Text: "Mastering English opens doors in education, business, technology, and international relations, facilitating access to global information.",
+                motivoCard3Title: "Cultural Exchange",
+                motivoCard3Text: "It allows the exchange of ideas, traditions, and knowledge between people from different parts of the world.",
+                culturaTitle: "Cultural Aspects",
+                culturaSubtitle: "Cultural Influence of English",
+                culturaText: "English has deeply influenced global culture through:",
+                culturaList1: "Literature: Works by Shakespeare, Dickens, Austen, and many other classic and contemporary authors.",
+                culturaList2: "Music: Genres such as rock, pop, jazz, and hip-hop that have transcended borders.",
+                culturaList3: "Film and TV: The Hollywood film industry and British productions recognized worldwide.",
+                culturaList4: "Science and Technology: Most scientific publications and technological terminology are in English.",
+                paisesTitle: "Countries that Celebrate English Day",
+                paisesSubtitle: "A global celebration that unites nations through the English language",
+                pais1Title: "United Kingdom",
+                pais1Text: "Birthplace of the English language with a rich literary and cultural heritage that has influenced the entire world. Celebrates English Day with cultural and educational events.",
+                pais2Title: "United States",
+                pais2Text: "Greatest global cultural influence through film, music, and technology. Celebrates English Day with multicultural festivals and educational events.",
+                pais3Title: "Canada",
+                pais3Text: "Bilingual country where English coexists with French. Celebrates English Day by promoting cultural exchange between Anglophone and Francophone communities.",
+                pais4Title: "Australia",
+                pais4Text: "Oceanic English with Aboriginal influences. Celebrates English Day with events highlighting Australian cultural diversity and its unique variant of English.",
+                pais5Title: "Ireland",
+                pais5Text: "Celtic heritage and literary tradition that has produced some of the greatest writers in English. Celebrates English Day with literary festivals.",
+                pais6Title: "South Africa",
+                pais6Text: "Multilingual country where English unites diverse communities. Celebrates English Day as part of its multicultural heritage and national unification tool.",
+                pais7Title: "Germany",
+                pais7Text: "As a European economic power, Germany celebrates English Day highlighting its importance in international business, science, and higher education.",
+                pais8Title: "Switzerland",
+                pais8Text: "As a European economic power, Germany celebrates English Day highlighting its importance in international business, science, and higher education.",
+                visitBtn: "Visit Country",
+                origenTitle: "Origin of the Movement",
+                origen1Year: "1960s",
+                origen1Title: "Birth of the Concept",
+                origen1Text: "With the increase in globalization, English began to position itself as an international lingua franca, especially in business and diplomacy.",
+                origen2Year: "1980s",
+                origen2Title: "First Celebrations",
+                origen2Text: "Educational institutions in non-English-speaking countries began organizing 'English Days' to motivate language learning.",
+                origen3Year: "2000s",
+                origen3Title: "Global Expansion",
+                origen3Text: "The celebration spread worldwide, with the support of organizations like the British Council and embassies of English-speaking countries.",
+                origen4Year: "Present",
+                origen4Title: "International Recognition",
+                origen4Text: "English Day is celebrated in more than 100 countries, promoting not only the language but also cultural exchange and global understanding.",
+                footerTitle: "English Day",
+                footerText: "Celebrating diversity and unity through the English language.",
+                footerLinks: "Quick Links",
+                footerCopyright: "&copy; 2023 English Day. All rights reserved."
+            };
+            
+            // Función para traducir la página
+            function translatePage() {
+                const texts = isTranslated ? spanishTexts : englishTexts;
+                
+                // Actualizar título de la página
+                document.title = texts.title;
+                
+                // Actualizar encabezado
+                document.querySelector('.header-content h1').textContent = texts.headerTitle;
+                document.querySelector('.subtitle').textContent = texts.headerSubtitle;
+                
+                // Actualizar navegación
+                document.querySelectorAll('nav a')[0].textContent = texts.navInicio;
+                document.querySelectorAll('nav a')[1].textContent = texts.navMotivo;
+                document.querySelectorAll('nav a')[2].textContent = texts.navCultura;
+                document.querySelectorAll('nav a')[3].textContent = texts.navPaises;
+                document.querySelectorAll('nav a')[4].textContent = texts.navOrigen;
+                
+                // Actualizar sección de inicio
+                document.querySelector('#inicio h2').textContent = texts.inicioTitle;
+                document.querySelectorAll('#inicio p')[0].textContent = texts.inicioText1;
+                document.querySelectorAll('#inicio p')[1].textContent = texts.inicioText2;
+                
+                // Actualizar sección de motivo
+                document.querySelector('#motivo h2').textContent = texts.motivoTitle;
+                document.querySelectorAll('.card h3')[0].textContent = texts.motivoCard1Title;
+                document.querySelectorAll('.card p')[0].textContent = texts.motivoCard1Text;
+                document.querySelectorAll('.card h3')[1].textContent = texts.motivoCard2Title;
+                document.querySelectorAll('.card p')[1].textContent = texts.motivoCard2Text;
+                document.querySelectorAll('.card h3')[2].textContent = texts.motivoCard3Title;
+                document.querySelectorAll('.card p')[2].textContent = texts.motivoCard3Text;
+                
+                // Actualizar sección cultural
+                document.querySelector('#cultura h2').textContent = texts.culturaTitle;
+                document.querySelector('#cultura h3').textContent = texts.culturaSubtitle;
+                document.querySelectorAll('#cultura p')[0].textContent = texts.culturaText;
+                document.querySelectorAll('#cultura li')[0].innerHTML = `<strong>Literature:</strong> ${texts.culturaList1.split(': ')[1]}`;
+                document.querySelectorAll('#cultura li')[1].innerHTML = `<strong>Music:</strong> ${texts.culturaList2.split(': ')[1]}`;
+                document.querySelectorAll('#cultura li')[2].innerHTML = `<strong>Film and TV:</strong> ${texts.culturaList3.split(': ')[1]}`;
+                document.querySelectorAll('#cultura li')[3].innerHTML = `<strong>Science and Technology:</strong> ${texts.culturaList4.split(': ')[1]}`;
+                
+                // Actualizar sección de países
+                document.querySelector('#paises h2').textContent = texts.paisesTitle;
+                document.querySelector('.section-subtitle').textContent = texts.paisesSubtitle;
+                
+                document.querySelectorAll('.country-card h4')[0].textContent = texts.pais1Title;
+                document.querySelectorAll('.country-card p')[0].textContent = texts.pais1Text;
+                
+                document.querySelectorAll('.country-card h4')[1].textContent = texts.pais2Title;
+                document.querySelectorAll('.country-card p')[1].textContent = texts.pais2Text;
+                
+                document.querySelectorAll('.country-card h4')[2].textContent = texts.pais3Title;
+                document.querySelectorAll('.country-card p')[2].textContent = texts.pais3Text;
+                
+                document.querySelectorAll('.country-card h4')[3].textContent = texts.pais4Title;
+                document.querySelectorAll('.country-card p')[3].textContent = texts.pais4Text;
+                
+                document.querySelectorAll('.country-card h4')[4].textContent = texts.pais5Title;
+                document.querySelectorAll('.country-card p')[4].textContent = texts.pais5Text;
+                
+                document.querySelectorAll('.country-card h4')[5].textContent = texts.pais6Title;
+                document.querySelectorAll('.country-card p')[5].textContent = texts.pais6Text;
+                
+                document.querySelectorAll('.country-card h4')[6].textContent = texts.pais7Title;
+                document.querySelectorAll('.country-card p')[6].textContent = texts.pais7Text;
+                
+                document.querySelectorAll('.country-card h4')[7].textContent = texts.pais8Title;
+                document.querySelectorAll('.country-card p')[7].textContent = texts.pais8Text;
+                
+                // Actualizar botones de visita
+                document.querySelectorAll('.visit-btn').forEach(btn => {
+                    btn.textContent = texts.visitBtn;
+                });
+                
+                // Actualizar sección de origen
+                document.querySelector('#origen h2').textContent = texts.origenTitle;
+                
+                document.querySelectorAll('.timeline-year')[0].textContent = texts.origen1Year;
+                document.querySelectorAll('.timeline-content h3')[0].textContent = texts.origen1Title;
+                document.querySelectorAll('.timeline-content p')[0].textContent = texts.origen1Text;
+                
+                document.querySelectorAll('.timeline-year')[1].textContent = texts.origen2Year;
+                document.querySelectorAll('.timeline-content h3')[1].textContent = texts.origen2Title;
+                document.querySelectorAll('.timeline-content p')[1].textContent = texts.origen2Text;
+                
+                document.querySelectorAll('.timeline-year')[2].textContent = texts.origen3Year;
+                document.querySelectorAll('.timeline-content h3')[2].textContent = texts.origen3Title;
+                document.querySelectorAll('.timeline-content p')[2].textContent = texts.origen3Text;
+                
+                document.querySelectorAll('.timeline-year')[3].textContent = texts.origen4Year;
+                document.querySelectorAll('.timeline-content h3')[3].textContent = texts.origen4Title;
+                document.querySelectorAll('.timeline-content p')[3].textContent = texts.origen4Text;
+                
+                // Actualizar pie de página
+                document.querySelectorAll('.footer-section h3')[0].textContent = texts.footerTitle;
+                document.querySelectorAll('.footer-section p')[0].textContent = texts.footerText;
+                document.querySelectorAll('.footer-section h4')[0].textContent = texts.footerLinks;
+                document.querySelector('.footer-bottom p').innerHTML = texts.footerCopyright;
+                
+                // Actualizar texto del botón
+                translateBtn.textContent = isTranslated ? "Traducir a Inglés" : "Translate to Spanish";
+                
+                // Cambiar estado
+                isTranslated = !isTranslated;
+            }
+            
+            // Asignar evento al botón
+            translateBtn.addEventListener('click', translatePage);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Australia: Land of Wonder and Diversity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Assets/css/australia.css">
+  <link rel="stylesheet" href="../Assets/css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Floating Buttons -->
+  <div class="floating-buttons">
+    <button class="float-btn" id="langBtn" onclick="toggleLanguage()">
+      <span id="flagIcon">🇺🇸</span>
+      <span id="langText">English</span>
+    </button>
+    <a href="../index.html">
+      <button class="float-btn pasaporte-btn">Volver al menú</button>
+    </a>
+    <a href="../Pasaporte/Login.php">
+      <button class="float-btn passport-btn">
+         Passport
+      </button>
+    </a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img class="flag-hero" src="https://flagcdn.com/au.svg" alt="Australian Flag">
+      <h1 id="mainTitle">AUSTRALIA</h1>
+      <p class="hero-subtitle" id="heroSubtitle">Land of Wonder • Spirit of Diversity</p>
+      <div class="hero-stats">
+        <div class="stat-box">
+          <div class="number">27.9M</div>
+          <div class="label" id="statPop">Population</div>
+        </div>
+        <div class="stat-box">
+          <div class="number">7.7M</div>
+          <div class="label" id="statArea">km² Area</div>
+        </div>
+        <div class="stat-box">
+          <div class="number">300+</div>
+          <div class="label" id="statLang">Languages</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Overview Section -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon">🌏</span> <span id="titleOverview">Overview</span></h2>
+      
+      <div class="facts-grid">
+        <div class="fact-card">
+          <strong id="factPop">Population (2025)</strong>
+          <span id="factPopText">27,978,000 — one of the fastest-growing populations in the developed world, reached mainly through migration and a high quality of life.</span>
+        </div>
+        <div class="fact-card">
+          <strong id="factLoc">Location</strong>
+          <span id="factLocText">Sixth-largest nation, occupying its own continent, surrounded by the vast Pacific and Indian Oceans.</span>
+        </div>
+        <div class="fact-card">
+          <strong id="factCap">Capital & Cities</strong>
+          <span id="factCapText">Canberra (capital). Top cities: Sydney, Melbourne, Brisbane, Perth, Adelaide.</span>
+        </div>
+        <div class="fact-card">
+          <strong id="factLangCurr">Language & Currency</strong>
+          <span id="factLangCurrText">English (official language). Australian Dollar (AUD).</span>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3 id="highlightTitle1">World's Most Successful Multicultural Society</h3>
+        <p id="highlightText1">More than 29% of Australians were born overseas, speaking over 300 languages at home. Unity in diversity is a national hallmark, making Australia one of the most harmonious and prosperous nations on Earth.</p>
+      </div>
+    </section>
+
+    <!-- Symbols Section -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon">🇦🇺</span> <span id="titleSymbols">National Symbols</span></h2>
+      
+      <div class="symbols-grid">
+        <div class="symbol-card">
+          <span class="icon">🌟</span>
+          <div class="name" id="sym1Name">Southern Cross</div>
+          <div class="desc" id="sym1Desc">5 stars on the flag, visible only in the southern hemisphere, symbolizing guidance and identity.</div>
+        </div>
+        <div class="symbol-card">
+          <span class="icon">🟩🟨</span>
+          <div class="name" id="sym2Name">Green & Gold</div>
+          <div class="desc" id="sym2Desc">National colors representing golden outback fields and lush green lands.</div>
+        </div>
+        <div class="symbol-card">
+          <span class="icon">🦘</span>
+          <div class="name" id="sym3Name">Kangaroo</div>
+          <div class="desc" id="sym3Desc">Iconic animal supporting the Coat of Arms, symbolizing progress and forward movement.</div>
+        </div>
+        <div class="symbol-card">
+          <span class="icon">🐨</span>
+          <div class="name" id="sym4Name">Koala</div>
+          <div class="desc" id="sym4Desc">Beloved marsupial representing Australia's unique and endearing wildlife.</div>
+        </div>
+        <div class="symbol-card">
+          <span class="icon">🌼</span>
+          <div class="name" id="sym5Name">Golden Wattle</div>
+          <div class="desc" id="sym5Desc">National flower blooming in spring, symbol of unity, resilience and optimism.</div>
+        </div>
+        <div class="symbol-card">
+          <span class="icon">🎶</span>
+          <div class="name" id="sym6Name">Didgeridoo</div>
+          <div class="desc" id="sym6Desc">Ancient Aboriginal instrument, timeless emblem of Australia's first nations.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nature Section with Split Layout -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon">🌱</span> <span id="titleNature">Unique Nature & Wildlife</span></h2>
+      
+      <div class="split-layout">
+        <div class="split-content">
+          <h3 id="bioTitle">Biodiversity Hotspot</h3>
+          <p id="bioText1">Australia is one of only 17 "megadiverse" countries, home to nearly 700,000 native species. More than 80% are found nowhere else on Earth.</p>
+          <p id="bioText2">From kangaroos to eucalyptus forests, from the Great Barrier Reef to ancient rainforests — biodiversity thrives in extraordinary ways.</p>
+        </div>
+        <div class="split-image">🦘</div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="number">60M</span>
+          <span class="label" id="stat1">Kangaroos</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">8,000+</span>
+          <span class="label" id="stat2">Islands</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">135M</span>
+          <span class="label" id="stat3">Years Old Rainforest</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">80%</span>
+          <span class="label" id="stat4">Endemic Species</span>
+        </div>
+      </div>
+
+      <div class="split-layout" style="margin-top: 60px;">
+        <div class="split-image">🪸</div>
+        <div class="split-content">
+          <h3 id="wondersTitle">Natural Wonders</h3>
+          <ul class="icon-list">
+            <li id="wonder1">Uluru — Sacred sandstone monolith in the central desert</li>
+            <li id="wonder2">Great Barrier Reef — Largest coral reef ecosystem on Earth</li>
+            <li id="wonder3">Daintree Rainforest — Over 135 million years old</li>
+            <li id="wonder4">Kakadu National Park — Ancient rock art and wildlife</li>
+            <li id="wonder5">Twelve Apostles — Stunning limestone formations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Economy Section -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon">💼</span> <span id="titleEconomy">Economy & Innovation</span></h2>
+      
+      <div class="split-layout">
+        <div class="split-content">
+          <h3 id="ecoTitle">Modern Economic Success</h3>
+          <p id="ecoText1">Australia's economy is globally admired for its resilience, world-class education system, and innovative technology scene. In 2025, the economy grew by 0.6% driven by tech innovation and environmental initiatives.</p>
+          <ul class="icon-list" style="margin-top: 30px;">
+            <li id="eco1">Mining & natural resources export leader</li>
+            <li id="eco2">World-class education hub for Asia-Pacific</li>
+            <li id="eco3">Technology and sustainability sectors booming</li>
+            <li id="eco4">Tourism industry worth billions annually</li>
+          </ul>
+        </div>
+        <div class="split-image">💰</div>
+      </div>
+
+      <div class="highlight-box" style="background: linear-gradient(135deg, var(--aussie-gold) 0%, #e6c200 100%); color: var(--navy);">
+        <h3 style="color: var(--aussie-green);" id="didYouKnow">Did You Know?</h3>
+        <p id="didYouKnowText">Over 1 in 4 Australians is born overseas — a melting pot of cultures with strong links to Asia, Europe, and the Americas, fueling a vibrant and dynamic economy.</p>
+      </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon">🎉</span> <span id="titleCulture">Culture & Lifestyle</span></h2>
+      
+      <div class="split-layout">
+        <div class="split-image">🏏</div>
+        <div class="split-content">
+          <h3 id="sportTitle">Sporting Nation</h3>
+          <p id="sportText1">Cricket, rugby, "Aussie Rules" football, swimming, and surfing are national passions. Australians embrace an active, outdoor lifestyle with hiking, camping, and BBQs ("barbies") as a way of life.</p>
+          <p id="sportText2">Melbourne, Sydney, and Adelaide consistently rank among the world's most liveable cities for quality of life and innovation.</p>
+        </div>
+      </div>
+
+      <div class="stats-bar" style="margin-top: 60px;">
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--aussie-green), #025a41);">
+          <span class="number">120+</span>
+          <span class="label" id="cultStat1">Faiths Practiced</span>
+        </div>
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--aussie-earth), #8b4513);">
+          <span class="number">50,000</span>
+          <span class="label" id="cultStat2">Years Indigenous Culture</span>
+        </div>
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--aussie-gold), #ffb700);">
+          <span class="number">Top 5</span>
+          <span class="label" id="cultStat3">Most Liveable Cities</span>
+        </div>
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--aussie-sky), #1a8cbd);">
+          <span class="number">365</span>
+          <span class="label" id="cultStat4">Days of Adventure</span>
+        </div>
+      </div>
+
+      <div class="split-layout" style="margin-top: 60px;">
+        <div class="split-content">
+          <h3 id="celebTitle">Celebrations & Traditions</h3>
+          <ul class="icon-list">
+            <li id="celeb1">Australia Day (Jan 26) — Celebrates diversity and achievements</li>
+            <li id="celeb2">ANZAC Day (Apr 25) — Honors service men and women</li>
+            <li id="celeb3">NAIDOC Week — Recognizes Aboriginal and Torres Strait Islander peoples</li>
+            <li id="celeb4">Harmony Day — Celebrates multicultural unity</li>
+            <li id="celeb5">Sydney Opera House — World-renowned architectural marvel</li>
+          </ul>
+        </div>
+        <div class="split-image">🎨</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="icons"></div>
+    <p><strong id="footerTitle">Made with the Green & Gold Spirit of Australia</strong></p>
+    <p id="footerCopy">© 2025 ADSO. All rights reserved. | Center for Agroindustrial Innovation</p>
+  </footer>
+
+  <script>
+    let currentLang = 'en';
+
+    const translations = {
+      en: {
+        flagIcon: '🇺🇸',
+        langText: 'English',
+        mainTitle: 'AUSTRALIA',
+        heroSubtitle: 'Land of Wonder • Spirit of Diversity',
+        statPop: 'Population',
+        statArea: 'km² Area',
+        statLang: 'Languages',
+        titleOverview: 'Overview',
+        factPop: 'Population (2025)',
+        factPopText: '27,978,000 — one of the fastest-growing populations in the developed world, reached mainly through migration and a high quality of life.',
+        factLoc: 'Location',
+        factLocText: 'Sixth-largest nation, occupying its own continent, surrounded by the vast Pacific and Indian Oceans.',
+        factCap: 'Capital & Cities',
+        factCapText: 'Canberra (capital). Top cities: Sydney, Melbourne, Brisbane, Perth, Adelaide.',
+        factLangCurr: 'Language & Currency',
+        factLangCurrText: 'English (official language). Australian Dollar (AUD).',
+        highlightTitle1: "World's Most Successful Multicultural Society",
+        highlightText1: 'More than 29% of Australians were born overseas, speaking over 300 languages at home. Unity in diversity is a national hallmark, making Australia one of the most harmonious and prosperous nations on Earth.',
+        titleSymbols: 'National Symbols',
+        sym1Name: 'Southern Cross',
+        sym1Desc: '5 stars on the flag, visible only in the southern hemisphere, symbolizing guidance and identity.',
+        sym2Name: 'Green & Gold',
+        sym2Desc: 'National colors representing golden outback fields and lush green lands.',
+        sym3Name: 'Kangaroo',
+        sym3Desc: 'Iconic animal supporting the Coat of Arms, symbolizing progress and forward movement.',
+        sym4Name: 'Koala',
+        sym4Desc: "Beloved marsupial representing Australia's unique and endearing wildlife.",
+        sym5Name: 'Golden Wattle',
+        sym5Desc: 'National flower blooming in spring, symbol of unity, resilience and optimism.',
+        sym6Name: 'Didgeridoo',
+        sym6Desc: "Ancient Aboriginal instrument, timeless emblem of Australia's first nations.",
+        titleNature: 'Unique Nature & Wildlife',
+        bioTitle: 'Biodiversity Hotspot',
+        bioText1: 'Australia is one of only 17 "megadiverse" countries, home to nearly 700,000 native species. More than 80% are found nowhere else on Earth.',
+        bioText2: 'From kangaroos to eucalyptus forests, from the Great Barrier Reef to ancient rainforests — biodiversity thrives in extraordinary ways.',
+        stat1: 'Kangaroos',
+        stat2: 'Islands',
+        stat3: 'Years Old Rainforest',
+        stat4: 'Endemic Species',
+        wondersTitle: 'Natural Wonders',
+        wonder1: 'Uluru — Sacred sandstone monolith in the central desert',
+        wonder2: 'Great Barrier Reef — Largest coral reef ecosystem on Earth',
+        wonder3: 'Daintree Rainforest — Over 135 million years old',
+        wonder4: 'Kakadu National Park — Ancient rock art and wildlife',
+        wonder5: 'Twelve Apostles — Stunning limestone formations',
+        titleEconomy: 'Economy & Innovation',
+        ecoTitle: 'Modern Economic Success',
+        ecoText1: "Australia's economy is globally admired for its resilience, world-class education system, and innovative technology scene. In 2025, the economy grew by 0.6% driven by tech innovation and environmental initiatives.",
+        eco1: 'Mining & natural resources export leader',
+        eco2: 'World-class education hub for Asia-Pacific',
+        eco3: 'Technology and sustainability sectors booming',
+        eco4: 'Tourism industry worth billions annually',
+        didYouKnow: 'Did You Know?',
+        didYouKnowText: 'Over 1 in 4 Australians is born overseas — a melting pot of cultures with strong links to Asia, Europe, and the Americas, fueling a vibrant and dynamic economy.',
+        titleCulture: 'Culture & Lifestyle',
+        sportTitle: 'Sporting Nation',
+        sportText1: 'Cricket, rugby, "Aussie Rules" football, swimming, and surfing are national passions. Australians embrace an active, outdoor lifestyle with hiking, camping, and BBQs ("barbies") as a way of life.',
+        sportText2: "Melbourne, Sydney, and Adelaide consistently rank among the world's most liveable cities for quality of life and innovation.",
+        cultStat1: 'Faiths Practiced',
+        cultStat2: 'Years Indigenous Culture',
+        cultStat3: 'Most Liveable Cities',
+        cultStat4: 'Days of Adventure',
+        celebTitle: 'Celebrations & Traditions',
+        celeb1: 'Australia Day (Jan 26) — Celebrates diversity and achievements',
+        celeb2: 'ANZAC Day (Apr 25) — Honors service men and women',
+        celeb3: 'NAIDOC Week — Recognizes Aboriginal and Torres Strait Islander peoples',
+        celeb4: 'Harmony Day — Celebrates multicultural unity',
+        celeb5: 'Sydney Opera House — World-renowned architectural marvel',
+        footerTitle: 'Made with the Green & Gold Spirit of Australia',
+        footerCopy: '© 2025 ADSO. All rights reserved. | Center for Agroindustrial Innovation'
+      },
+      es: {
+        flagIcon: '🇪🇸',
+        langText: 'Español',
+        mainTitle: 'AUSTRALIA',
+        heroSubtitle: 'Tierra de Maravillas • Espíritu de Diversidad',
+        statPop: 'Población',
+        statArea: 'km² de Área',
+        statLang: 'Idiomas',
+        titleOverview: 'Descripción General',
+        factPop: 'Población (2025)',
+        factPopText: '27,978,000 — una de las poblaciones de más rápido crecimiento en el mundo desarrollado, alcanzada principalmente a través de la migración y una alta calidad de vida.',
+        factLoc: 'Ubicación',
+        factLocText: 'Sexta nación más grande, ocupando su propio continente, rodeada por los vastos océanos Pacífico e Índico.',
+        factCap: 'Capital y Ciudades',
+        factCapText: 'Canberra (capital). Principales ciudades: Sídney, Melbourne, Brisbane, Perth, Adelaida.',
+        factLangCurr: 'Idioma y Moneda',
+        factLangCurrText: 'Inglés (idioma oficial). Dólar Australiano (AUD).',
+        highlightTitle1: 'Sociedad Multicultural Más Exitosa del Mundo',
+        highlightText1: 'Más del 29% de los australianos nacieron en el extranjero, hablando más de 300 idiomas en casa. La unidad en la diversidad es un sello distintivo nacional, haciendo de Australia una de las naciones más armoniosas y prósperas de la Tierra.',
+        titleSymbols: 'Símbolos Nacionales',
+        sym1Name: 'Cruz del Sur',
+        sym1Desc: '5 estrellas en la bandera, visibles solo en el hemisferio sur, simbolizando guía e identidad.',
+        sym2Name: 'Verde y Dorado',
+        sym2Desc: 'Colores nacionales que representan los campos dorados del interior y las tierras verdes exuberantes.',
+        sym3Name: 'Canguro',
+        sym3Desc: 'Animal icónico que sostiene el Escudo de Armas, simbolizando progreso y movimiento hacia adelante.',
+        sym4Name: 'Koala',
+        sym4Desc: 'Marsupial querido que representa la vida silvestre única y encantadora de Australia.',
+        sym5Name: 'Acacia Dorada',
+        sym5Desc: 'Flor nacional que florece en primavera, símbolo de unidad, resistencia y optimismo.',
+        sym6Name: 'Didgeridoo',
+        sym6Desc: 'Instrumento aborigen antiguo, emblema atemporal de las primeras naciones de Australia.',
+        titleNature: 'Naturaleza y Vida Silvestre Única',
+        bioTitle: 'Punto Crítico de Biodiversidad',
+        bioText1: 'Australia es uno de los solo 17 países "megadiversos", hogar de casi 700,000 especies nativas. Más del 80% no se encuentran en ningún otro lugar de la Tierra.',
+        bioText2: 'Desde canguros hasta bosques de eucaliptos, desde la Gran Barrera de Coral hasta selvas tropicales antiguas — la biodiversidad prospera de maneras extraordinarias.',
+        stat1: 'Canguros',
+        stat2: 'Islas',
+        stat3: 'Años de Selva Tropical',
+        stat4: 'Especies Endémicas',
+        wondersTitle: 'Maravillas Naturales',
+        wonder1: 'Uluru — Monolito sagrado de arenisca en el desierto central',
+        wonder2: 'Gran Barrera de Coral — Ecosistema de arrecife de coral más grande de la Tierra',
+        wonder3: 'Selva Tropical Daintree — Más de 135 millones de años',
+        wonder4: 'Parque Nacional Kakadu — Arte rupestre antiguo y vida silvestre',
+        wonder5: 'Doce Apóstoles — Impresionantes formaciones de piedra caliza',
+        titleEconomy: 'Economía e Innovación',
+        ecoTitle: 'Éxito Económico Moderno',
+        ecoText1: 'La economía de Australia es admirada mundialmente por su resistencia, sistema educativo de clase mundial y escena tecnológica innovadora. En 2025, la economía creció un 0.6% impulsada por la innovación tecnológica y las iniciativas ambientales.',
+        eco1: 'Líder en exportación de minería y recursos naturales',
+        eco2: 'Centro educativo de clase mundial para Asia-Pacífico',
+        eco3: 'Sectores de tecnología y sostenibilidad en auge',
+        eco4: 'Industria turística que vale miles de millones anualmente',
+        didYouKnow: '¿Sabías Que?',
+        didYouKnowText: 'Más de 1 de cada 4 australianos nació en el extranjero — un crisol de culturas con fuertes vínculos con Asia, Europa y las Américas, alimentando una economía vibrante y dinámica.',
+        titleCulture: 'Cultura y Estilo de Vida',
+        sportTitle: 'Nación Deportiva',
+        sportText1: 'El cricket, rugby, fútbol "Aussie Rules", natación y surf son pasiones nacionales. Los australianos abrazan un estilo de vida activo y al aire libre con senderismo, campamento y BBQs ("barbies") como forma de vida.',
+        sportText2: 'Melbourne, Sídney y Adelaida se clasifican constantemente entre las ciudades más habitables del mundo por calidad de vida e innovación.',
+        cultStat1: 'Religiones Practicadas',
+        cultStat2: 'Años de Cultura Indígena',
+        cultStat3: 'Ciudades Más Habitables',
+        cultStat4: 'Días de Aventura',
+        celebTitle: 'Celebraciones y Tradiciones',
+        celeb1: 'Día de Australia (26 Ene) — Celebra la diversidad y los logros',
+        celeb2: 'Día ANZAC (25 Abr) — Honra a los hombres y mujeres de servicio',
+        celeb3: 'Semana NAIDOC — Reconoce a los pueblos aborígenes e isleños del Estrecho de Torres',
+        celeb4: 'Día de la Armonía — Celebra la unidad multicultural',
+        celeb5: 'Ópera de Sídney — Maravilla arquitectónica de renombre mundial',
+        footerTitle: 'Hecho con el Espíritu Verde y Dorado de Australia',
+        footerCopy: '© 2025 ADSO. Todos los derechos reservados. | Centro de la Innovación Agroindustrial'
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      updateContent();
+    }
+
+    function updateContent() {
+      const t = translations[currentLang];
+      
+      Object.keys(t).forEach(key => {
+        const element = document.getElementById(key);
+        if (element) {
+          element.textContent = t[key];
+        }
+      });
+    }
+  </script>
+</body>
+</html>

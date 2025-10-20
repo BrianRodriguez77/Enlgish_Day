@@ -1,0 +1,818 @@
+/* === VARIABLES Y ESTILOS GLOBALES SUDÁFRICA === */
+:root {
+    --verde: #007749;
+    --amarillo: #FFB81C;
+    --rojo: #DE3831;
+    --azul: #002395;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --gris-claro: #F5F5F5;
+    --gris-medio: #e0e0e0;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 6px 18px rgba(0, 0, 0, 0.15);
+    --sombra-fuerte: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --transicion-rapida: all 0.2s ease;
+    --transicion-media: all 0.3s ease;
+    --transicion-lenta: all 0.5s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background: linear-gradient(
+        135deg,
+        var(--negro) 0%,
+        var(--verde) 25%,
+        var(--amarillo) 50%,
+        var(--rojo) 75%,
+        var(--azul) 100%
+    );
+    background-size: 400% 400%;
+    animation: banderaMovimiento 15s ease-in-out infinite;
+    min-height: 100vh;
+}
+
+@keyframes banderaMovimiento {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* === ENCABEZADO MEJORADO SUDÁFRICA === */
+.header-sudafrica {
+    background: linear-gradient(135deg, 
+        rgba(0, 119, 73, 0.9) 0%, 
+        rgba(255, 184, 28, 0.85) 25%,
+        rgba(222, 56, 49, 0.8) 50%,
+        rgba(0, 35, 149, 0.75) 75%,
+        rgba(0, 0, 0, 0.7) 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 0 5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.header-sudafrica::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 184, 28, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 35, 149, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(222, 56, 49, 0.3) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === TÍTULO PRINCIPAL MEJORADO === */
+.titulo-principal {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.titulo-sudafrica {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 
+        3px 3px 0 rgba(0, 0, 0, 0.3),
+        6px 6px 0 rgba(0, 35, 149, 0.2);
+    background: linear-gradient(135deg, #ffffff 0%, #FFB81C 25%, #DE3831 50%, #002395 75%, #ffffff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: tituloBrillo 3s ease-in-out infinite alternate;
+    line-height: 1.2;
+}
+
+@keyframes tituloBrillo {
+    0% {
+        text-shadow: 
+            3px 3px 0 rgba(0, 0, 0, 0.3),
+            6px 6px 0 rgba(0, 35, 149, 0.2);
+    }
+    100% {
+        text-shadow: 
+            3px 3px 0 rgba(0, 0, 0, 0.3),
+            6px 6px 0 rgba(0, 35, 149, 0.2),
+            9px 9px 20px rgba(255, 184, 28, 0.3);
+    }
+}
+
+/* === BANDERA DECORATIVA SUDÁFRICA === */
+.bandera-decorativa {
+    display: inline-block;
+    margin: 1rem auto;
+    width: min(300px, 90%);
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: perspective(500px) rotateX(5deg);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.bandera-decorativa:hover {
+    transform: perspective(500px) rotateX(0deg) scale(1.05);
+}
+
+.bandera-sudafrica {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        var(--verde) 0% 33%, 
+        var(--amarillo) 33% 66%, 
+        var(--rojo) 66% 100%);
+    position: relative;
+}
+
+.bandera-sudafrica::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 50%;
+    background: linear-gradient(135deg, 
+        var(--negro) 0% 50%, 
+        var(--azul) 50% 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.bandera-sudafrica::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 50%;
+    background: linear-gradient(135deg, 
+        transparent 0% 45%, 
+        var(--amarillo) 45% 55%, 
+        transparent 55% 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.subtitulo {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* === BOTONES HEADER CORREGIDOS === */
+.botones-header {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.pasaporte-btn-header, .menu-btn-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--verde), var(--amarillo), var(--rojo), var(--azul));
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: var(--sombra-media);
+    transition: var(--transicion-media);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    min-width: 200px;
+    justify-content: center;
+}
+
+.menu-btn-header {
+    background: linear-gradient(135deg, var(--azul), var(--rojo), var(--amarillo));
+}
+
+.pasaporte-btn-header::before,
+.menu-btn-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: var(--transicion-lenta);
+    z-index: -1;
+}
+
+.pasaporte-btn-header:hover::before,
+.menu-btn-header:hover::before {
+    left: 100%;
+}
+
+.pasaporte-btn-header:hover {
+    background: linear-gradient(135deg, var(--azul), var(--rojo), var(--amarillo), var(--verde));
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.menu-btn-header:hover {
+    background: linear-gradient(135deg, var(--verde), var(--amarillo), var(--rojo));
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-icon {
+    font-size: 1.2em;
+    transition: var(--transicion-rapida);
+}
+
+.pasaporte-btn-header:hover .btn-icon,
+.menu-btn-header:hover .btn-icon {
+    transform: scale(1.2);
+}
+
+.header-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.elementos-sudafricanos {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.elemento {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    animation: flotar 3s ease-in-out infinite;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+}
+
+.elemento-1 { animation-delay: 0s; }
+.elemento-2 { animation-delay: 1s; }
+.elemento-3 { animation-delay: 2s; }
+.elemento-4 { animation-delay: 1.5s; }
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.header-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.header-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
+}
+
+.header-wave .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* === BARRA DE NAVEGACIÓN SUDÁFRICA === */
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    border-bottom: none;
+    background: linear-gradient(90deg, var(--verde), var(--amarillo), var(--rojo), var(--azul));
+    box-shadow: var(--sombra-media);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.nav-tabs::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--verde), var(--amarillo), var(--rojo), var(--azul));
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: bold;
+    color: var(--blanco);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    transition: var(--transicion-media);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    flex: 1;
+    min-width: 120px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    white-space: nowrap;
+}
+
+.tab-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: var(--transicion-lenta);
+    z-index: -1;
+}
+
+.tab-btn:hover::before {
+    left: 100%;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--blanco);
+    box-shadow: inset 0 -3px 0 var(--amarillo);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, var(--verde), var(--azul));
+    color: var(--blanco);
+    box-shadow: inset 0 -3px 0 var(--amarillo);
+}
+
+/* === CONTENIDO MEJORADO === */
+.tab-content {
+    display: none;
+    padding: 2rem;
+    background-color: var(--blanco);
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 2rem;
+    transition: var(--transicion-media);
+    border: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content h2 {
+    color: var(--verde);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--amarillo);
+    padding-bottom: 0.5rem;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+    position: relative;
+}
+
+.tab-content h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--rojo);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* === TARJETAS DE CONTENIDO === */
+.food-category, .wildlife-category, .culture-category, 
+.history-category, .tourism-category, .language-category, 
+.people-category {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--sombra-suave);
+    border-left: 6px solid var(--verde);
+    transition: var(--transicion-media);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.food-category::before, .wildlife-category::before, .culture-category::before, 
+.history-category::before, .tourism-category::before, .language-category::before, 
+.people-category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--verde), var(--amarillo), var(--rojo), var(--azul));
+}
+
+.food-category:hover, .wildlife-category:hover, .culture-category:hover, 
+.history-category:hover, .tourism-category:hover, .language-category:hover, 
+.people-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.food-category h3, .wildlife-category h3, .culture-category h3, 
+.history-category h3, .tourism-category h3, .language-category h3, 
+.people-category h3 {
+    color: var(--verde);
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 4vw, 1.4rem);
+    position: relative;
+}
+
+.food-category h3::after, .wildlife-category h3::after, .culture-category h3::after, 
+.history-category h3::after, .tourism-category h3::after, .language-category h3::after, 
+.people-category h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--amarillo);
+}
+
+.food-category ul, .wildlife-category ul, .culture-category ul, 
+.history-category ul, .tourism-category ul, .language-category ul, 
+.people-category ul {
+    padding-left: 1.2rem;
+}
+
+.food-category li, .wildlife-category li, .culture-category li, 
+.history-category li, .tourism-category li, .language-category li, 
+.people-category li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    line-height: 1.5;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+}
+
+.food-category li::before, .wildlife-category li::before, .culture-category li::before, 
+.history-category li::before, .tourism-category li::before, .language-category li::before, 
+.people-category li::before {
+    content: "•";
+    color: var(--rojo);
+    font-weight: bold;
+    position: absolute;
+    left: -1rem;
+}
+
+.food-category b, .wildlife-category b, .culture-category b, 
+.history-category b, .tourism-category b, .language-category b, 
+.people-category b {
+    color: var(--azul);
+}
+
+/* === PIE DE PÁGINA SUDÁFRICA === */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    background: linear-gradient(135deg, var(--verde), var(--azul));
+    color: var(--blanco);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--verde), var(--amarillo), var(--rojo), var(--azul));
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+/* === EFECTOS ESPECIALES ADICIONALES === */
+.highlight-southafrica {
+    background: linear-gradient(135deg, var(--verde), var(--amarillo), var(--rojo), var(--azul));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.safari-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.safari-card::after {
+    content: "🦁";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    opacity: 0.1;
+    transition: var(--transicion-media);
+}
+
+.safari-card:hover::after {
+    opacity: 0.3;
+    transform: scale(1.2);
+}
+
+/* === ANIMACIONES DE ENTRADA === */
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-sudafrica .container {
+    animation: slideInFromTop 1s ease-out;
+}
+
+/* === MEJORAS DE ACCESIBILIDAD === */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* === CORRECCIÓN DE OVERFLOW === */
+.tab-content,
+.content-grid,
+.food-category, .wildlife-category, .culture-category, 
+.history-category, .tourism-category, .language-category, 
+.people-category {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* === RESPONSIVE DESIGN MEJORADO === */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .tab-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-sudafrica {
+        padding: 2.5rem 0 4rem;
+    }
+    
+    .nav-tabs {
+        border-radius: 8px;
+    }
+    
+    .tab-btn {
+        padding: 0.8rem 1rem;
+        min-width: 100px;
+    }
+    
+    .content-grid {
+        gap: 1rem;
+    }
+    
+    .food-category, .wildlife-category, .culture-category, 
+    .history-category, .tourism-category, .language-category, 
+    .people-category {
+        padding: 1.2rem;
+    }
+    
+    .botones-header {
+        gap: 1rem;
+    }
+    
+    .pasaporte-btn-header, .menu-btn-header {
+        min-width: 180px;
+        padding: 0.9rem 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-sudafrica {
+        padding: 2rem 0 3rem;
+    }
+    
+    .titulo-sudafrica {
+        font-size: 2.5rem;
+    }
+    
+    .subtitulo {
+        font-size: 1.1rem;
+    }
+    
+    .bandera-decorativa {
+        width: 250px;
+        height: 150px;
+    }
+    
+    .nav-tabs {
+        flex-direction: column;
+        border-radius: 8px;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        min-width: auto;
+        padding: 1rem;
+    }
+    
+    .tab-content {
+        padding: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .elementos-sudafricanos {
+        gap: 0.8rem;
+    }
+    
+    .botones-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .pasaporte-btn-header, .menu-btn-header {
+        min-width: 250px;
+        padding: 0.9rem 1.8rem;
+    }
+    
+    /* MEJORA DE RENDIMIENTO PARA MÓVILES */
+    .header-sudafrica::before {
+        background: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .header-sudafrica {
+        padding: 1.5rem 0 2.5rem;
+    }
+    
+    .titulo-sudafrica {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .bandera-decorativa {
+        width: 200px;
+        height: 120px;
+    }
+    
+    .tab-content {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    .tab-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .food-category, .wildlife-category, .culture-category, 
+    .history-category, .tourism-category, .language-category, 
+    .people-category {
+        padding: 1rem;
+        border-left-width: 4px;
+    }
+    
+    .pasaporte-btn-header, .menu-btn-header {
+        min-width: 220px;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .botones-header {
+        gap: 0.8rem;
+    }
+    
+    footer {
+        padding: 1.5rem 0;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* === ESTILOS PARA IMÁGENES RESPONSIVE === */
+.bandera-decorativa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* === EFECTOS DE FOCO MEJORADOS === */
+.tab-btn:focus,
+.pasaporte-btn-header:focus,
+.menu-btn-header:focus {
+    outline: 2px solid var(--amarillo);
+    outline-offset: 2px;
+}
+
+/* === LOADING STATES === */
+.pasaporte-btn-header:active,
+.menu-btn-header:active {
+    transform: translateY(-1px) scale(1.02);
+    transition: var(--transicion-rapida);
+}
+
+/* === ESTILOS PARA TEXTO SELECCIONADO === */
+::selection {
+    background: var(--amarillo);
+    color: var(--negro);
+}
+
+::-moz-selection {
+    background: var(--amarillo);
+    color: var(--negro);
+}

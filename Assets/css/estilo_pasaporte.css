@@ -1,0 +1,785 @@
+/* Colores del Pasaporte (valores por defecto burdeos) */
+:root {
+    --burgundy-main: #800020;
+    --burgundy-dark: #641226;
+    --burgundy-light: #8B2635;
+    --gold-official: #C9A961;
+    --gold-dark: #B8954D;
+    --text-dark: #1a1a1a;
+    --text-medium: #4a4a4a;
+    --text-light: #6a6a6a;
+    --bg-cream: #FAF8F3;
+    --bg-white: #FFFFFF;
+    --border-gray: #CCCCCC;
+    --mobile-breakpoint: 768px;
+    --tablet-breakpoint: 1024px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Open Sans', sans-serif;
+    background:
+        linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%),
+        url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    min-height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header Elegante */
+.embassy-header {
+    background: linear-gradient(135deg, rgba(15,32,39,0.95) 0%, rgba(32,58,67,0.98) 100%);
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid #d4af37;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.embassy-seal {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    box-shadow: 0 4px 15px rgba(212,175,55,0.4);
+    border: 3px solid rgba(255,255,255,0.2);
+}
+
+.header-titles { flex: 1; }
+
+.header-titles h1 {
+    font-size: 2.2em;
+    color: #d4af37;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-family: 'Libre Baskerville', serif;
+}
+
+.header-titles p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+/* Banner Informativo */
+.info-banner {
+    background: linear-gradient(90deg, rgba(212,175,55,0.15) 0%, rgba(244,228,166,0.1) 100%);
+    border-left: 4px solid #d4af37;
+    padding: 15px 30px;
+    margin: 30px auto;
+    max-width: 1400px;
+    border-radius: 8px;
+}
+
+.info-banner p { color: #d4af37; font-size: 1em; text-align: center; }
+
+/* Container Principal */
+.main-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Formulario Oscuro Mejorado */
+.application-form {
+    background: linear-gradient(145deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.08) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.3),
+        inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.form-header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid rgba(212,175,55,0.3); }
+
+.form-header h2 {
+    font-size: 1.8em;
+    color: #d4af37;
+    margin-bottom: 8px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.form-header p { color: rgba(255,255,255,0.7); font-size: 0.95em; }
+
+.form-group { margin-bottom: 20px; }
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d4af37;
+    font-weight: 600;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255,255,255,0.95);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 1em;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212,175,55,0.2);
+    background: #fff;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #d4af37 0%, #c9a332 100%);
+    color: #0f2027;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(212,175,55,0.3);
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212,175,55,0.5);
+    background: linear-gradient(135deg, #f4e4a6 0%, #d4af37 100%);
+}
+
+.submit-btn:active { transform: translateY(0); }
+
+.hidden { display: none !important; }
+
+.form-group.photo-upload { display: flex; flex-direction: column; }
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #2c3e50;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.95em;
+    transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover { background-color: #e0e0e0; }
+
+/* ============== PASAPORTE NUEVO ============== */
+.passport-container-wrapper {
+    background: linear-gradient(145deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.08) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.3),
+        inset 0 1px 0 rgba(255,255,255,0.1);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.passport-container {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    /* Estilos específicos para PDF */
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    accent-color: exact !important;
+}
+
+/* ===== PORTADA (color dinámico) ===== */
+.passport-cover {
+    background: linear-gradient(145deg, var(--burgundy-dark) 0%, var(--burgundy-main) 50%, var(--burgundy-light) 100%);
+    padding: 40px 30px;
+    position: relative;
+    transition: background 0.6s ease;
+    /* Para PDF */
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+.cover-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    justify-content: space-between;
+    min-height: 650px;
+}
+
+.eu-stars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--gold-official);
+}
+
+.eu-text, .eu-text-en {
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--gold-official);
+    line-height: 1.4;
+}
+
+.harp-container { margin: 30px 0; padding: 20px; }
+.harp-icon { font-size: 6em; filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4)); }
+
+.country-name, .country-name-en {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold-official);
+    line-height: 1.3;
+    margin: 5px 0;
+}
+
+.passport-label {
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--gold-official);
+    margin: 20px 0;
+}
+
+.biometric-symbol { margin-top: 15px; }
+.biometric-symbol svg { width: 30px; height: 30px; color: var(--gold-official); }
+
+/* ===== INTERIOR - NUEVO DISEÑO CON FOTO A LA DERECHA ===== */
+.passport-interior {
+    background: var(--bg-cream);
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Para PDF */
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+/* NUEVO: Header con foto a la derecha */
+.interior-header-with-photo {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 25px;
+    padding-bottom: 18px;
+    border-bottom: 3px solid var(--burgundy-main);
+    transition: border-color 0.6s ease;
+    align-items: start;
+}
+
+.header-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.header-item { 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-label {
+    font-size: 0.65em;
+    font-weight: 700;
+    color: var(--text-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+}
+
+.header-value {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--text-dark);
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Sección de foto mejorada */
+.photo-section-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.photo-container {
+    width: 140px;
+    height: 180px;
+    border: 3px solid var(--text-dark);
+    background: linear-gradient(135deg, #d0d0d0 0%, #e8e8e8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.photo-icon { 
+    font-size: 3em; 
+    opacity: 0.25; 
+    color: var(--text-dark); 
+}
+
+.photo-label {
+    font-size: 0.7em;
+    font-weight: 600;
+    color: var(--text-medium);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contenido principal - actualizado */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.data-section { display: flex; flex-direction: column; gap: 14px; }
+
+.data-item { border-bottom: 1px solid var(--border-gray); padding-bottom: 8px; }
+
+.data-label {
+    font-size: 0.68em;
+    font-weight: 700;
+    color: var(--text-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.data-value {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.4;
+}
+
+.data-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+.additional-info { display: flex; flex-direction: column; gap: 14px; }
+
+.footer-section { margin-top: 15px; padding-top: 20px; border-top: 3px solid var(--burgundy-main); transition: border-color 0.6s ease; }
+
+.flag-container { margin-bottom: 15px; }
+.passport-flag { 
+    width: 100%; 
+    height: 80px; 
+    background-size: cover; 
+    background-position: center; 
+    border: 2px solid var(--border-gray); 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
+    border-radius: 4px; 
+    object-fit: cover;
+    /* Para PDF */
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+.mrz-container {
+    background: #D8D8D8;
+    padding: 12px;
+    border: 2px solid #A0A0A0;
+    border-radius: 4px;
+    /* Para PDF */
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+.mrz-line {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.72em;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    word-break: break-all;
+}
+
+/* Botón Visitar País */
+.visit-country-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.05em;
+    background: linear-gradient(135deg, #28a745 0%, #20833b 100%);
+    color: white;
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.visit-country-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.5);
+    background: linear-gradient(135deg, #34ce57 0%, #28a745 100%);
+}
+
+.visit-country-btn:active { transform: translateY(0); }
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #00247d 0%, #001a5e 100%);
+    color: #FFD100;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 -5px 25px rgba(0,0,0,0.3);
+    border-top: 3px solid rgba(255,209,0,0.3);
+}
+
+footer p { font-size: 1.1em; margin: 6px 0; }
+.footer-icon { font-size: 2em; margin: 8px 0; }
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    background: linear-gradient(135deg, #0f6bff 0%, #0057d9 100%);
+    color: white;
+    box-shadow: 0 6px 20px rgba(0, 90, 255, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.download-btn:hover { transform: translateY(-3px); }
+
+/* ========== MEJORAS PARA MÓVILES Y TABLETS ========== */
+    
+/* Indicador de carga para PDF */
+.download-loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.2em;
+}
+
+.download-loading .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #d4af37;
+    animation: spin 1s ease-in-out infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Botones optimizados para móviles */
+.mobile-optimized-btn {
+    min-height: 44px; /* Tamaño mínimo para toques */
+    padding: 12px 20px;
+    font-size: 16px; /* Evita zoom en iOS */
+    touch-action: manipulation;
+}
+
+/* Mejoras específicas para móviles */
+@media (max-width: 1200px) { 
+    .main-container { grid-template-columns: 1fr; } 
+}
+
+@media (max-width: 900px) {
+    .passport-container { 
+        grid-template-columns: 1fr; 
+        max-width: 100%;
+    }
+    
+    .passport-cover { 
+        min-height: 400px; 
+        padding: 25px 20px;
+    }
+    
+    .cover-content {
+        min-height: 350px;
+    }
+    
+    .harp-icon { font-size: 4em; }
+    
+    .interior-header-with-photo {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .photo-section-right {
+        order: -1;
+        margin-bottom: 15px;
+    }
+    
+    .action-buttons { 
+        flex-direction: column; 
+        width: 100%; 
+        gap: 10px;
+    }
+    
+    .action-buttons a, 
+    .action-buttons button { 
+        width: 100%; 
+        text-align: center;
+    }
+    
+    .passport-container-wrapper,
+    .application-form {
+        padding: 20px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+    
+    .embassy-seal {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8em;
+    }
+    
+    .header-titles h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 600px) {
+    .passport-container-wrapper { 
+        padding: 15px; 
+    }
+    
+    .header-info {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .passport-interior {
+        padding: 20px 15px;
+    }
+    
+    .data-row { 
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
+    
+    .main-container {
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+    
+    .info-banner {
+        padding: 10px 15px;
+        margin: 20px auto;
+    }
+    
+    .submit-btn,
+    .download-btn,
+    .visit-country-btn {
+        padding: 14px;
+        font-size: 1em;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 14px; /* Más espacio para toques */
+    }
+    
+    .photo-container {
+        width: 120px;
+        height: 150px;
+    }
+}
+
+/* Optimización para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .passport-container {
+        max-width: 95%;
+    }
+    
+    .passport-cover {
+        min-height: 500px;
+    }
+}
+
+/* Prevenir zoom en inputs en iOS */
+@media screen and (max-width: 768px) {
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* Estilos específicos para PDF */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .passport-container, .passport-container * {
+        visibility: visible;
+    }
+    .passport-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+}
+
+/* ========== ESTILOS ESPECÍFICOS PARA PDF ========== */
+
+/* Contenedor principal optimizado para PDF */
+.passport-container.pdf-optimized {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 45% 55% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Ajustes para la portada en PDF */
+.passport-cover.pdf-optimized {
+    padding: 30px 20px !important;
+    min-height: auto !important;
+}
+
+.cover-content.pdf-optimized {
+    min-height: 500px !important;
+    justify-content: space-around !important;
+}
+
+/* Ajustes para el interior en PDF */
+.passport-interior.pdf-optimized {
+    padding: 25px 20px !important;
+}
+
+/* Header con foto optimizado para PDF */
+.interior-header-with-photo.pdf-optimized {
+    gap: 20px !important;
+    padding-bottom: 15px !important;
+}
+
+/* Mejoras en la foto para PDF */
+.photo-container.pdf-optimized {
+    width: 120px !important;
+    height: 150px !important;
+}
+
+/* Ajustes de texto para mejor legibilidad en PDF */
+.data-value.pdf-optimized {
+    font-size: 0.9em !important;
+}
+
+.header-value.pdf-optimized {
+    font-size: 1.1em !important;
+}
+
+/* Bandera más compacta para PDF */
+.flag-container.pdf-optimized {
+    margin-bottom: 10px !important;
+}
+
+.passport-flag.pdf-optimized {
+    height: 60px !important;
+}
+
+/* MRZ más compacto */
+.mrz-container.pdf-optimized {
+    padding: 8px 10px !important;
+}
+
+.mrz-line.pdf-optimized {
+    font-size: 0.65em !important;
+    line-height: 1.4 !important;
+}

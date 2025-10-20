@@ -1,0 +1,443 @@
+/* === VARIABLES Y ESTILOS GLOBALES MEJORADOS === */
+    :root {
+      --negro: #000000;
+      --rojo: #DD0000;
+      --dorado: #FFCC00;
+      --gris-claro: #F5F5F5;
+      --gris-oscuro: #3B3B3B;
+      --blanco: #FFFFFF;
+      --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --sombra-media: 0 6px 18px rgba(0, 0, 0, 0.15);
+      --sombra-fuerte: 0 8px 24px rgba(0, 0, 0, 0.2);
+      --transicion-rapida: all 0.2s ease;
+      --transicion-media: all 0.3s ease;
+      --transicion-lenta: all 0.5s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background: linear-gradient(
+          to bottom,
+          var(--negro) 0%,
+          var(--negro) 25%,
+          var(--rojo) 25%,
+          var(--rojo) 50%,
+          var(--dorado) 50%,
+          var(--dorado) 75%,
+          var(--gris-claro) 75%,
+          var(--gris-claro) 100%
+      );
+      background-size: 100% 400%;
+      animation: banderaMovimiento 15s ease-in-out infinite;
+    }
+
+    @keyframes banderaMovimiento {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 0% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* === ENCABEZADO MEJORADO === */
+    header {
+      background: linear-gradient(135deg, 
+          rgba(0, 0, 0, 0.9) 0%, 
+          rgba(221, 0, 0, 0.85) 50%, 
+          rgba(255, 204, 0, 0.8) 100%),
+          url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="germanPattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="10" fill="black"/><rect y="10" width="30" height="10" fill="red"/><rect y="20" width="30" height="10" fill="gold"/></pattern></defs><rect width="100" height="100" fill="url(%23germanPattern)" opacity="0.1"/></svg>');
+      color: white;
+      text-align: center;
+      padding: 4rem 0 6rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+          radial-gradient(circle at 20% 80%, rgba(255, 204, 0, 0.2) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(221, 0, 0, 0.2) 0%, transparent 50%),
+          radial-gradient(circle at 40% 40%, rgba(0, 0, 0, 0.2) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    header .container {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 
+          3px 3px 0 rgba(0, 0, 0, 0.3),
+          6px 6px 0 rgba(221, 0, 0, 0.2);
+      background: linear-gradient(135deg, #ffffff 0%, #ffcc00 50%, #ffffff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: tituloBrillo 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes tituloBrillo {
+      0% {
+          text-shadow: 
+              3px 3px 0 rgba(0, 0, 0, 0.3),
+              6px 6px 0 rgba(221, 0, 0, 0.2);
+      }
+      100% {
+          text-shadow: 
+              3px 3px 0 rgba(0, 0, 0, 0.3),
+              6px 6px 0 rgba(221, 0, 0, 0.2),
+              9px 9px 20px rgba(255, 204, 0, 0.3);
+      }
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      line-height: 1.5;
+    }
+
+    .pasaporte-btn-header {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--negro), var(--rojo));
+      color: var(--blanco);
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: var(--sombra-media);
+      transition: var(--transicion-media);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .pasaporte-btn-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: var(--transicion-lenta);
+      z-index: -1;
+    }
+
+    .pasaporte-btn-header:hover::before {
+      left: 100%;
+    }
+
+    .pasaporte-btn-header:hover {
+      background: linear-gradient(135deg, var(--rojo), var(--dorado));
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .header-wave svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 70px;
+    }
+
+    .header-wave .shape-fill {
+      fill: #FFFFFF;
+    }
+
+    /* === BARRA DE NAVEGACIÓN MEJORADA === */
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      border-bottom: none;
+      background: linear-gradient(90deg, var(--negro), var(--gris-oscuro), var(--dorado));
+      box-shadow: var(--sombra-media);
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nav-tabs::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--negro), var(--rojo), var(--dorado));
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      padding: 1.2rem 1.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--blanco);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      transition: var(--transicion-media);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .tab-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: var(--transicion-lenta);
+      z-index: -1;
+    }
+
+    .tab-btn:hover::before {
+      left: 100%;
+    }
+
+    .tab-btn:hover {
+      background: rgba(255, 204, 0, 0.15);
+      color: var(--dorado);
+      box-shadow: inset 0 -3px 0 var(--dorado);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(90deg, var(--negro), var(--rojo));
+      color: var(--blanco);
+      box-shadow: inset 0 -3px 0 var(--dorado);
+    }
+
+    /* === CONTENIDO MEJORADO === */
+    .tab-content {
+      display: none;
+      padding: 2.5rem;
+      background-color: var(--blanco);
+      border-radius: 12px;
+      box-shadow: var(--sombra-suave);
+      margin-bottom: 2rem;
+      transition: var(--transicion-media);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .tab-content h2 {
+      color: var(--rojo);
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--dorado);
+      padding-bottom: 0.5rem;
+      font-size: 1.8rem;
+      position: relative;
+    }
+
+    .tab-content h2::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--negro);
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .food-category, .clothing-category, .music-category, 
+    .culture-category, .festival-category, .phrases-category, 
+    .person-category {
+      background-color: var(--blanco);
+      border-radius: 10px;
+      padding: 1.8rem;
+      box-shadow: var(--sombra-suave);
+      border-left: 6px solid var(--rojo);
+      transition: var(--transicion-media);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .food-category::before, .clothing-category::before, .music-category::before, 
+    .culture-category::before, .festival-category::before, .phrases-category::before, 
+    .person-category::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--negro), var(--rojo), var(--dorado));
+    }
+
+    .food-category:hover, .clothing-category:hover, .music-category:hover, 
+    .culture-category:hover, .festival-category:hover, .phrases-category:hover, 
+    .person-category:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--sombra-media);
+    }
+
+    .food-category h3, .clothing-category h3, .music-category h3, 
+    .culture-category h3, .festival-category h3, .phrases-category h3, 
+    .person-category h3 {
+      color: var(--negro);
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .food-category ul, .clothing-category ul, .music-category ul, 
+    .culture-category ul, .festival-category ul, .phrases-category ul, 
+    .person-category ul {
+      padding-left: 1.5rem;
+    }
+
+    .food-category li, .clothing-category li, .music-category li, 
+    .culture-category li, .festival-category li, .phrases-category li, 
+    .person-category li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .food-category li::before, .clothing-category li::before, .music-category li::before, 
+    .culture-category li::before, .festival-category li::before, .phrases-category li::before, 
+    .person-category li::before {
+      content: "•";
+      color: var(--rojo);
+      font-weight: bold;
+      position: absolute;
+      left: -1rem;
+    }
+
+    .food-category b, .clothing-category b, .music-category b, 
+    .culture-category b, .festival-category b, .phrases-category b, 
+    .person-category b {
+      color: var(--rojo);
+    }
+
+    /* === PIE DE PÁGINA MEJORADO === */
+    footer {
+      text-align: center;
+      padding: 2.5rem 0;
+      margin-top: 3rem;
+      background: linear-gradient(135deg, var(--negro), var(--gris-oscuro));
+      color: var(--blanco);
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--negro), var(--rojo), var(--dorado));
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* === RESPONSIVE DESIGN === */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      
+      header p {
+        font-size: 1.1rem;
+      }
+      
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .nav-tabs {
+        flex-direction: column;
+      }
+      
+      .tab-btn {
+        width: 100%;
+      }
+      
+      .tab-content {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      header {
+        padding: 2.5rem 0 4rem;
+      }
+      
+      .tab-content {
+        padding: 1rem;
+      }
+    }

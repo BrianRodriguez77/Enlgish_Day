@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Switzerland: Heart of Europe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Assets/css/suiza.css">
+  <link rel="stylesheet" href="../Assets/css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Floating Buttons -->
+  <div class="floating-buttons">
+    <button class="float-btn menu-btn" onclick="window.location.href='../index.html'">
+      ← <span id="menuText">Menu</span>
+    </button>
+    <button class="float-btn lang-btn" id="langBtn" onclick="toggleLanguage()">
+      <span id="flagIcon">🇺🇸</span>
+      <span id="langText">English</span>
+    </button>
+    <a href="../Pasaporte/Login.php">
+        <button class="float-btn">
+            <span id="passportText">Passport</span>
+        </button>
+    </a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="swiss-cross"></div>
+      <h1 id="mainTitle">SWITZERLAND</h1>
+      <p class="hero-subtitle" id="heroSubtitle">Heart of Europe • Land of Precision & Beauty</p>
+      <div class="hero-badges">
+        <div class="hero-badge">🏔️ <span id="badge1">Alpine Paradise</span></div>
+        <div class="hero-badge">🕰️ <span id="badge2">Precision & Quality</span></div>
+        <div class="hero-badge">🏦 <span id="badge3">Financial Hub</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Overview Section -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon">🇨🇭</span> <span id="titleOverview">Overview</span></h2>
+      
+      <div class="facts-grid">
+        <div class="fact-card">
+          <strong id="factPop">Population (2025)</strong>
+          <p id="factPopText">8.9 million inhabitants living in one of the world's most prosperous and peaceful nations, known for exceptional quality of life.</p>
+        </div>
+        <div class="fact-card">
+          <strong id="factLoc">Location</strong>
+          <p id="factLocText">Central Europe, landlocked between France, Germany, Italy, Austria, and Liechtenstein. 60% covered by the majestic Alps.</p>
+        </div>
+        <div class="fact-card">
+          <strong id="factCap">Capital & Cities</strong>
+          <p id="factCapText">Bern (capital). Major cities: Zürich, Geneva, Basel, Lausanne, Lucerne.</p>
+        </div>
+        <div class="fact-card">
+          <strong id="factLang">Languages</strong>
+          <p id="factLangText">Four official languages: German (62%), French (23%), Italian (8%), Romansh (0.5%). Multilingualism is a cornerstone of Swiss identity.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3 id="highlightTitle1">Direct Democracy Pioneer</h3>
+        <p id="highlightText1">Switzerland practices one of the world's most advanced forms of direct democracy, where citizens vote on national issues 4 times per year. Neutrality since 1815 has made it a global hub for diplomacy and peace.</p>
+      </div>
+    </section>
+
+    <!-- Cantons Section -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon">🏔️</span> <span id="titleCantons">26 Cantons</span></h2>
+      
+      <div class="highlight-box" style="background: linear-gradient(135deg, var(--swiss-red) 0%, #990000 100%);">
+        <h3 id="cantonsTitle">Federal Structure</h3>
+        <p id="cantonsText">Switzerland is a confederation of 26 cantons, each with its own constitution, parliament, and government. This unique federal system ensures strong regional autonomy while maintaining national unity.</p>
+      </div>
+
+      <div class="cantons-grid">
+        <div class="canton-card">
+          <span class="icon">🏛️</span>
+          <div class="name">Zürich</div>
+        </div>
+        <div class="canton-card">
+          <span class="icon">🌐</span>
+          <div class="name">Geneva</div>
+        </div>
+        <div class="canton-card">
+          <span class="icon">🎨</span>
+          <div class="name">Basel</div>
+        </div>
+        <div class="canton-card">
+          <span class="icon">🏛️</span>
+          <div class="name">Bern</div>
+        </div>
+        <div class="canton-card">
+          <span class="icon">🏔️</span>
+          <div class="name">Valais</div>
+        </div>
+        <div class="canton-card">
+          <span class="icon">⛷️</span>
+          <div class="name">Graubünden</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nature & Tourism -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon">🏔️</span> <span id="titleNature">Alpine Majesty</span></h2>
+      
+      <div class="split-layout">
+        <div class="split-content">
+          <h3 id="alpsTitle">The Swiss Alps</h3>
+          <p id="alpsText1">Home to 48 peaks over 4,000 meters, including the iconic Matterhorn (4,478m) and Jungfrau. The Alps cover 60% of Switzerland's territory.</p>
+          <p id="alpsText2">World-class ski resorts like Zermatt, St. Moritz, and Verbier attract millions of visitors annually for winter sports and summer hiking.</p>
+        </div>
+        <div class="split-image">⛰️</div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="number">1,500+</span>
+          <span class="label" id="stat1">Lakes</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">48</span>
+          <span class="label" id="stat2">Peaks Over 4000m</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">65,000</span>
+          <span class="label" id="stat3">km of Hiking Trails</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">7</span>
+          <span class="label" id="stat4">UNESCO Sites</span>
+        </div>
+      </div>
+
+      <div class="split-layout" style="margin-top: 70px;">
+        <div class="split-image">🚂</div>
+        <div class="split-content">
+          <h3 id="railTitle">Scenic Railways</h3>
+          <ul class="icon-list">
+            <li id="rail1">Glacier Express — "Slowest express train" through the Alps</li>
+            <li id="rail2">Bernina Express — UNESCO World Heritage route</li>
+            <li id="rail3">GoldenPass Line — Montreux to Lucerne panoramic journey</li>
+            <li id="rail4">Jungfrau Railway — Highest railway station in Europe (3,454m)</li>
+            <li id="rail5">Gornergrat Railway — Views of the Matterhorn</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Economy & Innovation -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon">💰</span> <span id="titleEconomy">Economy & Innovation</span></h2>
+      
+      <div class="split-layout">
+        <div class="split-content">
+          <h3 id="ecoTitle">Global Excellence</h3>
+          <p id="ecoText1">Switzerland boasts one of the world's highest GDP per capita ($92,000+ USD), ranking among the most competitive and innovative economies globally.</p>
+          <ul class="icon-list" style="margin-top: 30px;">
+            <li id="eco1">Banking & Finance — Zürich and Geneva are global financial centers</li>
+            <li id="eco2">Pharmaceuticals — Novartis, Roche leading healthcare innovation</li>
+            <li id="eco3">Luxury Watches — Rolex, Patek Philippe, Omega</li>
+            <li id="eco4">Precision Manufacturing — World-renowned quality</li>
+            <li id="eco5">Innovation Hub — Top 3 in Global Innovation Index</li>
+          </ul>
+        </div>
+        <div class="split-image">🏦</div>
+      </div>
+
+      <div class="highlight-box">
+        <h3 id="qualityTitle">Swiss Quality</h3>
+        <p id="qualityText">The "Swiss Made" label represents excellence worldwide. From chocolate (Lindt, Toblerone) to precision instruments, Swiss products set global standards for quality and craftsmanship.</p>
+      </div>
+    </section>
+
+    <!-- Culture & Lifestyle -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon">🎭</span> <span id="titleCulture">Culture & Lifestyle</span></h2>
+      
+      <div class="split-layout">
+        <div class="split-image">🧀</div>
+        <div class="split-content">
+          <h3 id="cultureTitle">Swiss Traditions</h3>
+          <ul class="icon-list">
+            <li id="cult1">Fondue & Raclette — Iconic cheese dishes</li>
+            <li id="cult2">Swiss Chocolate — World's finest, 11kg consumed per person/year</li>
+            <li id="cult3">Yodeling — Traditional Alpine singing</li>
+            <li id="cult4">Swiss Watch Craftsmanship — Centuries of precision</li>
+            <li id="cult5">Neutrality — Peaceful diplomacy since 1815</li>
+            <li id="cult6">Multilingualism — 4 languages, 26 dialects</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stats-bar" style="margin-top: 70px;">
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--alpine-blue), #004d8c);">
+          <span class="number">#1</span>
+          <span class="label" id="cultStat1">Quality of Life</span>
+        </div>
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--gold), #b8860b);">
+          <span class="number">#2</span>
+          <span class="label" id="cultStat2">Most Innovative</span>
+        </div>
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--chocolate-brown), #2d1508);">
+          <span class="number">210</span>
+          <span class="label" id="cultStat3">Years of Neutrality</span>
+        </div>
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--mountain-gray), #4a5568);">
+          <span class="number">4</span>
+          <span class="label" id="cultStat4">Official Languages</span>
+        </div>
+      </div>
+
+      <div class="highlight-box" style="background: linear-gradient(135deg, var(--chocolate-brown) 0%, #1a0d06 100%);">
+        <h3 id="lifeTitle">Exceptional Living</h3>
+        <p id="lifeText">Switzerland consistently ranks #1 globally for quality of life, combining political stability, excellent healthcare, pristine environment, and unmatched safety. Cities like Zürich and Geneva are among the world's most liveable.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong id="footerTitle">Made with Swiss Precision & Alpine Spirit</strong></p>
+    <p id="footerCopy">© 2025 ADSO. All rights reserved. | Center for Agroindustrial Innovation</p>
+  </footer>
+
+  <script>
+    let currentLang = 'en';
+
+    const translations = {
+      en: {
+        menuText: 'Menu',
+        flagIcon: '🇺🇸',
+        langText: 'English',
+        passportText: 'Passport',
+        mainTitle: 'SWITZERLAND',
+        heroSubtitle: 'Heart of Europe • Land of Precision & Beauty',
+        badge1: 'Alpine Paradise',
+        badge2: 'Precision & Quality',
+        badge3: 'Financial Hub',
+        titleOverview: 'Overview',
+        factPop: 'Population (2025)',
+        factPopText: '8.9 million inhabitants living in one of the world\'s most prosperous and peaceful nations, known for exceptional quality of life.',
+        factLoc: 'Location',
+        factLocText: 'Central Europe, landlocked between France, Germany, Italy, Austria, and Liechtenstein. 60% covered by the majestic Alps.',
+        factCap: 'Capital & Cities',
+        factCapText: 'Bern (capital). Major cities: Zürich, Geneva, Basel, Lausanne, Lucerne.',
+        factLang: 'Languages',
+        factLangText: 'Four official languages: German (62%), French (23%), Italian (8%), Romansh (0.5%). Multilingualism is a cornerstone of Swiss identity.',
+        highlightTitle1: 'Direct Democracy Pioneer',
+        highlightText1: 'Switzerland practices one of the world\'s most advanced forms of direct democracy, where citizens vote on national issues 4 times per year. Neutrality since 1815 has made it a global hub for diplomacy and peace.',
+        titleCantons: '26 Cantons',
+        cantonsTitle: 'Federal Structure',
+        cantonsText: 'Switzerland is a confederation of 26 cantons, each with its own constitution, parliament, and government. This unique federal system ensures strong regional autonomy while maintaining national unity.',
+        titleNature: 'Alpine Majesty',
+        alpsTitle: 'The Swiss Alps',
+        alpsText1: 'Home to 48 peaks over 4,000 meters, including the iconic Matterhorn (4,478m) and Jungfrau. The Alps cover 60% of Switzerland\'s territory.',
+        alpsText2: 'World-class ski resorts like Zermatt, St. Moritz, and Verbier attract millions of visitors annually for winter sports and summer hiking.',
+        stat1: 'Lakes',
+        stat2: 'Peaks Over 4000m',
+        stat3: 'km of Hiking Trails',
+        stat4: 'UNESCO Sites',
+        railTitle: 'Scenic Railways',
+        rail1: 'Glacier Express — "Slowest express train" through the Alps',
+        rail2: 'Bernina Express — UNESCO World Heritage route',
+        rail3: 'GoldenPass Line — Montreux to Lucerne panoramic journey',
+        rail4: 'Jungfrau Railway — Highest railway station in Europe (3,454m)',
+        rail5: 'Gornergrat Railway — Views of the Matterhorn',
+        titleEconomy: 'Economy & Innovation',
+        ecoTitle: 'Global Excellence',
+        ecoText1: 'Switzerland boasts one of the world\'s highest GDP per capita ($92,000+ USD), ranking among the most competitive and innovative economies globally.',
+        eco1: 'Banking & Finance — Zürich and Geneva are global financial centers',
+        eco2: 'Pharmaceuticals — Novartis, Roche leading healthcare innovation',
+        eco3: 'Luxury Watches — Rolex, Patek Philippe, Omega',
+        eco4: 'Precision Manufacturing — World-renowned quality',
+        eco5: 'Innovation Hub — Top 3 in Global Innovation Index',
+        qualityTitle: 'Swiss Quality',
+        qualityText: 'The "Swiss Made" label represents excellence worldwide. From chocolate (Lindt, Toblerone) to precision instruments, Swiss products set global standards for quality and craftsmanship.',
+        titleCulture: 'Culture & Lifestyle',
+        cultureTitle: 'Swiss Traditions',
+        cult1: 'Fondue & Raclette — Iconic cheese dishes',
+        cult2: 'Swiss Chocolate — World\'s finest, 11kg consumed per person/year',
+        cult3: 'Yodeling — Traditional Alpine singing',
+        cult4: 'Swiss Watch Craftsmanship — Centuries of precision',
+        cult5: 'Neutrality — Peaceful diplomacy since 1815',
+        cult6: 'Multilingualism — 4 languages, 26 dialects',
+        cultStat1: 'Quality of Life',
+        cultStat2: 'Most Innovative',
+        cultStat3: 'Years of Neutrality',
+        cultStat4: 'Official Languages',
+        lifeTitle: 'Exceptional Living',
+        lifeText: 'Switzerland consistently ranks #1 globally for quality of life, combining political stability, excellent healthcare, pristine environment, and unmatched safety. Cities like Zürich and Geneva are among the world\'s most liveable.',
+        footerTitle: 'Made with Swiss Precision & Alpine Spirit',
+        footerCopy: '© 2025 | Where Excellence Meets Tradition'
+      },
+      es: {
+        menuText: 'Menú',
+        flagIcon: '🇪🇸',
+        langText: 'Español',
+        passportText: 'Pasaporte',
+        mainTitle: 'SUIZA',
+        heroSubtitle: 'Corazón de Europa • Tierra de Precisión y Belleza',
+        badge1: 'Paraíso Alpino',
+        badge2: 'Precisión y Calidad',
+        badge3: 'Centro Financiero',
+        titleOverview: 'Descripción General',
+        factPop: 'Población (2025)',
+        factPopText: '8.9 millones de habitantes viviendo en una de las naciones más prósperas y pacíficas del mundo, conocida por su excepcional calidad de vida.',
+        factLoc: 'Ubicación',
+        factLocText: 'Europa Central, sin salida al mar entre Francia, Alemania, Italia, Austria y Liechtenstein. 60% cubierto por los majestuosos Alpes.',
+        factCap: 'Capital y Ciudades',
+        factCapText: 'Berna (capital). Ciudades principales: Zúrich, Ginebra, Basilea, Lausana, Lucerna.',
+        factLang: 'Idiomas',
+        factLangText: 'Cuatro idiomas oficiales: Alemán (62%), Francés (23%), Italiano (8%), Romanche (0.5%). El multilingüismo es piedra angular de la identidad suiza.',
+        highlightTitle1: 'Pionera de la Democracia Directa',
+        highlightText1: 'Suiza practica una de las formas más avanzadas de democracia directa del mundo, donde los ciudadanos votan sobre asuntos nacionales 4 veces al año. La neutralidad desde 1815 la ha convertido en centro global de diplomacia y paz.',
+        titleCantons: '26 Cantones',
+        cantonsTitle: 'Estructura Federal',
+        cantonsText: 'Suiza es una confederación de 26 cantones, cada uno con su propia constitución, parlamento y gobierno. Este sistema federal único garantiza una fuerte autonomía regional manteniendo la unidad nacional.',
+        titleNature: 'Majestuosidad Alpina',
+        alpsTitle: 'Los Alpes Suizos',
+        alpsText1: 'Hogar de 48 picos de más de 4,000 metros, incluyendo el icónico Matterhorn (4,478m) y el Jungfrau. Los Alpes cubren el 60% del territorio suizo.',
+        alpsText2: 'Estaciones de esquí de clase mundial como Zermatt, St. Moritz y Verbier atraen millones de visitantes anualmente para deportes de invierno y senderismo de verano.',
+        stat1: 'Lagos',
+        stat2: 'Picos Sobre 4000m',
+        stat3: 'km de Rutas de Senderismo',
+        stat4: 'Sitios UNESCO',
+        railTitle: 'Ferrocarriles Panorámicos',
+        rail1: 'Glacier Express — "Tren expreso más lento" a través de los Alpes',
+        rail2: 'Bernina Express — Ruta Patrimonio Mundial UNESCO',
+        rail3: 'GoldenPass Line — Viaje panorámico Montreux a Lucerna',
+        rail4: 'Jungfrau Railway — Estación de tren más alta de Europa (3,454m)',
+        rail5: 'Gornergrat Railway — Vistas del Matterhorn',
+        titleEconomy: 'Economía e Innovación',
+        ecoTitle: 'Excelencia Global',
+        ecoText1: 'Suiza cuenta con uno de los PIB per cápita más altos del mundo ($92,000+ USD), clasificándose entre las economías más competitivas e innovadoras a nivel mundial.',
+        eco1: 'Banca y Finanzas — Zúrich y Ginebra son centros financieros globales',
+        eco2: 'Farmacéutica — Novartis, Roche liderando innovación en salud',
+        eco3: 'Relojes de Lujo — Rolex, Patek Philippe, Omega',
+        eco4: 'Manufactura de Precisión — Calidad reconocida mundialmente',
+        eco5: 'Centro de Innovación — Top 3 en Índice Global de Innovación',
+        qualityTitle: 'Calidad Suiza',
+        qualityText: 'La etiqueta "Swiss Made" representa excelencia mundial. Desde chocolate (Lindt, Toblerone) hasta instrumentos de precisión, los productos suizos establecen estándares globales de calidad y artesanía.',
+        titleCulture: 'Cultura y Estilo de Vida',
+        cultureTitle: 'Tradiciones Suizas',
+        cult1: 'Fondue y Raclette — Platos icónicos de queso',
+        cult2: 'Chocolate Suizo — El mejor del mundo, 11kg consumidos por persona/año',
+        cult3: 'Yodeling — Canto tradicional alpino',
+        cult4: 'Artesanía Relojera Suiza — Siglos de precisión',
+        cult5: 'Neutralidad — Diplomacia pacífica desde 1815',
+        cult6: 'Multilingüismo — 4 idiomas, 26 dialectos',
+        cultStat1: 'Calidad de Vida',
+        cultStat2: 'Más Innovador',
+        cultStat3: 'Años de Neutralidad',
+        cultStat4: 'Idiomas Oficiales',
+        lifeTitle: 'Vida Excepcional',
+        lifeText: 'Suiza se clasifica consistentemente #1 globalmente en calidad de vida, combinando estabilidad política, excelente atención médica, medio ambiente prístino y seguridad inigualable. Ciudades como Zúrich y Ginebra están entre las más habitables del mundo.',
+        footerTitle: 'Hecho con Precisión Suiza y Espíritu Alpino',
+        footerCopy: '© 2025 ADSO. Todos los derechos reservados. | Centro de la Innovación Agroindustrial'
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      updateContent();
+    }
+
+    function updateContent() {
+      const t = translations[currentLang];
+      
+      Object.keys(t).forEach(key => {
+        const element = document.getElementById(key);
+        if (element) {
+          element.textContent = t[key];
+        }
+      });
+    }
+  </script>
+</body>
+</html>

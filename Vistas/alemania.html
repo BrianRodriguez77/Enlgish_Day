@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALEMANIA - Tierra de Innovación y Tradición</title>
+  <link rel="stylesheet" href="../Assets/css/alemania.css">
+  <link rel="stylesheet" href="../Assets/css/responsive.css">
+  <style>
+    /* === ESTILO PARA BOTÓN FLOTANTE DE IDIOMA === */
+    .language-floating-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #000000, #dd0000, #ffcc00);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 20px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Arial', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .language-floating-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(135deg, #dd0000, #ffcc00, #000000);
+    }
+
+    .language-floating-btn:active {
+      transform: translateY(-1px);
+    }
+
+    .language-icon {
+      font-size: 1.1rem;
+    }
+
+    /* Responsive para el botón flotante */
+    @media (max-width: 768px) {
+      .language-floating-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 16px;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .language-floating-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 14px;
+        font-size: 0.75rem;
+      }
+      
+      .language-icon {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Botón flotante de idioma -->
+  <button class="language-floating-btn" id="languageToggle">
+    <span class="language-icon">🌐</span>
+    <span id="languageText">EN</span>
+  </button>
+
+  <header>
+    <div class="container">
+      <h1 data-translate="header_title">ALEMANIA</h1>
+      <p data-translate="header_subtitle">Descubre las tradiciones, gastronomía y costumbres de la tierra de innovación y tradición</p>
+      <div class="header-buttons">
+        <a href="../index.html" class="pasaporte-btn-header" data-translate="menu_button">
+          Volver al menú
+        </a>
+        <a href="../Pasaporte/Login.php" class="pasaporte-btn-header" data-translate="passport_button">
+          Obtener Pasaporte
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="nav-tabs">
+      <button class="tab-btn active" data-tab="gastronomia" data-translate="tab_gastronomy">Gastronomía</button>
+      <button class="tab-btn" data-tab="vestimenta" data-translate="tab_clothing">Vestimenta</button>
+      <button class="tab-btn" data-tab="musica" data-translate="tab_music">Música y Danzas</button>
+      <button class="tab-btn" data-tab="cultura" data-translate="tab_culture">Cultura</button>
+      <button class="tab-btn" data-tab="festivales" data-translate="tab_festivals">Festivales</button>
+      <button class="tab-btn" data-tab="frases" data-translate="tab_phrases">Frases Típicas</button>
+      <button class="tab-btn" data-tab="personajes" data-translate="tab_personalities">Personajes Relevantes</button>
+    </div>
+
+    <!-- GASTRONOMÍA -->
+    <div id="gastronomia" class="tab-content active">
+      <h2 data-translate="gastronomy_title">Gastronomía Alemana</h2>
+      <div class="content-grid">
+        <div class="food-category">
+          <h3 data-translate="main_dishes">Platos Principales</h3>
+          <ul>
+            <li><b data-translate="sauerbraten">Sauerbraten:</b> <span data-translate="sauerbraten_desc">Asado marinado durante días en vinagre, vino y especias, servido con salsa espesa y klöße (bolas de papa)</span></li>
+            <li><b data-translate="currywurst">Currywurst:</b> <span data-translate="currywurst_desc">Salchicha cocida o frita cortada en rodajas y condimentada con salsa de curry ketchup</span></li>
+            <li><b data-translate="rouladen">Rouladen:</b> <span data-translate="rouladen_desc">Rebanadas de carne de res rellenas de cebolla, tocino y pepinillos, enrolladas y cocinadas</span></li>
+            <li><b data-translate="klopse">Königsberger Klopse:</b> <span data-translate="klopse_desc">Albóndigas de carne en salsa de alcaparras con limón</span></li>
+          </ul>
+        </div>
+        
+        <div class="food-category">
+          <h3 data-translate="regional_specialties">Especialidades Regionales</h3>
+          <ul>
+            <li><b data-translate="bavaria">Baviera:</b> <span data-translate="bavaria_desc">Weisswurst (salchicha blanca), Obatzda (untable de queso)</span></li>
+            <li><b data-translate="baden">Baden-Württemberg:</b> <span data-translate="baden_desc">Maultaschen (ravioles rellenos de carne)</span></li>
+            <li><b data-translate="rhineland">Renania:</b> <span data-translate="rhineland_desc">Sauerbraten con pasas</span></li>
+            <li><b data-translate="hamburg">Hamburgo:</b> <span data-translate="hamburg_desc">Labskaus (estofado de carne en conserva con remolacha)</span></li>
+          </ul>
+        </div>
+        
+        <div class="food-category">
+          <h3 data-translate="bakery_desserts">Panadería y Postres</h3>
+          <ul>
+            <li><b data-translate="pretzel">Pretzel (Brezel):</b> <span data-translate="pretzel_desc">Pan horneado con forma de lazo, salado o dulce</span></li>
+            <li><b data-translate="blackforest">Schwarzwälder Kirschtorte:</b> <span data-translate="blackforest_desc">Tarta de la Selva Negra con cerezas y kirsch</span></li>
+            <li><b data-translate="strudel">Apfelstrudel:</b> <span data-translate="strudel_desc">Pastel de manzana enrollado con masa filo</span></li>
+            <li><b data-translate="stollen">Stollen:</b> <span data-translate="stollen_desc">Pan dulce navideño con frutas confitadas</span></li>
+          </ul>
+        </div>
+        
+        <div class="food-category">
+          <h3 data-translate="traditional_drinks">Bebidas Tradicionales</h3>
+          <ul>
+            <li><b data-translate="beer">Cerveza:</b> <span data-translate="beer_desc">Alemania tiene más de 1,300 cervecerías y 5,000 marcas</span></li>
+            <li><b data-translate="wine">Vino:</b> <span data-translate="wine_desc">Regiones del Rin, Mosela y Baden producen vinos blancos excelentes</span></li>
+            <li><b data-translate="schnaps">Schnaps:</b> <span data-translate="schnaps_desc">Aguardientes de frutas como kirsch y obstler</span></li>
+            <li><b data-translate="gluhwein">Glühwein:</b> <span data-translate="gluhwein_desc">Vino caliente especiado para mercados navideños</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- VESTIMENTA -->
+    <div id="vestimenta" class="tab-content">
+      <h2 data-translate="clothing_title">Vestimenta Tradicional Alemana</h2>
+      <div class="content-grid">
+        <div class="clothing-category">
+          <h3 data-translate="regional_costumes">Trajes Regionales</h3>
+          <ul>
+            <li><b data-translate="dirndl">Dirndl:</b> <span data-translate="dirndl_desc">Vestido tradicional femenino con corpiño, blusa, falda amplia y delantal</span></li>
+            <li><b data-translate="lederhosen">Lederhosen:</b> <span data-translate="lederhosen_desc">Pantalones de cuero para hombres, típicos de Baviera y Austria</span></li>
+            <li><b data-translate="tracht">Tracht:</b> <span data-translate="tracht_desc">Término general para la vestimenta tradicional alemana</span></li>
+            <li><b data-translate="gamsbart">Gamsbart:</b> <span data-translate="gamsbart_desc">Adorno de pelo de cabra montés para sombreros tiroleses</span></li>
+          </ul>
+        </div>
+        
+        <div class="clothing-category">
+          <h3 data-translate="dirndl_meaning">Significado del Dirndl</h3>
+          <p data-translate="dirndl_meaning_desc">La posición del lazo del delantal indica el estado civil:</p>
+          <ul>
+            <li data-translate="single_side">Lado izquierdo: Soltera</li>
+            <li data-translate="married_side">Lado derecho: Casada o comprometida</li>
+            <li data-translate="virgin_side">Al centro frontal: Virgen</li>
+            <li data-translate="widow_side">Al centro trasero: Viuda</li>
+          </ul>
+        </div>
+        
+        <div class="clothing-category">
+          <h3 data-translate="traditional_accessories">Accesorios Tradicionales</h3>
+          <ul>
+            <li data-translate="haferlschuh">Haferlschuh: Zapatos característicos</li>
+            <li data-translate="wadlstrumpf">Wadlstrumpf: Medias largas de lana</li>
+            <li data-translate="tirolerhut">Tirolerhut: Sombrero tiroles con adornos</li>
+            <li data-translate="charivari">Charivari: Cadena decorativa para lederhosen</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MÚSICA Y DANZAS -->
+    <div id="musica" class="tab-content">
+      <h2 data-translate="music_title">Música y Danzas Alemanas</h2>
+      <div class="content-grid">
+        <div class="music-category">
+          <h3 data-translate="classical_music">Música Clásica</h3>
+          <ul>
+            <li><b>Johann Sebastian Bach:</b> <span data-translate="bach_desc">Compositor barroco, obras maestras como el "Clave bien temperado"</span></li>
+            <li><b>Ludwig van Beethoven:</b> <span data-translate="beethoven_desc">Sinfonías revolucionarias como la 5ª y 9ª</span></li>
+            <li><b>Wolfgang Amadeus Mozart:</b> <span data-translate="mozart_desc">Aunque austriaco, gran parte de su carrera en Alemania</span></li>
+            <li><b>Richard Wagner:</b> <span data-translate="wagner_desc">Óperas épicas como "El anillo del nibelungo"</span></li>
+          </ul>
+        </div>
+        
+        <div class="music-category">
+          <h3 data-translate="traditional_dances">Danzas Tradicionales</h3>
+          <ul>
+            <li data-translate="schuhplattler">Schuhplattler: Danza bávara donde los hombres golpean sus zapatos y muslos</li>
+            <li data-translate="landler">Ländler: Danza folclórica precursora del vals</li>
+            <li data-translate="zwiefacher">Zwiefacher: Danza con cambios constantes de ritmo</li>
+            <li data-translate="polka">Polka: Popular en toda Alemania, especialmente en festivales</li>
+          </ul>
+        </div>
+        
+        <div class="music-category">
+          <h3 data-translate="contemporary_music">Música Contemporánea</h3>
+          <ul>
+            <li data-translate="kraftwerk">Kraftwerk: Pioneros de la música electrónica</li>
+            <li data-translate="rammstein">Rammstein: Bandas de metal industrial</li>
+            <li data-translate="techno">Techno: Berlín es capital mundial del techno</li>
+            <li data-translate="schlager">Schlager: Música pop alemana tradicional</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CULTURA -->
+    <div id="cultura" class="tab-content">
+      <h2 data-translate="culture_title">Cultura y Tradiciones Alemanas</h2>
+      <div class="content-grid">
+        <div class="culture-category">
+          <h3 data-translate="important_holidays">Festividades Importantes</h3>
+          <ul>
+            <li data-translate="oktoberfest">Oktoberfest: Festival de cerveza más grande del mundo en Múnich</li>
+            <li data-translate="karneval">Karneval: Celebración antes de la Cuaresma, especialmente en Colonia</li>
+            <li data-translate="christmas_markets">Weihnachtsmärkte: Mercados navideños tradicionales</li>
+            <li data-translate="unity_day">Día de la Unidad Alemana: 3 de octubre, celebración de la reunificación</li>
+          </ul>
+        </div>
+        
+        <div class="culture-category">
+          <h3 data-translate="social_customs">Costumbres Sociales</h3>
+          <ul>
+            <li data-translate="punctuality">Puntualidad: Valor altamente apreciado en la cultura alemana</li>
+            <li data-translate="recycling">Separación de residuos: Sistema avanzado de reciclaje</li>
+            <li data-translate="quiet_time">Ruhezeit: Horarios de silencio respetados (generalmente después de las 10 PM)</li>
+            <li data-translate="coffee_time">Kaffeeklatsch: Tradición de reunirse para café y pasteles por la tarde</li>
+          </ul>
+        </div>
+        
+        <div class="culture-category">
+          <h3 data-translate="architecture_art">Arquitectura y Arte</h3>
+          <ul>
+            <li data-translate="castles">Castillos: Neuschwanstein, Hohenzollern, Heidelberg</li>
+            <li data-translate="bauhaus">Bauhaus: Movimiento arquitectónico y de diseño influyente</li>
+            <li data-translate="gothic_cathedrals">Catedrales góticas: Colonia, Ulm, Estrasburgo</li>
+            <li data-translate="museums">Museos: Isla de los Museos en Berlín (Patrimonio de la Humanidad)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FESTIVALES -->
+    <div id="festivales" class="tab-content">
+      <h2 data-translate="festivals_title">Festivales y Celebraciones</h2>
+      <div class="content-grid">
+        <div class="festival-category">
+          <h3 data-translate="beer_festivals">Festivales de Cerveza</h3>
+          <ul>
+            <li data-translate="oktoberfest_munich">Oktoberfest (Múnich): 16 días desde finales de septiembre</li>
+            <li data-translate="volksfest">Canstatter Volksfest (Stuttgart): Segundo festival más grande</li>
+            <li data-translate="bergkirchweih">Bergkirchweih (Erlangen): Festival en un entorno de cuevas de cerveza</li>
+            <li data-translate="frühlingsfest">Frühlingsfest (Múnich): "Oktoberfest de primavera"</li>
+          </ul>
+        </div>
+        
+        <div class="festival-category">
+          <h3 data-translate="music_festivals">Festivales Musicales</h3>
+          <ul>
+            <li data-translate="rock_am_ring">Rock am Ring: Uno de los festivales de rock más grandes del mundo</li>
+            <li data-translate="wacken">Wacken Open Air: Festival de heavy metal más grande del mundo</li>
+            <li data-translate="fusion">Fusion Festival: Festival alternativo de música y arte</li>
+            <li data-translate="bayreuth">Bayreuth Festspiele: Festival dedicado a las óperas de Wagner</li>
+          </ul>
+        </div>
+        
+        <div class="festival-category">
+          <h3 data-translate="traditional_markets">Mercados Tradicionales</h3>
+          <ul>
+            <li data-translate="nuremberg_market">Christkindlesmarkt (Núremberg): Mercado navideño más famoso</li>
+            <li data-translate="dresden_market">Striezelmarkt (Dresde): Mercado navideño más antiguo (desde 1434)</li>
+            <li data-translate="leipzig_market">Leipziger Weihnachtsmarkt: Uno de los más grandes de Alemania</li>
+            <li data-translate="easter_markets">Mercados de Pascua: Tradición en toda Alemania durante la primavera</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRASES TÍPICAS -->
+    <div id="frases" class="tab-content">
+      <h2 data-translate="phrases_title">Frases y Expresiones Alemanas</h2>
+      <div class="content-grid">
+        <div class="phrases-category">
+          <h3 data-translate="greetings">Saludos y Cortesías</h3>
+          <ul>
+            <li data-translate="guten_morgen">Guten Morgen/Tag/Abend: Buenos días/tardes/noches</li>
+            <li data-translate="auf_wiedersehen">Auf Wiedersehen: Adiós (formal)</li>
+            <li data-translate="tschuss">Tschüss: Adiós (informal)</li>
+            <li data-translate="bitte_schon">Bitte schön: De nada / Por favor</li>
+            <li data-translate="entschuldigung">Entschuldigung: Disculpe / Lo siento</li>
+          </ul>
+        </div>
+        
+        <div class="phrases-category">
+          <h3 data-translate="useful_expressions">Expresiones Útiles</h3>
+          <ul>
+            <li data-translate="wie_gehts">Wie geht's?: ¿Cómo estás?</li>
+            <li data-translate="alles_klar">Alles klar?: ¿Todo bien?</li>
+            <li data-translate="vielen_dank">Vielen Dank: Muchas gracias</li>
+            <li data-translate="kein_problem">Kein Problem: No hay problema</li>
+            <li data-translate="prost">Prost!/Zum Wohl!: ¡Salud! (al brindar)</li>
+          </ul>
+        </div>
+        
+        <div class="phrases-category">
+          <h3 data-translate="colloquial_expressions">Expresiones Coloquiales</h3>
+          <ul>
+            <li data-translate="na">Na?: ¿Qué tal? (informal)</li>
+            <li data-translate="mahlzeit">Mahlzeit!: ¡Buen provecho! (también como saludo al mediodía)</li>
+            <li data-translate="geil">Geil!: ¡Genial! / ¡Increíble!</li>
+            <li data-translate="krass">Krass!: ¡Increíble! (positivo o negativo)</li>
+            <li data-translate="halt_maul">Halt's Maul!: ¡Cállate! (muy informal)</li>
+          </ul>
+        </div>
+        
+        <div class="phrases-category">
+          <h3 data-translate="compound_words">Palabras Compuestas Típicas</h3>
+          <ul>
+            <li data-translate="schadenfreude">Schadenfreude: Alegría por el mal ajeno</li>
+            <li data-translate="fernweh">Fernweh: Nostalgia por lugares no visitados</li>
+            <li data-translate="weltschmerz">Weltschmerz: Dolor por el estado del mundo</li>
+            <li data-translate="verschlimmbessern">Verschlimmbessern: Empeorar algo al intentar mejorarlo</li>
+            <li data-translate="kummerspeck">Kummerspeck: "Panceta de la pena" - peso ganado por estrés emocional</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERSONAJES RELEVANTES -->
+    <div id="personajes" class="tab-content">
+      <h2 data-translate="personalities_title">Personajes Relevantes Alemanes</h2>
+      <div class="content-grid">
+        <div class="person-category">
+          <h3 data-translate="science_innovation">Ciencia e Innovación</h3>
+          <ul>
+            <li data-translate="einstein">Albert Einstein: Físico teórico, teoría de la relatividad</li>
+            <li data-translate="von_braun">Wernher von Braun: Pionero de la cohetería</li>
+            <li data-translate="koch">Robert Koch: Descubridor del bacilo de la tuberculosis</li>
+            <li data-translate="benz">Karl Benz: Inventor del automóvil con motor de combustión</li>
+            <li data-translate="gutenberg">Johannes Gutenberg: Inventor de la imprenta de tipos móviles</li>
+          </ul>
+        </div>
+        
+        <div class="person-category">
+          <h3 data-translate="art_literature">Arte y Literatura</h3>
+          <ul>
+            <li data-translate="goethe">Johann Wolfgang von Goethe: Escritor, científico, "Fausto"</li>
+            <li data-translate="schiller">Friedrich Schiller: Poeta, dramaturgo, filósofo</li>
+            <li data-translate="mann">Thomas Mann: Novelista, Premio Nobel de Literatura</li>
+            <li data-translate="friedrich">Caspar David Friedrich: Pintor romántico</li>
+            <li data-translate="kiefer">Anselm Kiefer: Artista contemporáneo</li>
+          </ul>
+        </div>
+        
+        <div class="person-category">
+          <h3 data-translate="philosophy_thought">Filosofía y Pensamiento</h3>
+          <ul>
+            <li data-translate="kant">Immanuel Kant: Filósofo de la Ilustración</li>
+            <li data-translate="nietzsche">Friedrich Nietzsche: Filósofo, crítico cultural</li>
+            <li data-translate="marx">Karl Marx: Filósofo, economista, teórico socialista</li>
+            <li data-translate="heidegger">Martin Heidegger: Filósofo existencialista</li>
+            <li data-translate="arendt">Hannah Arendt: Teórica política</li>
+          </ul>
+        </div>
+        
+        <div class="person-category">
+          <h3 data-translate="politics_leadership">Política y Liderazgo</h3>
+          <ul>
+            <li data-translate="merkel">Angela Merkel: Canciller de Alemania (2005-2021)</li>
+            <li data-translate="adenauer">Konrad Adenauer: Primer canciller de la RFA</li>
+            <li data-translate="brandt">Willy Brandt: Canciller, Premio Nobel de la Paz</li>
+            <li data-translate="kohl">Helmut Kohl: Canciller durante la reunificación</li>
+            <li data-translate="bismarck">Otto von Bismarck: Unificador de Alemania</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p data-translate="footer_copyright">&copy; © 2025 ADSO. Todos los derechos reservados. | Centro de la Innovación Agroindustrial.</p>
+      <p data-translate="footer_about">Conoce más sobre la rica cultura e historia alemana</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sistema de traducción completo
+    const translations = {
+      es: {
+        // Header
+        "header_title": "ALEMANIA",
+        "header_subtitle": "Descubre las tradiciones, gastronomía y costumbres de la tierra de innovación y tradición",
+        "menu_button": "Volver al menú",
+        "passport_button": "Obtener Pasaporte",
+        
+        // Tabs
+        "tab_gastronomy": "Gastronomía",
+        "tab_clothing": "Vestimenta",
+        "tab_music": "Música y Danzas",
+        "tab_culture": "Cultura",
+        "tab_festivals": "Festivales",
+        "tab_phrases": "Frases Típicas",
+        "tab_personalities": "Personajes Relevantes",
+        
+        // Gastronomía
+        "gastronomy_title": "Gastronomía Alemana",
+        "main_dishes": "Platos Principales",
+        "sauerbraten": "Sauerbraten",
+        "sauerbraten_desc": "Asado marinado durante días en vinagre, vino y especias, servido con salsa espesa y klöße (bolas de papa)",
+        "currywurst": "Currywurst",
+        "currywurst_desc": "Salchicha cocida o frita cortada en rodajas y condimentada con salsa de curry ketchup",
+        "rouladen": "Rouladen",
+        "rouladen_desc": "Rebanadas de carne de res rellenas de cebolla, tocino y pepinillos, enrolladas y cocinadas",
+        "klopse": "Königsberger Klopse",
+        "klopse_desc": "Albóndigas de carne en salsa de alcaparras con limón",
+        
+        "regional_specialties": "Especialidades Regionales",
+        "bavaria": "Baviera",
+        "bavaria_desc": "Weisswurst (salchicha blanca), Obatzda (untable de queso)",
+        "baden": "Baden-Württemberg",
+        "baden_desc": "Maultaschen (ravioles rellenos de carne)",
+        "rhineland": "Renania",
+        "rhineland_desc": "Sauerbraten con pasas",
+        "hamburg": "Hamburgo",
+        "hamburg_desc": "Labskaus (estofado de carne en conserva con remolacha)",
+        
+        "bakery_desserts": "Panadería y Postres",
+        "pretzel": "Pretzel (Brezel)",
+        "pretzel_desc": "Pan horneado con forma de lazo, salado o dulce",
+        "blackforest": "Schwarzwälder Kirschtorte",
+        "blackforest_desc": "Tarta de la Selva Negra con cerezas y kirsch",
+        "strudel": "Apfelstrudel",
+        "strudel_desc": "Pastel de manzana enrollado con masa filo",
+        "stollen": "Stollen",
+        "stollen_desc": "Pan dulce navideño con frutas confitadas",
+        
+        "traditional_drinks": "Bebidas Tradicionales",
+        "beer": "Cerveza",
+        "beer_desc": "Alemania tiene más de 1,300 cervecerías y 5,000 marcas",
+        "wine": "Vino",
+        "wine_desc": "Regiones del Rin, Mosela y Baden producen vinos blancos excelentes",
+        "schnaps": "Schnaps",
+        "schnaps_desc": "Aguardientes de frutas como kirsch y obstler",
+        "gluhwein": "Glühwein",
+        "gluhwein_desc": "Vino caliente especiado para mercados navideños",
+        
+        // Vestimenta
+        "clothing_title": "Vestimenta Tradicional Alemana",
+        "regional_costumes": "Trajes Regionales",
+        "dirndl": "Dirndl",
+        "dirndl_desc": "Vestido tradicional femenino con corpiño, blusa, falda amplia y delantal",
+        "lederhosen": "Lederhosen",
+        "lederhosen_desc": "Pantalones de cuero para hombres, típicos de Baviera y Austria",
+        "tracht": "Tracht",
+        "tracht_desc": "Término general para la vestimenta tradicional alemana",
+        "gamsbart": "Gamsbart",
+        "gamsbart_desc": "Adorno de pelo de cabra montés para sombreros tiroleses",
+        
+        "dirndl_meaning": "Significado del Dirndl",
+        "dirndl_meaning_desc": "La posición del lazo del delantal indica el estado civil:",
+        "single_side": "Lado izquierdo: Soltera",
+        "married_side": "Lado derecho: Casada o comprometida",
+        "virgin_side": "Al centro frontal: Virgen",
+        "widow_side": "Al centro trasero: Viuda",
+        
+        "traditional_accessories": "Accesorios Tradicionales",
+        "haferlschuh": "Haferlschuh: Zapatos característicos",
+        "wadlstrumpf": "Wadlstrumpf: Medias largas de lana",
+        "tirolerhut": "Tirolerhut: Sombrero tiroles con adornos",
+        "charivari": "Charivari: Cadena decorativa para lederhosen",
+        
+        // Música
+        "music_title": "Música y Danzas Alemanas",
+        "classical_music": "Música Clásica",
+        "bach_desc": "Compositor barroco, obras maestras como el 'Clave bien temperado'",
+        "beethoven_desc": "Sinfonías revolucionarias como la 5ª y 9ª",
+        "mozart_desc": "Aunque austriaco, gran parte de su carrera en Alemania",
+        "wagner_desc": "Óperas épicas como 'El anillo del nibelungo'",
+        
+        "traditional_dances": "Danzas Tradicionales",
+        "schuhplattler": "Schuhplattler: Danza bávara donde los hombres golpean sus zapatos y muslos",
+        "landler": "Ländler: Danza folclórica precursora del vals",
+        "zwiefacher": "Zwiefacher: Danza con cambios constantes de ritmo",
+        "polka": "Polka: Popular en toda Alemania, especialmente en festivales",
+        
+        "contemporary_music": "Música Contemporánea",
+        "kraftwerk": "Kraftwerk: Pioneros de la música electrónica",
+        "rammstein": "Rammstein: Bandas de metal industrial",
+        "techno": "Techno: Berlín es capital mundial del techno",
+        "schlager": "Schlager: Música pop alemana tradicional",
+        
+        // Cultura
+        "culture_title": "Cultura y Tradiciones Alemanas",
+        "important_holidays": "Festividades Importantes",
+        "oktoberfest": "Oktoberfest: Festival de cerveza más grande del mundo en Múnich",
+        "karneval": "Karneval: Celebración antes de la Cuaresma, especialmente en Colonia",
+        "christmas_markets": "Weihnachtsmärkte: Mercados navideños tradicionales",
+        "unity_day": "Día de la Unidad Alemana: 3 de octubre, celebración de la reunificación",
+        
+        "social_customs": "Costumbres Sociales",
+        "punctuality": "Puntualidad: Valor altamente apreciado en la cultura alemana",
+        "recycling": "Separación de residuos: Sistema avanzado de reciclaje",
+        "quiet_time": "Ruhezeit: Horarios de silencio respetados (generalmente después de las 10 PM)",
+        "coffee_time": "Kaffeeklatsch: Tradición de reunirse para café y pasteles por la tarde",
+        
+        "architecture_art": "Arquitectura y Arte",
+        "castles": "Castillos: Neuschwanstein, Hohenzollern, Heidelberg",
+        "bauhaus": "Bauhaus: Movimiento arquitectónico y de diseño influyente",
+        "gothic_cathedrals": "Catedrales góticas: Colonia, Ulm, Estrasburgo",
+        "museums": "Museos: Isla de los Museos en Berlín (Patrimonio de la Humanidad)",
+        
+        // Festivales
+        "festivals_title": "Festivales y Celebraciones",
+        "beer_festivals": "Festivales de Cerveza",
+        "oktoberfest_munich": "Oktoberfest (Múnich): 16 días desde finales de septiembre",
+        "volksfest": "Canstatter Volksfest (Stuttgart): Segundo festival más grande",
+        "bergkirchweih": "Bergkirchweih (Erlangen): Festival en un entorno de cuevas de cerveza",
+        "frühlingsfest": "Frühlingsfest (Múnich): 'Oktoberfest de primavera'",
+        
+        "music_festivals": "Festivales Musicales",
+        "rock_am_ring": "Rock am Ring: Uno de los festivales de rock más grandes del mundo",
+        "wacken": "Wacken Open Air: Festival de heavy metal más grande del mundo",
+        "fusion": "Fusion Festival: Festival alternativo de música y arte",
+        "bayreuth": "Bayreuth Festspiele: Festival dedicado a las óperas de Wagner",
+        
+        "traditional_markets": "Mercados Tradicionales",
+        "nuremberg_market": "Christkindlesmarkt (Núremberg): Mercado navideño más famoso",
+        "dresden_market": "Striezelmarkt (Dresde): Mercado navideño más antiguo (desde 1434)",
+        "leipzig_market": "Leipziger Weihnachtsmarkt: Uno de los más grandes de Alemania",
+        "easter_markets": "Mercados de Pascua: Tradición en toda Alemania durante la primavera",
+        
+        // Frases
+        "phrases_title": "Frases y Expresiones Alemanas",
+        "greetings": "Saludos y Cortesías",
+        "guten_morgen": "Guten Morgen/Tag/Abend: Buenos días/tardes/noches",
+        "auf_wiedersehen": "Auf Wiedersehen: Adiós (formal)",
+        "tschuss": "Tschüss: Adiós (informal)",
+        "bitte_schon": "Bitte schön: De nada / Por favor",
+        "entschuldigung": "Entschuldigung: Disculpe / Lo siento",
+        
+        "useful_expressions": "Expresiones Útiles",
+        "wie_gehts": "Wie geht's?: ¿Cómo estás?",
+        "alles_klar": "Alles klar?: ¿Todo bien?",
+        "vielen_dank": "Vielen Dank: Muchas gracias",
+        "kein_problem": "Kein Problem: No hay problema",
+        "prost": "Prost!/Zum Wohl!: ¡Salud! (al brindar)",
+        
+        "colloquial_expressions": "Expresiones Coloquiales",
+        "na": "Na?: ¿Qué tal? (informal)",
+        "mahlzeit": "Mahlzeit!: ¡Buen provecho! (también como saludo al mediodía)",
+        "geil": "Geil!: ¡Genial! / ¡Increíble!",
+        "krass": "Krass!: ¡Increíble! (positivo o negativo)",
+        "halt_maul": "Halt's Maul!: ¡Cállate! (muy informal)",
+        
+        "compound_words": "Palabras Compuestas Típicas",
+        "schadenfreude": "Schadenfreude: Alegría por el mal ajeno",
+        "fernweh": "Fernweh: Nostalgia por lugares no visitados",
+        "weltschmerz": "Weltschmerz: Dolor por el estado del mundo",
+        "verschlimmbessern": "Verschlimmbessern: Empeorar algo al intentar mejorarlo",
+        "kummerspeck": "Kummerspeck: 'Panceta de la pena' - peso ganado por estrés emocional",
+        
+        // Personajes
+        "personalities_title": "Personajes Relevantes Alemanes",
+        "science_innovation": "Ciencia e Innovación",
+        "einstein": "Albert Einstein: Físico teórico, teoría de la relatividad",
+        "von_braun": "Wernher von Braun: Pionero de la cohetería",
+        "koch": "Robert Koch: Descubridor del bacilo de la tuberculosis",
+        "benz": "Karl Benz: Inventor del automóvil con motor de combustión",
+        "gutenberg": "Johannes Gutenberg: Inventor de la imprenta de tipos móviles",
+        
+        "art_literature": "Arte y Literatura",
+        "goethe": "Johann Wolfgang von Goethe: Escritor, científico, 'Fausto'",
+        "schiller": "Friedrich Schiller: Poeta, dramaturgo, filósofo",
+        "mann": "Thomas Mann: Novelista, Premio Nobel de Literatura",
+        "friedrich": "Caspar David Friedrich: Pintor romántico",
+        "kiefer": "Anselm Kiefer: Artista contemporáneo",
+        
+        "philosophy_thought": "Filosofía y Pensamiento",
+        "kant": "Immanuel Kant: Filósofo de la Ilustración",
+        "nietzsche": "Friedrich Nietzsche: Filósofo, crítico cultural",
+        "marx": "Karl Marx: Filósofo, economista, teórico socialista",
+        "heidegger": "Martin Heidegger: Filósofo existencialista",
+        "arendt": "Hannah Arendt: Teórica política",
+        
+        "politics_leadership": "Política y Liderazgo",
+        "merkel": "Angela Merkel: Canciller de Alemania (2005-2021)",
+        "adenauer": "Konrad Adenauer: Primer canciller de la RFA",
+        "brandt": "Willy Brandt: Canciller, Premio Nobel de la Paz",
+        "kohl": "Helmut Kohl: Canciller durante la reunificación",
+        "bismarck": "Otto von Bismarck: Unificador de Alemania",
+        
+        // Footer
+        "footer_copyright": "© 2025 ADSO. Todos los derechos reservados. | Centro de la Innovación Agroindustrial.",
+        "footer_about": "Conoce más sobre la rica cultura e historia alemana"
+      },
+      en: {
+        // Header
+        "header_title": "GERMANY",
+        "header_subtitle": "Discover the traditions, gastronomy and customs of the land of innovation and tradition",
+        "menu_button": "Back to Menu",
+        "passport_button": "Get Passport",
+        
+        // Tabs
+        "tab_gastronomy": "Gastronomy",
+        "tab_clothing": "Clothing",
+        "tab_music": "Music and Dances",
+        "tab_culture": "Culture",
+        "tab_festivals": "Festivals",
+        "tab_phrases": "Typical Phrases",
+        "tab_personalities": "Relevant Personalities",
+        
+        // Gastronomía
+        "gastronomy_title": "German Gastronomy",
+        "main_dishes": "Main Dishes",
+        "sauerbraten": "Sauerbraten",
+        "sauerbraten_desc": "Roast marinated for days in vinegar, wine and spices, served with thick sauce and klöße (potato balls)",
+        "currywurst": "Currywurst",
+        "currywurst_desc": "Boiled or fried sausage sliced and seasoned with curry ketchup sauce",
+        "rouladen": "Rouladen",
+        "rouladen_desc": "Beef slices stuffed with onion, bacon and pickles, rolled and cooked",
+        "klopse": "Königsberger Klopse",
+        "klopse_desc": "Meatballs in caper sauce with lemon",
+        
+        "regional_specialties": "Regional Specialties",
+        "bavaria": "Bavaria",
+        "bavaria_desc": "Weisswurst (white sausage), Obatzda (cheese spread)",
+        "baden": "Baden-Württemberg",
+        "baden_desc": "Maultaschen (meat-filled ravioli)",
+        "rhineland": "Rhineland",
+        "rhineland_desc": "Sauerbraten with raisins",
+        "hamburg": "Hamburg",
+        "hamburg_desc": "Labskaus (preserved meat stew with beetroot)",
+        
+        "bakery_desserts": "Bakery and Desserts",
+        "pretzel": "Pretzel (Brezel)",
+        "pretzel_desc": "Baked bread in bow shape, salty or sweet",
+        "blackforest": "Schwarzwälder Kirschtorte",
+        "blackforest_desc": "Black Forest cake with cherries and kirsch",
+        "strudel": "Apfelstrudel",
+        "strudel_desc": "Apple pastry rolled with phyllo dough",
+        "stollen": "Stollen",
+        "stollen_desc": "Sweet Christmas bread with candied fruits",
+        
+        "traditional_drinks": "Traditional Drinks",
+        "beer": "Beer",
+        "beer_desc": "Germany has more than 1,300 breweries and 5,000 brands",
+        "wine": "Wine",
+        "wine_desc": "Rhine, Moselle and Baden regions produce excellent white wines",
+        "schnaps": "Schnaps",
+        "schnaps_desc": "Fruit brandies like kirsch and obstler",
+        "gluhwein": "Glühwein",
+        "gluhwein_desc": "Spiced hot wine for Christmas markets",
+        
+        // Vestimenta
+        "clothing_title": "Traditional German Clothing",
+        "regional_costumes": "Regional Costumes",
+        "dirndl": "Dirndl",
+        "dirndl_desc": "Traditional women's dress with bodice, blouse, wide skirt and apron",
+        "lederhosen": "Lederhosen",
+        "lederhosen_desc": "Leather pants for men, typical of Bavaria and Austria",
+        "tracht": "Tracht",
+        "tracht_desc": "General term for traditional German clothing",
+        "gamsbart": "Gamsbart",
+        "gamsbart_desc": "Chamois hair decoration for Tyrolean hats",
+        
+        "dirndl_meaning": "Dirndl Meaning",
+        "dirndl_meaning_desc": "The position of the apron bow indicates marital status:",
+        "single_side": "Left side: Single",
+        "married_side": "Right side: Married or engaged",
+        "virgin_side": "Center front: Virgin",
+        "widow_side": "Center back: Widow",
+        
+        "traditional_accessories": "Traditional Accessories",
+        "haferlschuh": "Haferlschuh: Characteristic shoes",
+        "wadlstrumpf": "Wadlstrumpf: Long wool socks",
+        "tirolerhut": "Tirolerhut: Tyrolean hat with decorations",
+        "charivari": "Charivari: Decorative chain for lederhosen",
+        
+        // Música
+        "music_title": "German Music and Dances",
+        "classical_music": "Classical Music",
+        "bach_desc": "Baroque composer, masterpieces like 'The Well-Tempered Clavier'",
+        "beethoven_desc": "Revolutionary symphonies like the 5th and 9th",
+        "mozart_desc": "Although Austrian, much of his career in Germany",
+        "wagner_desc": "Epic operas like 'The Ring of the Nibelung'",
+        
+        "traditional_dances": "Traditional Dances",
+        "schuhplattler": "Schuhplattler: Bavarian dance where men slap their shoes and thighs",
+        "landler": "Ländler: Folk dance precursor to the waltz",
+        "zwiefacher": "Zwiefacher: Dance with constant rhythm changes",
+        "polka": "Polka: Popular throughout Germany, especially at festivals",
+        
+        "contemporary_music": "Contemporary Music",
+        "kraftwerk": "Kraftwerk: Pioneers of electronic music",
+        "rammstein": "Rammstein: Industrial metal bands",
+        "techno": "Techno: Berlin is world capital of techno",
+        "schlager": "Schlager: Traditional German pop music",
+        
+        // Cultura
+        "culture_title": "German Culture and Traditions",
+        "important_holidays": "Important Holidays",
+        "oktoberfest": "Oktoberfest: Largest beer festival in the world in Munich",
+        "karneval": "Karneval: Celebration before Lent, especially in Cologne",
+        "christmas_markets": "Weihnachtsmärkte: Traditional Christmas markets",
+        "unity_day": "German Unity Day: October 3rd, celebration of reunification",
+        
+        "social_customs": "Social Customs",
+        "punctuality": "Punctuality: Highly valued in German culture",
+        "recycling": "Waste separation: Advanced recycling system",
+        "quiet_time": "Ruhezeit: Quiet hours respected (usually after 10 PM)",
+        "coffee_time": "Kaffeeklatsch: Tradition of meeting for coffee and cakes in the afternoon",
+        
+        "architecture_art": "Architecture and Art",
+        "castles": "Castles: Neuschwanstein, Hohenzollern, Heidelberg",
+        "bauhaus": "Bauhaus: Influential architectural and design movement",
+        "gothic_cathedrals": "Gothic cathedrals: Cologne, Ulm, Strasbourg",
+        "museums": "Museums: Museum Island in Berlin (World Heritage Site)",
+        
+        // Festivales
+        "festivals_title": "Festivals and Celebrations",
+        "beer_festivals": "Beer Festivals",
+        "oktoberfest_munich": "Oktoberfest (Munich): 16 days from late September",
+        "volksfest": "Canstatter Volksfest (Stuttgart): Second largest festival",
+        "bergkirchweih": "Bergkirchweih (Erlangen): Festival in a beer cave setting",
+        "frühlingsfest": "Frühlingsfest (Munich): 'Spring Oktoberfest'",
+        
+        "music_festivals": "Music Festivals",
+        "rock_am_ring": "Rock am Ring: One of the largest rock festivals in the world",
+        "wacken": "Wacken Open Air: Largest heavy metal festival in the world",
+        "fusion": "Fusion Festival: Alternative music and art festival",
+        "bayreuth": "Bayreuth Festspiele: Festival dedicated to Wagner's operas",
+        
+        "traditional_markets": "Traditional Markets",
+        "nuremberg_market": "Christkindlesmarkt (Nuremberg): Most famous Christmas market",
+        "dresden_market": "Striezelmarkt (Dresden): Oldest Christmas market (since 1434)",
+        "leipzig_market": "Leipziger Weihnachtsmarkt: One of the largest in Germany",
+        "easter_markets": "Easter markets: Tradition throughout Germany during spring",
+        
+        // Frases
+        "phrases_title": "German Phrases and Expressions",
+        "greetings": "Greetings and Courtesies",
+        "guten_morgen": "Guten Morgen/Tag/Abend: Good morning/afternoon/evening",
+        "auf_wiedersehen": "Auf Wiedersehen: Goodbye (formal)",
+        "tschuss": "Tschüss: Goodbye (informal)",
+        "bitte_schon": "Bitte schön: You're welcome / Please",
+        "entschuldigung": "Entschuldigung: Excuse me / I'm sorry",
+        
+        "useful_expressions": "Useful Expressions",
+        "wie_gehts": "Wie geht's?: How are you?",
+        "alles_klar": "Alles klar?: Everything okay?",
+        "vielen_dank": "Vielen Dank: Thank you very much",
+        "kein_problem": "Kein Problem: No problem",
+        "prost": "Prost!/Zum Wohl!: Cheers! (when toasting)",
+        
+        "colloquial_expressions": "Colloquial Expressions",
+        "na": "Na?: What's up? (informal)",
+        "mahlzeit": "Mahlzeit!: Enjoy your meal! (also as midday greeting)",
+        "geil": "Geil!: Awesome! / Incredible!",
+        "krass": "Krass!: Incredible! (positive or negative)",
+        "halt_maul": "Halt's Maul!: Shut up! (very informal)",
+        
+        "compound_words": "Typical Compound Words",
+        "schadenfreude": "Schadenfreude: Joy from others' misfortune",
+        "fernweh": "Fernweh: Longing for places not visited",
+        "weltschmerz": "Weltschmerz: World-weariness, pain for the state of the world",
+        "verschlimmbessern": "Verschlimmbessern: Making something worse while trying to improve it",
+        "kummerspeck": "Kummerspeck: 'Grief bacon' - weight gained from emotional stress",
+        
+        // Personajes
+        "personalities_title": "Relevant German Personalities",
+        "science_innovation": "Science and Innovation",
+        "einstein": "Albert Einstein: Theoretical physicist, theory of relativity",
+        "von_braun": "Wernher von Braun: Rocketry pioneer",
+        "koch": "Robert Koch: Discoverer of the tuberculosis bacillus",
+        "benz": "Karl Benz: Inventor of the automobile with combustion engine",
+        "gutenberg": "Johannes Gutenberg: Inventor of the movable type printing press",
+        
+        "art_literature": "Art and Literature",
+        "goethe": "Johann Wolfgang von Goethe: Writer, scientist, 'Faust'",
+        "schiller": "Friedrich Schiller: Poet, playwright, philosopher",
+        "mann": "Thomas Mann: Novelist, Nobel Prize in Literature",
+        "friedrich": "Caspar David Friedrich: Romantic painter",
+        "kiefer": "Anselm Kiefer: Contemporary artist",
+        
+        "philosophy_thought": "Philosophy and Thought",
+        "kant": "Immanuel Kant: Enlightenment philosopher",
+        "nietzsche": "Friedrich Nietzsche: Philosopher, cultural critic",
+        "marx": "Karl Marx: Philosopher, economist, socialist theorist",
+        "heidegger": "Martin Heidegger: Existentialist philosopher",
+        "arendt": "Hannah Arendt: Political theorist",
+        
+        "politics_leadership": "Politics and Leadership",
+        "merkel": "Angela Merkel: Chancellor of Germany (2005-2021)",
+        "adenauer": "Konrad Adenauer: First chancellor of West Germany",
+        "brandt": "Willy Brandt: Chancellor, Nobel Peace Prize",
+        "kohl": "Helmut Kohl: Chancellor during reunification",
+        "bismarck": "Otto von Bismarck: Unifier of Germany",
+        
+        // Footer
+        "footer_copyright": "© 2025 ADSO. All rights reserved. | Center for Agroindustrial Innovation.",
+        "footer_about": "Learn more about the rich German culture and history"
+      }
+    };
+
+    let currentLanguage = 'es';
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
+      applyTranslations();
+      updateLanguageButton();
+    }
+
+    function applyTranslations() {
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[currentLanguage][key]) {
+          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = translations[currentLanguage][key];
+          } else {
+            element.innerHTML = translations[currentLanguage][key];
+          }
+        }
+      });
+      
+      // Actualizar el atributo lang del HTML
+      document.documentElement.lang = currentLanguage;
+    }
+
+    function updateLanguageButton() {
+      const languageText = document.getElementById('languageText');
+      languageText.textContent = currentLanguage === 'es' ? 'EN' : 'ES';
+    }
+
+    // Lógica para cambiar de pestaña
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Desactivar todos
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        tabContents.forEach(content => content.classList.remove("active"));
+
+        // Activar el seleccionado
+        button.classList.add("active");
+        document.getElementById(button.dataset.tab).classList.add("active");
+      });
+    });
+
+    // Smooth scroll para enlaces internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Inicializar
+    document.getElementById('languageToggle').addEventListener('click', toggleLanguage);
+    applyTranslations();
+  </script>
+</body>
+</html>

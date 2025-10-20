@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estados Unidos - Tierra de la Libertad</title>
+    <link rel="stylesheet" href="../Assets/css/EstadosUnidos.css">
+    <link rel="stylesheet" href="../Assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* === ESTILO PARA BOTÓN VOLVER AL MENÚ === */
+        .menu-return-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.9);
+            color: #0a3161;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid rgba(10, 49, 97, 0.2);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            backdrop-filter: blur(5px);
+        }
+
+        .menu-return-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 1);
+            color: #061f40;
+        }
+
+        .menu-return-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Posicionamiento del botón */
+        .menu-return-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        /* === ESTILOS PARA BOTÓN DE TRADUCCIÓN === */
+        .translate-btn {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            color: #0a3161;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid rgba(10, 49, 97, 0.2);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            backdrop-filter: blur(5px);
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .translate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 1);
+            color: #061f40;
+        }
+
+        .translate-btn i {
+            margin-right: 5px;
+        }
+
+        .translate-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-return-container, .translate-container {
+                top: 15px;
+            }
+            
+            .menu-return-container {
+                left: 15px;
+            }
+            
+            .translate-container {
+                right: 15px;
+            }
+            
+            .menu-return-btn, .translate-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-return-container, .translate-container {
+                top: 10px;
+            }
+            
+            .menu-return-container {
+                left: 10px;
+            }
+            
+            .translate-container {
+                right: 10px;
+            }
+            
+            .menu-return-btn, .translate-btn {
+                padding: 5px 10px;
+                font-size: 0.75rem;
+                border-radius: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Principal -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="logo-container">
+                <div class="hero-logo-svg">
+                    <img src="../Assets/img/logouuee.webp" alt="Gran Sello de los Estados Unidos">
+                </div>
+            </div>
+            <!-- Botón Volver al Menú -->
+            <div class="menu-return-container">
+                <a href="../index.html" class="menu-return-btn">
+                    ← Volver al Menú
+                </a>
+            </div>
+            <!-- Botón de Traducción -->
+            <div class="translate-container">
+                <button id="translateBtn" class="translate-btn">
+                    <i class="fas fa-language"></i> English
+                </button>
+            </div>
+            <h1 data-es="Estados Unidos de América" data-en="United States of America">Estados Unidos de América</h1>
+            <p data-es="Descubre la tierra de la libertad, la diversidad y las oportunidades infinitas" 
+               data-en="Discover the land of freedom, diversity, and endless opportunities">
+               Descubre la tierra de la libertad, la diversidad y las oportunidades infinitas
+            </p>
+            <a href="#informacion" class="cta-button" data-es="Explorar Más" data-en="Explore More">Explorar Más</a>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <div class="nav-container">
+        <nav>
+            <div class="nav-logo">
+                <div class="small-logo-svg">
+                    <img src="../Assets/img/logouuee.webp" alt="Sello del Departamento de Estado de EE. UU.">
+                </div>
+                <span data-es="USA Explorer" data-en="USA Explorer">USA Explorer</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#informacion" data-es="Información" data-en="Information">Información</a></li>
+                <li><a href="#estados" data-es="Estados" data-en="States">Estados</a></li>
+                <li><a href="#historia" data-es="Historia" data-en="History">Historia</a></li>
+                <li><a href="#cultura" data-es="Cultura" data-en="Culture">Cultura</a></li>
+                <li><a href="../Pasaporte/Login.php" data-es="Pasaporte" data-en="Passport">Pasaporte</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+        <!-- Sección Información General -->
+        <section id="informacion" class="section">
+            <h2 class="section-title" data-es="Información General" data-en="General Information">Información General</h2>
+            <div class="cards-grid">
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 data-es="Gobierno y Política" data-en="Government and Politics">Gobierno y Política</h3>
+                    <p data-es="Estados Unidos es una república federal constitucional con tres ramas de gobierno:" 
+                       data-en="The United States is a constitutional federal republic with three branches of government:">
+                       Estados Unidos es una república federal constitucional con tres ramas de gobierno:
+                    </p>
+                    <ul>
+                        <li><strong data-es="Ejecutivo:" data-en="Executive:">Ejecutivo:</strong> 
+                            <span data-es="Presidente como jefe de estado y gobierno" 
+                                  data-en="President as head of state and government">
+                                  Presidente como jefe de estado y gobierno
+                            </span>
+                        </li>
+                        <li><strong data-es="Legislativo:" data-en="Legislative:">Legislativo:</strong> 
+                            <span data-es="Congreso bicameral (Senado y Cámara de Representantes)" 
+                                  data-en="Bicameral Congress (Senate and House of Representatives)">
+                                  Congreso bicameral (Senado y Cámara de Representantes)
+                            </span>
+                        </li>
+                        <li><strong data-es="Judicial:" data-en="Judicial:">Judicial:</strong> 
+                            <span data-es="Corte Suprema y sistema de cortes federales" 
+                                  data-en="Supreme Court and federal court system">
+                                  Corte Suprema y sistema de cortes federales
+                            </span>
+                        </li>
+                    </ul>
+                    <p data-es="El sistema político se basa en la Constitución de 1787, una de las más antiguas aún en vigor." 
+                       data-en="The political system is based on the 1787 Constitution, one of the oldest still in effect.">
+                       El sistema político se basa en la Constitución de 1787, una de las más antiguas aún en vigor.
+                    </p>
+                </article>
+                
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-es="Economía" data-en="Economy">Economía</h3>
+                    <p data-es="La economía más grande del mundo con un PIB de más de $25 billones." 
+                       data-en="The world's largest economy with a GDP of over $25 trillion.">
+                       La economía más grande del mundo con un PIB de más de $25 billones.
+                    </p>
+                    <ul>
+                        <li><strong data-es="Principales industrias:" data-en="Main industries:">Principales industrias:</strong> 
+                            <span data-es="Tecnología, finanzas, salud, entretenimiento" 
+                                  data-en="Technology, finance, healthcare, entertainment">
+                                  Tecnología, finanzas, salud, entretenimiento
+                            </span>
+                        </li>
+                        <li><strong data-es="Moneda:" data-en="Currency:">Moneda:</strong> 
+                            <span data-es="Dólar estadounidense (USD)" data-en="US Dollar (USD)">
+                                Dólar estadounidense (USD)
+                            </span>
+                        </li>
+                        <li><strong data-es="Comercio:" data-en="Trade:">Comercio:</strong> 
+                            <span data-es="Mayor importador y segundo mayor exportador mundial" 
+                                  data-en="Largest importer and second largest exporter worldwide">
+                                  Mayor importador y segundo mayor exportador mundial
+                            </span>
+                        </li>
+                        <li><strong data-es="Innovación:" data-en="Innovation:">Innovación:</strong> 
+                            <span data-es="Líder en tecnología, investigación y desarrollo" 
+                                  data-en="Leader in technology, research and development">
+                                  Líder en tecnología, investigación y desarrollo
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+                
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-es="Población y Sociedad" data-en="Population and Society">Población y Sociedad</h3>
+                    <p data-es="Una nación de inmigrantes con diversidad cultural extraordinaria." 
+                       data-en="A nation of immigrants with extraordinary cultural diversity.">
+                       Una nación de inmigrantes con diversidad cultural extraordinaria.
+                    </p>
+                    <ul>
+                        <li><strong data-es="Población:" data-en="Population:">Población:</strong> 
+                            <span data-es="Más de 331 millones de habitantes" 
+                                  data-en="Over 331 million inhabitants">
+                                  Más de 331 millones de habitantes
+                            </span>
+                        </li>
+                        <li><strong data-es="Idiomas:" data-en="Languages:">Idiomas:</strong> 
+                            <span data-es="Inglés (oficial), español hablado por 13% de la población" 
+                                  data-en="English (official), Spanish spoken by 13% of the population">
+                                  Inglés (oficial), español hablado por 13% de la población
+                            </span>
+                        </li>
+                        <li><strong data-es="Religión:" data-en="Religion:">Religión:</strong> 
+                            <span data-es="Cristianismo (70%), judaísmo, islam, budismo, hinduismo" 
+                                  data-en="Christianity (70%), Judaism, Islam, Buddhism, Hinduism">
+                                  Cristianismo (70%), judaísmo, islam, budismo, hinduismo
+                            </span>
+                        </li>
+                        <li><strong data-es="Educación:" data-en="Education:">Educación:</strong> 
+                            <span data-es="Sistema educativo descentralizado con universidades de élite mundial" 
+                                  data-en="Decentralized education system with world-class universities">
+                                  Sistema educativo descentralizado con universidades de élite mundial
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Datos Interesantes -->
+        <section id="datos" class="section">
+            <h2 class="section-title" data-es="Datos Interesantes" data-en="Interesting Facts">Datos Interesantes</h2>
+            <div class="facts-container">
+                <div class="fact-box">
+                    <div class="fact-number">50</div>
+                    <div class="fact-text" data-es="Estados" data-en="States">Estados</div>
+                </div>
+                <div class="fact-box">
+                    <div class="fact-number">331M</div>
+                    <div class="fact-text" data-es="Habitantes" data-en="Inhabitants">Habitantes</div>
+                </div>
+                <div class="fact-box">
+                    <div class="fact-number">1776</div>
+                    <div class="fact-text" data-es="Año de Independencia" data-en="Year of Independence">Año de Independencia</div>
+                </div>
+                <div class="fact-box">
+                    <div class="fact-number">9.8M</div>
+                    <div class="fact-text" data-es="km² de Territorio" data-en="km² of Territory">km² de Territorio</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Estados Destacados -->
+        <section id="estados" class="section">
+            <h2 class="section-title" data-es="Estados Destacados" data-en="Featured States">Estados Destacados</h2>
+            <div class="states-grid">
+                <article class="state-card">
+                    <div class="state-img">NUEVA YORK</div>
+                    <div class="state-info">
+                        <h4 data-es="Estado de Nueva York" data-en="State of New York">Estado de Nueva York</h4>
+                        <p data-es="Conocido como 'El Estado del Imperio', alberga la ciudad de Nueva York, las Cataratas del Niágara y una rica historia cultural. Es un centro global de finanzas, arte y moda." 
+                               data-en="Known as 'The Empire State', it hosts New York City, Niagara Falls and a rich cultural history. It's a global center for finance, art and fashion.">
+                               Conocido como 'El Estado del Imperio', alberga la ciudad de Nueva York, las Cataratas del Niágara y una rica historia cultural. Es un centro global de finanzas, arte y moda.
+                        </p>
+                    </div>
+                </article>
+                
+                <article class="state-card">
+                    <div class="state-img">CALIFORNIA</div>
+                    <div class="state-info">
+                        <h4 data-es="California" data-en="California">California</h4>
+                        <p data-es="El estado más poblado, conocido por Silicon Valley, Hollywood, playas espectaculares y paisajes diversos desde desiertos hasta bosques de secuoyas." 
+                               data-en="The most populous state, known for Silicon Valley, Hollywood, spectacular beaches and diverse landscapes from deserts to redwood forests.">
+                               El estado más poblado, conocido por Silicon Valley, Hollywood, playas espectaculares y paisajes diversos desde desiertos hasta bosques de secuoyas.
+                        </p>
+                    </div>
+                </article>
+                
+                <article class="state-card">
+                    <div class="state-img">FLORIDA</div>
+                    <div class="state-info">
+                        <h4 data-es="Florida" data-en="Florida">Florida</h4>
+                        <p data-es="El 'Estado del Sol' con playas paradisíacas, Miami, Orlando con sus parques temáticos y el Centro Espacial Kennedy de la NASA." 
+                               data-en="The 'Sunshine State' with paradise beaches, Miami, Orlando with its theme parks and NASA's Kennedy Space Center.">
+                               El 'Estado del Sol' con playas paradisíacas, Miami, Orlando con sus parques temáticos y el Centro Espacial Kennedy de la NASA.
+                        </p>
+                    </div>
+                </article>
+                
+                <article class="state-card">
+                    <div class="state-img">TEXAS</div>
+                    <div class="state-info">
+                        <h4 data-es="Texas" data-en="Texas">Texas</h4>
+                        <p data-es="El segundo estado más grande, con una rica herencia cultural, economía robusta basada en energía, tecnología y una identidad única." 
+                               data-en="The second largest state, with a rich cultural heritage, robust economy based on energy, technology and a unique identity.">
+                               El segundo estado más grande, con una rica herencia cultural, economía robusta basada en energía, tecnología y una identidad única.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="state-card">
+                    <div class="state-img">HAWÁI</div>
+                    <div class="state-info">
+                        <h4 data-es="Hawái" data-en="Hawaii">Hawái</h4>
+                        <p data-es="Archipiélago tropical en el Pacífico, conocido por sus playas de arena volcánica, paisajes exuberantes y la cultura polinesia única." 
+                               data-en="Tropical archipelago in the Pacific, known for its volcanic sand beaches, lush landscapes and unique Polynesian culture.">
+                               Archipiélago tropical en el Pacífico, conocido por sus playas de arena volcánica, paisajes exuberantes y la cultura polinesia única.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="state-card">
+                    <div class="state-img">ALASKA</div>
+                    <div class="state-info">
+                        <h4 data-es="Alaska" data-en="Alaska">Alaska</h4>
+                        <p data-es="El estado más grande y septentrional, famoso por su naturaleza salvaje, auroras boreales y vida silvestre espectacular." 
+                               data-en="The largest and northernmost state, famous for its wilderness, northern lights and spectacular wildlife.">
+                               El estado más grande y septentrional, famoso por su naturaleza salvaje, auroras boreales y vida silvestre espectacular.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Historia -->
+        <section id="historia" class="section">
+            <h2 class="section-title" data-es="Historia y Cultura" data-en="History and Culture">Historia y Cultura</h2>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <h3 data-es="1492 - Llegada de Colón" data-en="1492 - Columbus' Arrival">1492 - Llegada de Colón</h3>
+                    <p data-es="Cristóbal Colón llega a América, iniciando la exploración europea del continente." 
+                       data-en="Christopher Columbus arrives in America, beginning European exploration of the continent.">
+                       Cristóbal Colón llega a América, iniciando la exploración europea del continente.
+                    </p>
+                </article>
+                
+                <article class="timeline-item">
+                    <h3 data-es="1607 - Primera Colonia Inglesa" data-en="1607 - First English Colony">1607 - Primera Colonia Inglesa</h3>
+                    <p data-es="Se establece Jamestown, Virginia, la primera colonia inglesa permanente en América." 
+                       data-en="Jamestown, Virginia is established, the first permanent English colony in America.">
+                       Se establece Jamestown, Virginia, la primera colonia inglesa permanente en América.
+                    </p>
+                </article>
+                
+                <article class="timeline-item">
+                    <h3 data-es="1776 - Declaración de Independencia" data-en="1776 - Declaration of Independence">1776 - Declaración de Independencia</h3>
+                    <p data-es="Las 13 colonias americanas declaran su independencia de Gran Bretaña el 4 de julio." 
+                       data-en="The 13 American colonies declare their independence from Great Britain on July 4th.">
+                       Las 13 colonias americanas declaran su independencia de Gran Bretaña el 4 de julio.
+                    </p>
+                </article>
+                
+                <article class="timeline-item">
+                    <h3 data-es="1787 - Constitución" data-en="1787 - Constitution">1787 - Constitución</h3>
+                    <p data-es="Se adopta la Constitución de los Estados Unidos, estableciendo el gobierno federal." 
+                       data-en="The United States Constitution is adopted, establishing the federal government.">
+                       Se adopta la Constitución de los Estados Unidos, estableciendo el gobierno federal.
+                    </p>
+                </article>
+                
+                <article class="timeline-item">
+                    <h3 data-es="1861-1865 - Guerra Civil" data-en="1861-1865 - Civil War">1861-1865 - Guerra Civil</h3>
+                    <p data-es="Conflicto entre los estados del Norte y del Sur sobre la esclavitud y los derechos estatales." 
+                       data-en="Conflict between Northern and Southern states over slavery and states' rights.">
+                       Conflicto entre los estados del Norte y del Sur sobre la esclavitud y los derechos estatales.
+                    </p>
+                </article>
+                
+                <article class="timeline-item">
+                    <h3 data-es="1969 - Llegada a la Luna" data-en="1969 - Moon Landing">1969 - Llegada a la Luna</h3>
+                    <p data-es="Neil Armstrong se convierte en el primer humano en caminar sobre la Luna." 
+                       data-en="Neil Armstrong becomes the first human to walk on the Moon.">
+                       Neil Armstrong se convierte en el primer humano en caminar sobre la Luna.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Cultura -->
+        <section id="cultura" class="section">
+            <h2 class="section-title" data-es="Cultura Estadounidense" data-en="American Culture">Cultura Estadounidense</h2>
+            <div class="cards-grid">
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 data-es="Cine y Televisión" data-en="Film and Television">Cine y Televisión</h3>
+                    <p data-es="Hollywood es el centro mundial de la industria cinematográfica. La televisión estadounidense tiene influencia global con series y programas vistos en todo el mundo." 
+                           data-en="Hollywood is the world center of the film industry. American television has global influence with series and programs watched worldwide.">
+                           Hollywood es el centro mundial de la industria cinematográfica. La televisión estadounidense tiene influencia global con series y programas vistos en todo el mundo.
+                    </p>
+                    <ul>
+                        <li data-es="Hollywood - Capital del cine" data-en="Hollywood - Film capital">Hollywood - Capital del cine</li>
+                        <li data-es="Premios Oscar - Los más prestigiosos" data-en="Oscars - Most prestigious awards">Premios Oscar - Los más prestigiosos</li>
+                        <li data-es="Series de TV - Exportación cultural" data-en="TV Series - Cultural export">Series de TV - Exportación cultural</li>
+                        <li data-es="Streaming - Revolución digital" data-en="Streaming - Digital revolution">Streaming - Revolución digital</li>
+                    </ul>
+                </article>
+                
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 data-es="Música" data-en="Music">Música</h3>
+                    <p data-es="Estados Unidos es la cuna de géneros musicales como el jazz, blues, rock, hip-hop y country que han influenciado la música mundial." 
+                           data-en="The United States is the birthplace of musical genres such as jazz, blues, rock, hip-hop and country that have influenced world music.">
+                           Estados Unidos es la cuna de géneros musicales como el jazz, blues, rock, hip-hop y country que han influenciado la música mundial.
+                    </p>
+                    <ul>
+                        <li data-es="Jazz - Nueva Orleans" data-en="Jazz - New Orleans">Jazz - Nueva Orleans</li>
+                        <li data-es="Rock and Roll - Años 50" data-en="Rock and Roll - 50s">Rock and Roll - Años 50</li>
+                        <li data-es="Hip-Hop - Cultura urbana" data-en="Hip-Hop - Urban culture">Hip-Hop - Cultura urbana</li>
+                        <li data-es="Country - Tradición rural" data-en="Country - Rural tradition">Country - Tradición rural</li>
+                    </ul>
+                </article>
+                
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 data-es="Gastronomía" data-en="Gastronomy">Gastronomía</h3>
+                    <p data-es="La cocina estadounidense refleja su diversidad cultural, con influencias de todo el mundo adaptadas al estilo local." 
+                           data-en="American cuisine reflects its cultural diversity, with influences from around the world adapted to local style.">
+                           La cocina estadounidense refleja su diversidad cultural, con influencias de todo el mundo adaptadas al estilo local.
+                    </p>
+                    <ul>
+                        <li data-es="Hamburguesas y perros calientes" data-en="Burgers and hot dogs">Hamburguesas y perros calientes</li>
+                        <li data-es="Barbacoa - Especialidad regional" data-en="Barbecue - Regional specialty">Barbacoa - Especialidad regional</li>
+                        <li data-es="Cocina fusión - Innovación culinaria" data-en="Fusion cuisine - Culinary innovation">Cocina fusión - Innovación culinaria</li>
+                        <li data-es="Comida rápida - Cultura global" data-en="Fast food - Global culture">Comida rápida - Cultura global</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-es="USA Explorer" data-en="USA Explorer">USA Explorer</h3>
+                <p data-es="Descubre la belleza, historia y diversidad de los Estados Unidos de América a través de nuestra guía informativa." 
+                       data-en="Discover the beauty, history and diversity of the United States of America through our informative guide.">
+                       Descubre la belleza, historia y diversidad de los Estados Unidos de América a través de nuestra guía informativa.
+                </p>
+               
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-es="Enlaces Rápidos" data-en="Quick Links">Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#informacion" data-es="Información General" data-en="General Information">Información General</a></li>
+                    <li><a href="#estados" data-es="Estados Destacados" data-en="Featured States">Estados Destacados</a></li>
+                    <li><a href="#historia" data-es="Historia" data-en="History">Historia</a></li>
+                    <li><a href="#cultura" data-es="Cultura" data-en="Culture">Cultura</a></li>
+                    <li><a href="#datos" data-es="Datos Interesantes" data-en="Interesting Facts">Datos Interesantes</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-es="Contacto" data-en="Contact">Contacto</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> ADSO - Centro de la Innovación Agroindustrial</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p data-es="&copy; 2025 ADSO. Todos los derechos reservados. | Centro de la Innovación Agroindustrial" 
+               data-en="&copy; 2025 ADSO. All rights reserved. | Center for Agroindustrial Innovation">
+               &copy; 2025 ADSO. Todos los derechos reservados. | Centro de la Innovación Agroindustrial
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Script de Traducción
+        document.addEventListener('DOMContentLoaded', function() {
+            const translateBtn = document.getElementById('translateBtn');
+            let currentLanguage = 'es'; // Idioma actual por defecto
+            
+            // Función para cambiar el idioma
+            function toggleLanguage() {
+                if (currentLanguage === 'es') {
+                    // Cambiar a inglés
+                    translatePage('en');
+                    translateBtn.innerHTML = '<i class="fas fa-language"></i> Español';
+                    currentLanguage = 'en';
+                } else {
+                    // Cambiar a español
+                    translatePage('es');
+                    translateBtn.innerHTML = '<i class="fas fa-language"></i> English';
+                    currentLanguage = 'es';
+                }
+            }
+            
+            // Función para traducir la página
+            function translatePage(language) {
+                // Obtener todos los elementos con atributos de traducción
+                const translatableElements = document.querySelectorAll('[data-es], [data-en]');
+                
+                translatableElements.forEach(element => {
+                    if (element.hasAttribute(`data-${language}`)) {
+                        const translation = element.getAttribute(`data-${language}`);
+                        
+                        // Para elementos de entrada o botones
+                        if (element.tagName === 'INPUT' || element.tagName === 'BUTTON' || element.tagName === 'TEXTAREA') {
+                            if (element.hasAttribute('placeholder')) {
+                                element.setAttribute('placeholder', translation);
+                            } else {
+                                element.textContent = translation;
+                            }
+                        } 
+                        // Para elementos de enlace (mantener href)
+                        else if (element.tagName === 'A') {
+                            element.textContent = translation;
+                        }
+                        // Para otros elementos
+                        else {
+                            element.textContent = translation;
+                        }
+                    }
+                });
+                
+                // Actualizar el atributo lang del documento
+                document.documentElement.lang = language;
+            }
+            
+            // Añadir evento al botón de traducción
+            translateBtn.addEventListener('click', toggleLanguage);
+            
+            // Verificar si hay un idioma guardado en localStorage
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            if (savedLanguage && savedLanguage !== 'es') {
+                toggleLanguage(); // Cambiar al idioma guardado
+            }
+            
+            // Guardar preferencia de idioma cuando se cambie
+            translateBtn.addEventListener('click', function() {
+                localStorage.setItem('preferredLanguage', currentLanguage);
+            });
+        });
+    </script>
+</body>
+</html>

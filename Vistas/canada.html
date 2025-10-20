@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Informativa de Canadá</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red-canada: #DD0000;
+            --dark-text: #2c3e50;
+            --light-bg: #e9ecef;
+            --white: #ffffff;
+            --border-color: #e9ecef;
+            --accent: #0d3b66;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: #333;
+        }
+        .container {
+            max-width: 950px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            background: var(--red-canada);
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+            color: var(--white);
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: var(--red-canada);
+            font-size: 2.2em;
+            border-bottom: 3px solid var(--red-canada);
+            padding-bottom: 10px;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            color: var(--accent);
+            font-size: 1.4em;
+            margin-bottom: 1rem;
+        }
+        /* Estilos de Pestañas (Tabs) */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            background: var(--white);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 5px;
+        }
+        .tab-btn {
+            background: transparent;
+            border: none;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--dark-text);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+        .tab-btn:hover {
+            background: #f0f0f0;
+            color: var(--red-canada);
+        }
+        .tab-btn.active {
+            background: var(--red-canada);
+            color: var(--white);
+            box-shadow: 0 2px 8px rgba(221, 0, 0, 0.4);
+        }
+        .tab-content {
+            display: none;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            animation: fadeIn 0.5s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        strong {
+            font-weight: 700;
+            color: var(--red-canada);
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: var(--red-canada);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+        }
+        tbody tr:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+        tbody tr:hover {
+            background-color: #ffebee;
+        }
+        /* Estilos para la bandera de Canadá */
+        .flag-container {
+            width: 200px;
+            height: 100px;
+            border: 1px solid rgba(0,0,0,0.2);
+            display: flex;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .flag-container:hover {
+            transform: scale(1.05);
+        }
+        .flag-red {
+            width: 25%;
+            background-color: #FF0000;
+        }
+        .flag-white {
+            width: 50%;
+            background-color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .maple-leaf {
+            width: 80%;
+            height: 80%;
+            fill: #FF0000;
+        }
+        /* Estilos para el botón de idioma */
+        .language-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 18px;
+            background: var(--red-canada);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .language-btn:hover {
+            background: #a80000;
+            transform: scale(1.05);
+        }
+        /* Estilos para los botones de acción */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .visitor-pass-btn {
+            padding: 12px 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .visitor-pass-btn:hover {
+            background: var(--dark-text);
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            background-color: var(--dark-text);
+            color: #aaa;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="languageBtn" class="language-btn">EN</button>
+
+    <div class="container">
+        <header>
+            <h1>Canadá</h1>
+            <p>Descubre la cultura, tradiciones y maravillas del Gran Norte Blanco</p>
+        </header>
+
+        <div class="nav-tabs">
+            <button class="tab-btn active" data-tab="gastronomia">Gastronomía</button>
+            <button class="tab-btn" data-tab="vestimenta">Vestimenta</button>
+            <button class="tab-btn" data-tab="musica">Música y Danzas</button>
+            <button class="tab-btn" data-tab="personajes">Personajes</button>
+        </div>
+
+        <div class="action-buttons">
+            <a href="../index.html">
+                <button class="visitor-pass-btn">Volver al menú</button>
+            </a>
+            <a href="../Pasaporte/Login.php">
+                <button class="visitor-pass-btn">Crear mi Pase de Visitante</button>
+            </a>
+        </div>
+
+        <main>
+            <div id="gastronomia" class="tab-content active">
+                <h2>🍽️ Gastronomía</h2>
+                <h3>Platos Salados Famosos</h3>
+                <p><strong>Poutine:</strong> Es quizás el plato canadiense más icónico, originario de Quebec. Consiste en una base de papas fritas, cubiertas con trozos de queso en grano y bañadas en una salsa de carne caliente (gravy).</p>
+                <p><strong>Tourtière:</strong> Un delicioso pastel de carne tradicional de la cocina franco-canadiense, muy popular durante las fiestas navideñas.</p>
+                <p><strong>Carne Ahumada (Smoked Meat):</strong> Un tipo de carne de res curada y ahumada, muy similar al pastrami. Se sirve caliente en un sándwich de pan de centeno con mostaza, muy famoso en Montreal.</p>
+                <p><strong>Peameal Bacon:</strong> También conocido como Canadian Bacon. Es lomo de cerdo magro, curado en salmuera y rebozado en harina de maíz.</p>
+                <p><strong>Pescados y Mariscos:</strong> Dada su extensa costa, el salmón, el cangrejo de nieve, la langosta y las vieiras son ingredientes esenciales, sobre todo en las Provincias Atlánticas.</p>
+
+                <h3>Postres y Dulces Emblemáticos</h3>
+                <p><strong>Sirope de Arce (Maple Syrup):</strong> Es el símbolo culinario de Canadá. Este jarabe dulce se utiliza para endulzar pancakes, waffles, postres, e incluso para curar carnes.</p>
+                <p><strong>Butter Tarts (Tartas de Mantequilla):</strong> Pequeñas tartaletas rellenas de un relleno dulce y semilíquido hecho con mantequilla, azúcar, jarabe y huevo.</p>
+                <p><strong>Nanaimo Bars:</strong> Un postre frío de tres capas que no requiere cocción: base de galleta y coco, crema de vainilla en medio y chocolate fundido arriba.</p>
+                <p><strong>BeaverTails (Colas de Castor):</strong> Una delicia de masa frita, plana y alargada, cubierta con toppings dulces.</p>
+
+                <h3>Otros Platos Regionales</h3>
+                <p><strong>Fiddleheads:</strong> Brotes tiernos de helechos que se recogen en primavera, comunes en Nuevo Brunswick.</p>
+                <p><strong>Bagels estilo Montreal:</strong> Más pequeño, denso y dulce que el de Nueva York, horneado en horno de leña.</p>
+            </div>
+
+            <div id="vestimenta" class="tab-content">
+                <h2>👕 Vestimenta</h2>
+                <h3>1. Vestimenta Diaria (Moda Canadiense)</h3>
+                <p>El estilo canadiense se define por la practicidad y la informalidad.</p>
+                <p><strong>Ropa por Capas (El "Estilo Cebolla"):</strong> Es la regla de oro para cualquier estación. Permite quitar o añadir ropa para regular la temperatura.</p>
+                <ul>
+                    <li><strong>Capa Base:</strong> Ropa térmica que mantiene el calor corporal.</li>
+                    <li><strong>Capa Intermedia:</strong> Suéteres de lana o fleece (felpa polar) para aislar.</li>
+                    <li><strong>Capa Exterior:</strong> Chaquetas o abrigos impermeables y resistentes al viento.</li>
+                </ul>
+                <p><strong>Comodidad y Casualidad:</strong> El estilo predominante es casual. Los jeans, las sudaderas (hoodies), y las zapatillas deportivas son muy comunes.</p>
+                <p><strong>Ropa a Cuadros (Plaid o Flannel):</strong> Las camisas de franela a cuadros son un clásico atemporal.</p>
+
+                <h3>2. Vestimenta Tradicional y Simbólica</h3>
+                <p><strong>Vestimenta Indígena:</strong> Prendas hechas de pieles de animales, a menudo decoradas con bordados y flecos. Los mocasines y los trajes ceremoniales son parte de esta herencia.</p>
+                <p><strong>La Policía Montada:</strong> El uniforme de gala de la Real Policía Montada de Canadá (chaqueta roja, sombrero de ala ancha) es un símbolo nacional icónico.</p>
+                <p><strong>Sombrero de Vaquero:</strong> En el oeste (Alberta), la vestimenta vaquera con sombreros y botas es parte de la identidad regional.</p>
+
+                <h3>3. La Importancia del Invierno</h3>
+                <p>El factor más importante en la vestimenta canadiense es el invierno. La gente invierte en botas de invierno impermeables y accesorios como gorros, bufandas y guantes.</p>
+            </div>
+
+            <div id="musica" class="tab-content">
+                <h2>🎵 Música y Danzas</h2>
+                <h3>1. Música Tradicional y Folclórica</h3>
+                <p><strong>Música Franco-Canadiense (Quebec):</strong> Combina influencias celtas y francesas, con el violín como instrumento clave. Las danzas asociadas son rápidas y sociales.</p>
+                <p><strong>Música Anglocanadiense:</strong> Se mezcla con géneros como el country, el folk y el bluegrass.</p>
+
+                <h3>2. Danzas y Música Indígena</h3>
+                <p><strong>Pow Wow:</strong> Un encuentro social y espiritual con música centrada en el tambor y danzas que representan la historia de las tribus.</p>
+
+                <h3>3. Géneros Contemporáneos (Música Popular)</h3>
+                <p><strong>Rock e Indie Rock:</strong> Canadá ha producido bandas influyentes como Rush y Arcade Fire.</p>
+                <p><strong>Pop y R&B:</strong> Ha dominado las listas internacionales con artistas como Celine Dion, Justin Bieber, Drake y The Weeknd.</p>
+                <p><strong>Folk y Country:</strong> Artistas legendarios como Joni Mitchell, Leonard Cohen y Neil Young son fundamentales.</p>
+                <p><strong>Jazz:</strong> Figuras como el pianista Oscar Peterson consolidaron una fuerte tradición de jazz.</p>
+                <p><strong>Hip-Hop y Urbano:</strong> Montreal y Toronto son centros importantes para la música urbana.</p>
+            </div>
+
+            <div id="personajes" class="tab-content">
+                <h2>⭐ Personajes Relevantes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Área</th>
+                            <th>Personaje(s)</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Historia</td>
+                            <td>Sir John A. Macdonald</td>
+                            <td>Primer Primer Ministro; padre de la Confederación.</td>
+                        </tr>
+                        <tr>
+                            <td>Política</td>
+                            <td>Pierre Elliott Trudeau</td>
+                            <td>Primer Ministro, defensor del multiculturalismo y la Carta de Derechos.</td>
+                        </tr>
+                        <tr>
+                            <td>Ciencia</td>
+                            <td>Frederick Banting</td>
+                            <td>Descubridor de la insulina (Premio Nobel).</td>
+                        </tr>
+                        <tr>
+                            <td>Literatura</td>
+                            <td>Margaret Atwood</td>
+                            <td>Novelista de fama mundial (El cuento de la criada).</td>
+                        </tr>
+                        <tr>
+                            <td>Música</td>
+                            <td>Leonard Cohen</td>
+                            <td>Cantautor y poeta icónico (Hallelujah).</td>
+                        </tr>
+                        <tr>
+                            <td>Música Pop</td>
+                            <td>Celine Dion, Drake</td>
+                            <td>Artistas de mayor éxito global y ventas.</td>
+                        </tr>
+                        <tr>
+                            <td>Cine/Comedia</td>
+                            <td>Jim Carrey, Ryan Reynolds</td>
+                            <td>Actores canadienses con gran éxito en Hollywood.</td>
+                        </tr>
+                        <tr>
+                            <td>Inspiración</td>
+                            <td>Terry Fox</td>
+                            <td>Héroe nacional por su maratón para recaudar fondos contra el cáncer.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+    <footer>
+        <p>&copy; © 2025 ADSO. Todos los derechos reservados. | Centro de la Innovación Agroindustrial.</p>
+    </footer>
+
+    <script>
+        // Sistema de traducción
+        const translations = {
+            'es': {
+                'titulo': 'Canadá',
+                'subtitulo': 'Descubre la cultura, tradiciones y maravillas del Gran Norte Blanco',
+                'gastronomia': '🍽️ Gastronomía',
+                'vestimenta': '👕 Vestimenta',
+                'musica': '🎵 Música y Danzas',
+                'personajes': '⭐ Personajes Relevantes',
+                'volverMenu': 'Volver al menú',
+                'crearPase': 'Crear mi Pase de Visitante',
+                'platosSalados': 'Platos Salados Famosos',
+                'poutine': 'Poutine:',
+                'poutineDesc': 'Es quizás el plato canadiense más icónico, originario de Quebec. Consiste en una base de papas fritas, cubiertas con trozos de queso en grano y bañadas en una salsa de carne caliente (gravy).',
+                'tourtiere': 'Tourtière:',
+                'tourtiereDesc': 'Un delicioso pastel de carne tradicional de la cocina franco-canadiense, muy popular durante las fiestas navideñas.',
+                'carneAhumada': 'Carne Ahumada (Smoked Meat):',
+                'carneAhumadaDesc': 'Un tipo de carne de res curada y ahumada, muy similar al pastrami. Se sirve caliente en un sándwich de pan de centeno con mostaza, muy famoso en Montreal.',
+                'peamealBacon': 'Peameal Bacon:',
+                'peamealBaconDesc': 'También conocido como Canadian Bacon. Es lomo de cerdo magro, curado en salmuera y rebozado en harina de maíz.',
+                'pescadosMariscos': 'Pescados y Mariscos:',
+                'pescadosMariscosDesc': 'Dada su extensa costa, el salmón, el cangrejo de nieve, la langosta y las vieiras son ingredientes esenciales, sobre todo en las Provincias Atlánticas.',
+                'postres': 'Postres y Dulces Emblemáticos',
+                'siropeArce': 'Sirope de Arce (Maple Syrup):',
+                'siropeArceDesc': 'Es el símbolo culinario de Canadá. Este jarabe dulce se utiliza para endulzar pancakes, waffles, postres, e incluso para curar carnes.',
+                'butterTarts': 'Butter Tarts (Tartas de Mantequilla):',
+                'butterTartsDesc': 'Pequeñas tartaletas rellenas de un relleno dulce y semilíquido hecho con mantequilla, azúcar, jarabe y huevo.',
+                'nanaimoBars': 'Nanaimo Bars:',
+                'nanaimoBarsDesc': 'Un postre frío de tres capas que no requiere cocción: base de galleta y coco, crema de vainilla en medio y chocolate fundido arriba.',
+                'beaverTails': 'BeaverTails (Colas de Castor):',
+                'beaverTailsDesc': 'Una delicia de masa frita, plana y alargada, cubierta con toppings dulces.',
+                'otrosPlatos': 'Otros Platos Regionales',
+                'fiddleheads': 'Fiddleheads:',
+                'fiddleheadsDesc': 'Brotes tiernos de helechos que se recogen en primavera, comunes en Nuevo Brunswick.',
+                'bagels': 'Bagels estilo Montreal:',
+                'bagelsDesc': 'Más pequeño, denso y dulce que el de Nueva York, horneado en horno de leña.',
+                'vestimentaDiaria': '1. Vestimenta Diaria (Moda Canadiense)',
+                'estiloCebolla': 'Ropa por Capas (El "Estilo Cebolla"):',
+                'estiloCebollaDesc': 'Es la regla de oro para cualquier estación. Permite quitar o añadir ropa para regular la temperatura.',
+                'capaBase': 'Capa Base:',
+                'capaBaseDesc': 'Ropa térmica que mantiene el calor corporal.',
+                'capaIntermedia': 'Capa Intermedia:',
+                'capaIntermediaDesc': 'Suéteres de lana o fleece (felpa polar) para aislar.',
+                'capaExterior': 'Capa Exterior:',
+                'capaExteriorDesc': 'Chaquetas o abrigos impermeables y resistentes al viento.',
+                'comodidad': 'Comodidad y Casualidad:',
+                'comodidadDesc': 'El estilo predominante es casual. Los jeans, las sudaderas (hoodies), y las zapatillas deportivas son muy comunes.',
+                'ropaCuadros': 'Ropa a Cuadros (Plaid o Flannel):',
+                'ropaCuadrosDesc': 'Las camisas de franela a cuadros son un clásico atemporal.',
+                'vestimentaTradicional': '2. Vestimenta Tradicional y Simbólica',
+                'vestimentaIndigena': 'Vestimenta Indígena:',
+                'vestimentaIndigenaDesc': 'Prendas hechas de pieles de animales, a menudo decoradas con bordados y flecos. Los mocasines y los trajes ceremoniales son parte de esta herencia.',
+                'policiaMontada': 'La Policía Montada:',
+                'policiaMontadaDesc': 'El uniforme de gala de la Real Policía Montada de Canadá (chaqueta roja, sombrero de ala ancha) es un símbolo nacional icónico.',
+                'sombreroVaquero': 'Sombrero de Vaquero:',
+                'sombreroVaqueroDesc': 'En el oeste (Alberta), la vestimenta vaquera con sombreros y botas es parte de la identidad regional.',
+                'importanciaInvierno': '3. La Importancia del Invierno',
+                'importanciaInviernoDesc': 'El factor más importante en la vestimenta canadiense es el invierno. La gente invierte en botas de invierno impermeables y accesorios como gorros, bufandas y guantes.',
+                'musicaTradicional': '1. Música Tradicional y Folclórica',
+                'musicaFranco': 'Música Franco-Canadiense (Quebec):',
+                'musicaFrancoDesc': 'Combina influencias celtas y francesas, con el violín como instrumento clave. Las danzas asociadas son rápidas y sociales.',
+                'musicaAnglo': 'Música Anglocanadiense:',
+                'musicaAngloDesc': 'Se mezcla con géneros como el country, el folk y el bluegrass.',
+                'danzasIndigenas': '2. Danzas y Música Indígena',
+                'powWow': 'Pow Wow:',
+                'powWowDesc': 'Un encuentro social y espiritual con música centrada en el tambor y danzas que representan la historia de las tribus.',
+                'generosContemporaneos': '3. Géneros Contemporáneos (Música Popular)',
+                'rock': 'Rock e Indie Rock:',
+                'rockDesc': 'Canadá ha producido bandas influyentes como Rush y Arcade Fire.',
+                'pop': 'Pop y R&B:',
+                'popDesc': 'Ha dominado las listas internacionales con artistas como Celine Dion, Justin Bieber, Drake y The Weeknd.',
+                'folk': 'Folk y Country:',
+                'folkDesc': 'Artistas legendarios como Joni Mitchell, Leonard Cohen y Neil Young son fundamentales.',
+                'jazz': 'Jazz:',
+                'jazzDesc': 'Figuras como el pianista Oscar Peterson consolidaron una fuerte tradición de jazz.',
+                'hiphop': 'Hip-Hop y Urbano:',
+                'hiphopDesc': 'Montreal y Toronto son centros importantes para la música urbana.',
+                'tablaArea': 'Área',
+                'tablaPersonaje': 'Personaje(s)',
+                'tablaDescripcion': 'Descripción',
+                'historia': 'Historia',
+                'politica': 'Política',
+                'ciencia': 'Ciencia',
+                'literatura': 'Literatura',
+                'musicaTabla': 'Música',
+                'musicaPop': 'Música Pop',
+                'cine': 'Cine/Comedia',
+                'inspiracion': 'Inspiración',
+                'footer': '© 2025 ADSO. Todos los derechos reservados. | Centro de la Innovación Agroindustrial.'
+            },
+            'en': {
+                'titulo': 'Canada',
+                'subtitulo': 'Discover the culture, traditions and wonders of the Great White North',
+                'gastronomia': '🍽️ Gastronomy',
+                'vestimenta': '👕 Clothing',
+                'musica': '🎵 Music and Dances',
+                'personajes': '⭐ Relevant Characters',
+                'volverMenu': 'Back to menu',
+                'crearPase': 'Create my Visitor Pass',
+                'platosSalados': 'Famous Savory Dishes',
+                'poutine': 'Poutine:',
+                'poutineDesc': 'It is perhaps the most iconic Canadian dish, originating from Quebec. It consists of a base of french fries, topped with cheese curds and covered in hot meat gravy.',
+                'tourtiere': 'Tourtière:',
+                'tourtiereDesc': 'A delicious traditional meat pie from French-Canadian cuisine, very popular during the Christmas holidays.',
+                'carneAhumada': 'Smoked Meat:',
+                'carneAhumadaDesc': 'A type of cured and smoked beef, very similar to pastrami. Served hot in a rye bread sandwich with mustard, very famous in Montreal.',
+                'peamealBacon': 'Peameal Bacon:',
+                'peamealBaconDesc': 'Also known as Canadian Bacon. It is lean pork loin, cured in brine and coated in cornmeal.',
+                'pescadosMariscos': 'Fish and Seafood:',
+                'pescadosMariscosDesc': 'Given its extensive coastline, salmon, snow crab, lobster and scallops are essential ingredients, especially in the Atlantic Provinces.',
+                'postres': 'Iconic Desserts and Sweets',
+                'siropeArce': 'Maple Syrup:',
+                'siropeArceDesc': 'It is the culinary symbol of Canada. This sweet syrup is used to sweeten pancakes, waffles, desserts, and even to cure meats.',
+                'butterTarts': 'Butter Tarts:',
+                'butterTartsDesc': 'Small tartlets filled with a sweet and semi-liquid filling made with butter, sugar, syrup and egg.',
+                'nanaimoBars': 'Nanaimo Bars:',
+                'nanaimoBarsDesc': 'A cold three-layer dessert that requires no baking: cookie and coconut base, vanilla cream in the middle and melted chocolate on top.',
+                'beaverTails': 'BeaverTails:',
+                'beaverTailsDesc': 'A fried dough delicacy, flat and elongated, covered with sweet toppings.',
+                'otrosPlatos': 'Other Regional Dishes',
+                'fiddleheads': 'Fiddleheads:',
+                'fiddleheadsDesc': 'Tender fern shoots collected in spring, common in New Brunswick.',
+                'bagels': 'Montreal-style Bagels:',
+                'bagelsDesc': 'Smaller, denser and sweeter than New York style, baked in a wood-fired oven.',
+                'vestimentaDiaria': '1. Daily Clothing (Canadian Fashion)',
+                'estiloCebolla': 'Layered Clothing (The "Onion Style"):',
+                'estiloCebollaDesc': 'It is the golden rule for any season. It allows you to remove or add clothing to regulate temperature.',
+                'capaBase': 'Base Layer:',
+                'capaBaseDesc': 'Thermal clothing that maintains body heat.',
+                'capaIntermedia': 'Middle Layer:',
+                'capaIntermediaDesc': 'Wool sweaters or fleece for insulation.',
+                'capaExterior': 'Outer Layer:',
+                'capaExteriorDesc': 'Waterproof and wind-resistant jackets or coats.',
+                'comodidad': 'Comfort and Casualness:',
+                'comodidadDesc': 'The predominant style is casual. Jeans, hoodies, and sneakers are very common.',
+                'ropaCuadros': 'Plaid or Flannel Clothing:',
+                'ropaCuadrosDesc': 'Plaid flannel shirts are a timeless classic.',
+                'vestimentaTradicional': '2. Traditional and Symbolic Clothing',
+                'vestimentaIndigena': 'Indigenous Clothing:',
+                'vestimentaIndigenaDesc': 'Garments made from animal skins, often decorated with embroidery and fringe. Moccasins and ceremonial costumes are part of this heritage.',
+                'policiaMontada': 'The Mounted Police:',
+                'policiaMontadaDesc': 'The dress uniform of the Royal Canadian Mounted Police (red jacket, wide-brimmed hat) is an iconic national symbol.',
+                'sombreroVaquero': 'Cowboy Hat:',
+                'sombreroVaqueroDesc': 'In the West (Alberta), cowboy clothing with hats and boots is part of the regional identity.',
+                'importanciaInvierno': '3. The Importance of Winter',
+                'importanciaInviernoDesc': 'The most important factor in Canadian clothing is winter. People invest in waterproof winter boots and accessories like hats, scarves and gloves.',
+                'musicaTradicional': '1. Traditional and Folk Music',
+                'musicaFranco': 'French-Canadian Music (Quebec):',
+                'musicaFrancoDesc': 'It combines Celtic and French influences, with the violin as a key instrument. The associated dances are fast and social.',
+                'musicaAnglo': 'Anglo-Canadian Music:',
+                'musicaAngloDesc': 'It mixes with genres like country, folk and bluegrass.',
+                'danzasIndigenas': '2. Indigenous Dances and Music',
+                'powWow': 'Pow Wow:',
+                'powWowDesc': 'A social and spiritual gathering with music centered on the drum and dances that represent tribal history.',
+                'generosContemporaneos': '3. Contemporary Genres (Popular Music)',
+                'rock': 'Rock and Indie Rock:',
+                'rockDesc': 'Canada has produced influential bands like Rush and Arcade Fire.',
+                'pop': 'Pop and R&B:',
+                'popDesc': 'It has dominated international charts with artists like Celine Dion, Justin Bieber, Drake and The Weeknd.',
+                'folk': 'Folk and Country:',
+                'folkDesc': 'Legendary artists like Joni Mitchell, Leonard Cohen and Neil Young are fundamental.',
+                'jazz': 'Jazz:',
+                'jazzDesc': 'Figures like pianist Oscar Peterson consolidated a strong jazz tradition.',
+                'hiphop': 'Hip-Hop and Urban:',
+                'hiphopDesc': 'Montreal and Toronto are important centers for urban music.',
+                'tablaArea': 'Area',
+                'tablaPersonaje': 'Character(s)',
+                'tablaDescripcion': 'Description',
+                'historia': 'History',
+                'politica': 'Politics',
+                'ciencia': 'Science',
+                'literatura': 'Literature',
+                'musicaTabla': 'Music',
+                'musicaPop': 'Pop Music',
+                'cine': 'Film/Comedy',
+                'inspiracion': 'Inspiration',
+                'footer': '© 2025 ADSO. All rights reserved. | Center for Agroindustrial Innovation.'
+            }
+        };
+
+        let currentLang = 'es';
+
+        // Función para cambiar idioma
+        function changeLanguage(lang) {
+            currentLang = lang;
+            const t = translations[lang];
+            
+            // Actualizar elementos de la página
+            document.querySelector('h1').textContent = t.titulo;
+            document.querySelector('header p').textContent = t.subtitulo;
+            
+            // Actualizar botones de pestañas
+            document.querySelector('[data-tab="gastronomia"]').textContent = t.gastronomia;
+            document.querySelector('[data-tab="vestimenta"]').textContent = t.vestimenta;
+            document.querySelector('[data-tab="musica"]').textContent = t.musica;
+            document.querySelector('[data-tab="personajes"]').textContent = t.personajes;
+            
+            // Actualizar botones de acción
+            document.querySelectorAll('.visitor-pass-btn')[0].textContent = t.volverMenu;
+            document.querySelectorAll('.visitor-pass-btn')[1].textContent = t.crearPase;
+            
+            // Actualizar contenido de GASTRONOMÍA
+            const gastronomia = document.getElementById('gastronomia');
+            gastronomia.querySelector('h2').textContent = t.gastronomia;
+            gastronomia.querySelector('h3').textContent = t.platosSalados;
+            
+            // Actualizar párrafos de gastronomía
+            const gastronomiaParrafos = gastronomia.querySelectorAll('p');
+            gastronomiaParrafos[0].innerHTML = `<strong>${t.poutine}</strong> ${t.poutineDesc}`;
+            gastronomiaParrafos[1].innerHTML = `<strong>${t.tourtiere}</strong> ${t.tourtiereDesc}`;
+            gastronomiaParrafos[2].innerHTML = `<strong>${t.carneAhumada}</strong> ${t.carneAhumadaDesc}`;
+            gastronomiaParrafos[3].innerHTML = `<strong>${t.peamealBacon}</strong> ${t.peamealBaconDesc}`;
+            gastronomiaParrafos[4].innerHTML = `<strong>${t.pescadosMariscos}</strong> ${t.pescadosMariscosDesc}`;
+            
+            // Actualizar sección de postres
+            gastronomia.querySelectorAll('h3')[1].textContent = t.postres;
+            gastronomiaParrafos[5].innerHTML = `<strong>${t.siropeArce}</strong> ${t.siropeArceDesc}`;
+            gastronomiaParrafos[6].innerHTML = `<strong>${t.butterTarts}</strong> ${t.butterTartsDesc}`;
+            gastronomiaParrafos[7].innerHTML = `<strong>${t.nanaimoBars}</strong> ${t.nanaimoBarsDesc}`;
+            gastronomiaParrafos[8].innerHTML = `<strong>${t.beaverTails}</strong> ${t.beaverTailsDesc}`;
+            
+            // Actualizar otros platos
+            gastronomia.querySelectorAll('h3')[2].textContent = t.otrosPlatos;
+            gastronomiaParrafos[9].innerHTML = `<strong>${t.fiddleheads}</strong> ${t.fiddleheadsDesc}`;
+            gastronomiaParrafos[10].innerHTML = `<strong>${t.bagels}</strong> ${t.bagelsDesc}`;
+            
+            // Actualizar contenido de VESTIMENTA
+            const vestimenta = document.getElementById('vestimenta');
+            vestimenta.querySelector('h2').textContent = t.vestimenta;
+            vestimenta.querySelector('h3').textContent = t.vestimentaDiaria;
+            
+            const vestimentaParrafos = vestimenta.querySelectorAll('p');
+            vestimentaParrafos[0].textContent = t.estiloCebollaDesc.replace('Es la regla', 'It is the rule').replace('Permite', 'It allows');
+            vestimentaParrafos[1].innerHTML = `<strong>${t.estiloCebolla}</strong> ${t.estiloCebollaDesc}`;
+            
+            // Actualizar lista
+            const listaItems = vestimenta.querySelectorAll('li');
+            listaItems[0].innerHTML = `<strong>${t.capaBase}</strong> ${t.capaBaseDesc}`;
+            listaItems[1].innerHTML = `<strong>${t.capaIntermedia}</strong> ${t.capaIntermediaDesc}`;
+            listaItems[2].innerHTML = `<strong>${t.capaExterior}</strong> ${t.capaExteriorDesc}`;
+            
+            vestimentaParrafos[2].innerHTML = `<strong>${t.comodidad}</strong> ${t.comodidadDesc}`;
+            vestimentaParrafos[3].innerHTML = `<strong>${t.ropaCuadros}</strong> ${t.ropaCuadrosDesc}`;
+            
+            // Vestimenta tradicional
+            vestimenta.querySelectorAll('h3')[1].textContent = t.vestimentaTradicional;
+            vestimentaParrafos[4].innerHTML = `<strong>${t.vestimentaIndigena}</strong> ${t.vestimentaIndigenaDesc}`;
+            vestimentaParrafos[5].innerHTML = `<strong>${t.policiaMontada}</strong> ${t.policiaMontadaDesc}`;
+            vestimentaParrafos[6].innerHTML = `<strong>${t.sombreroVaquero}</strong> ${t.sombreroVaqueroDesc}`;
+            
+            // Importancia del invierno
+            vestimenta.querySelectorAll('h3')[2].textContent = t.importanciaInvierno;
+            vestimentaParrafos[7].textContent = t.importanciaInviernoDesc;
+            
+            // Actualizar contenido de MÚSICA
+            const musica = document.getElementById('musica');
+            musica.querySelector('h2').textContent = t.musica;
+            musica.querySelectorAll('h3')[0].textContent = t.musicaTradicional;
+            
+            const musicaParrafos = musica.querySelectorAll('p');
+            musicaParrafos[0].innerHTML = `<strong>${t.musicaFranco}</strong> ${t.musicaFrancoDesc}`;
+            musicaParrafos[1].innerHTML = `<strong>${t.musicaAnglo}</strong> ${t.musicaAngloDesc}`;
+            
+            // Danzas indígenas
+            musica.querySelectorAll('h3')[1].textContent = t.danzasIndigenas;
+            musicaParrafos[2].innerHTML = `<strong>${t.powWow}</strong> ${t.powWowDesc}`;
+            
+            // Géneros contemporáneos
+            musica.querySelectorAll('h3')[2].textContent = t.generosContemporaneos;
+            musicaParrafos[3].innerHTML = `<strong>${t.rock}</strong> ${t.rockDesc}`;
+            musicaParrafos[4].innerHTML = `<strong>${t.pop}</strong> ${t.popDesc}`;
+            musicaParrafos[5].innerHTML = `<strong>${t.folk}</strong> ${t.folkDesc}`;
+            musicaParrafos[6].innerHTML = `<strong>${t.jazz}</strong> ${t.jazzDesc}`;
+            musicaParrafos[7].innerHTML = `<strong>${t.hiphop}</strong> ${t.hiphopDesc}`;
+            
+            // Actualizar tabla de PERSONAJES
+            const tabla = document.querySelector('table');
+            const ths = tabla.querySelectorAll('th');
+            ths[0].textContent = t.tablaArea;
+            ths[1].textContent = t.tablaPersonaje;
+            ths[2].textContent = t.tablaDescripcion;
+            
+            const tds = tabla.querySelectorAll('td');
+            tds[0].textContent = t.historia;
+            tds[3].textContent = t.politica;
+            tds[6].textContent = t.ciencia;
+            tds[9].textContent = t.literatura;
+            tds[12].textContent = t.musicaTabla;
+            tds[15].textContent = t.musicaPop;
+            tds[18].textContent = t.cine;
+            tds[21].textContent = t.inspiracion;
+            
+            // Actualizar footer
+            document.querySelector('footer p').innerHTML = t.footer;
+            
+            // Actualizar texto del botón de idioma
+            document.getElementById('languageBtn').textContent = lang === 'es' ? 'EN' : 'ES';
+        }
+
+        // Inicializar cuando el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lógica para cambiar de pestaña
+            const tabButtons = document.querySelectorAll(".tab-btn");
+            const tabContents = document.querySelectorAll(".tab-content");
+
+            tabButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    tabButtons.forEach(btn => btn.classList.remove("active"));
+                    tabContents.forEach(content => content.classList.remove("active"));
+                    button.classList.add("active");
+                    document.getElementById(button.dataset.tab).classList.add("active");
+                });
+            });
+
+            // Configurar botón de idioma
+            document.getElementById('languageBtn').addEventListener('click', function() {
+                const newLang = currentLang === 'es' ? 'en' : 'es';
+                changeLanguage(newLang);
+            });
+        });
+    </script>
+</body>
+</html>

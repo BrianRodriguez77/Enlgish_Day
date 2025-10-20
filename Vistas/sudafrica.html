@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDÁFRICA - Tierra del Arcoíris</title>
+    <link rel="stylesheet" href="../Assets/css/sudafrica.css">
+    <link rel="stylesheet" href="../Assets/css/responsive.css">
+    <style>
+        /* Estilos adicionales para el selector de idioma */
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .language-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .language-btn.active {
+            background: rgba(255, 255, 255, 0.4);
+            font-weight: bold;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-sudafrica">
+        <div class="container">
+            <!-- Selector de idioma -->
+            <div class="language-selector">
+                <button class="language-btn active" data-lang="es">ES</button>
+                <button class="language-btn" data-lang="en">EN</button>
+            </div>
+            
+            <div class="header-content">
+                <div class="titulo-principal">
+                    <h1 class="titulo-sudafrica" data-es="SUDÁFRICA" data-en="SOUTH AFRICA"></h1>
+                    <div class="bandera-decorativa">
+                        <img src="../Assets/img/sudafrica.png" alt="Bandera de Sudáfrica" width="300">
+                    </div>
+                </div>
+                <p class="subtitulo" data-es="Descubre la nación del arcoíris: diversidad cultural, vida salvaje espectacular y paisajes impresionantes" 
+                   data-en="Discover the rainbow nation: cultural diversity, spectacular wildlife and impressive landscapes">Descubre la nación del arcoíris: diversidad cultural, vida salvaje espectacular y paisajes impresionantes</p>
+                <div class="header-actions">
+                    <div class="botones-header">
+                        <a href="../Pasaporte/Login.php" class="pasaporte-btn-header">
+                            <span class="btn-icon">🦁</span>
+                            <span data-es="Obtener Pasaporte Virtual" data-en="Get Virtual Passport">Obtener Pasaporte Virtual</span>
+                            <span class="btn-efecto"></span>
+                        </a>
+                        <a href="../index.html" class="menu-btn-header">
+                            <span class="btn-icon">🏠</span>
+                            <span data-es="Menú Principal" data-en="Main Menu">Menú Principal</span>
+                            <span class="btn-efecto"></span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="header-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- El resto del contenido permanece igual -->
+    <div class="container">
+        <div class="nav-tabs">
+            <button class="tab-btn active" data-tab="biodiversidad" data-es="Biodiversidad" data-en="Biodiversity">Biodiversidad</button>
+            <button class="tab-btn" data-tab="cultura" data-es="Cultura" data-en="Culture">Cultura</button>
+            <button class="tab-btn" data-tab="historia" data-es="Historia" data-en="History">Historia</button>
+            <button class="tab-btn" data-tab="gastronomia" data-es="Gastronomía" data-en="Gastronomy">Gastronomía</button>
+            <button class="tab-btn" data-tab="turismo" data-es="Turismo" data-en="Tourism">Turismo</button>
+            <button class="tab-btn" data-tab="idiomas" data-es="Idiomas" data-en="Languages">Idiomas</button>
+            <button class="tab-btn" data-tab="personajes" data-es="Personajes" data-en="Famous People">Personajes</button>
+        </div>
+
+        <!-- BIODIVERSIDAD -->
+        <div id="biodiversidad" class="tab-content active">
+            <h2 data-es="🌿 Biodiversidad Sudafricana" data-en="🌿 South African Biodiversity">🌿 Biodiversidad Sudafricana</h2>
+            <div class="content-grid">
+                <div class="wildlife-category safari-card">
+                    <h3 data-es="Los Cinco Grandes" data-en="The Big Five">Los Cinco Grandes</h3>
+                    <ul>
+                        <li><b data-es="León:" data-en="Lion:">León:</b> <span data-es="Rey de la sabana africana, símbolo de fuerza y poder" data-en="King of the African savannah, symbol of strength and power">Rey de la sabana africana, símbolo de fuerza y poder</span></li>
+                        <li><b data-es="Elefante:" data-en="Elephant:">Elefante:</b> <span data-es="El mamífero terrestre más grande, inteligente y social" data-en="The largest land mammal, intelligent and social">El mamífero terrestre más grande, inteligente y social</span></li>
+                        <li><b data-es="Búfalo:" data-en="Buffalo:">Búfalo:</b> <span data-es="Conocido por su impredecibilidad y fuerza" data-en="Known for its unpredictability and strength">Conocido por su impredecibilidad y fuerza</span></li>
+                        <li><b data-es="Leopardo:" data-en="Leopard:">Leopardo:</b> <span data-es="Elusive y majestuoso, maestro del camuflaje" data-en="Elusive and majestic, master of camouflage">Elusive y majestuoso, maestro del camuflaje</span></li>
+                        <li><b data-es="Rinoceronte:" data-en="Rhino:">Rinoceronte:</b> <span data-es="En peligro crítico, símbolo de conservación" data-en="Critically endangered, symbol of conservation">En peligro crítico, símbolo de conservación</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Resto del contenido de biodiversidad con atributos de traducción similares -->
+                <div class="wildlife-category safari-card">
+                    <h3 data-es="Parques Nacionales" data-en="National Parks">Parques Nacionales</h3>
+                    <ul>
+                        <li><b data-es="Kruger:" data-en="Kruger:">Kruger:</b> <span data-es="Uno de los parques más grandes del mundo (19,485 km²)" data-en="One of the largest parks in the world (19,485 km²)">Uno de los parques más grandes del mundo (19,485 km²)</span></li>
+                        <li><b data-es="Addo Elephant:" data-en="Addo Elephant:">Addo Elephant:</b> <span data-es="Especializado en conservación de elefantes" data-en="Specialized in elephant conservation">Especializado en conservación de elefantes</span></li>
+                        <li><b data-es="Table Mountain:" data-en="Table Mountain:">Table Mountain:</b> <span data-es="Patrimonio de la Humanidad en Ciudad del Cabo" data-en="World Heritage Site in Cape Town">Patrimonio de la Humanidad en Ciudad del Cabo</span></li>
+                        <li><b data-es="Kgalagadi:" data-en="Kgalagadi:">Kgalagadi:</b> <span data-es="Desierto del Kalahari, paisajes únicos" data-en="Kalahari desert, unique landscapes">Desierto del Kalahari, paisajes únicos</span></li>
+                        <li><b data-es="iSimangaliso:" data-en="iSimangaliso:">iSimangaliso:</b> <span data-es="Humedal de importancia internacional" data-en="Wetland of international importance">Humedal de importancia internacional</span></li>
+                    </ul>
+                </div>
+                
+                <div class="wildlife-category safari-card">
+                    <h3 data-es="Flora Única" data-en="Unique Flora">Flora Única</h3>
+                    <ul>
+                        <li><b data-es="Fynbos:" data-en="Fynbos:">Fynbos:</b> <span data-es="Bioma exclusivo con 9,000 especies de plantas" data-en="Exclusive biome with 9,000 plant species">Bioma exclusivo con 9,000 especies de plantas</span></li>
+                        <li><b data-es="Baobab:" data-en="Baobab:">Baobab:</b> <span data-es="Árbol milenario, símbolo de la sabana" data-en="Millenary tree, symbol of the savannah">Árbol milenario, símbolo de la sabana</span></li>
+                        <li><b data-es="Protea:" data-en="Protea:">Protea:</b> <span data-es="Flor nacional, diversidad increíble" data-en="National flower, incredible diversity">Flor nacional, diversidad increíble</span></li>
+                        <li><b data-es="Aloe:" data-en="Aloe:">Aloe:</b> <span data-es="Plantas medicinales nativas" data-en="Native medicinal plants">Plantas medicinales nativas</span></li>
+                        <li><b data-es="Welwitschia:" data-en="Welwitschia:">Welwitschia:</b> <span data-es="Planta del desierto que vive 2,000 años" data-en="Desert plant that lives 2,000 years">Planta del desierto que vive 2,000 años</span></li>
+                    </ul>
+                </div>
+                
+                <div class="wildlife-category safari-card">
+                    <h3 data-es="Especies Endémicas" data-en="Endemic Species">Especies Endémicas</h3>
+                    <ul>
+                        <li><b data-es="Pingüino Africano:" data-en="African Penguin:">Pingüino Africano:</b> <span data-es="Única especie de pingüino en África" data-en="Only penguin species in Africa">Única especie de pingüino en África</span></li>
+                        <li><b data-es="Conejo de Río:" data-en="Riverine Rabbit:">Conejo de Río:</b> <span data-es="Mamífero semiacuático en peligro" data-en="Endangered semi-aquatic mammal">Mamífero semiacuático en peligro</span></li>
+                        <li><b data-es="Rana Fantasma:" data-en="Ghost Frog:">Rana Fantasma:</b> <span data-es="Anfibio único de Table Mountain" data-en="Unique amphibian from Table Mountain">Anfibio único de Table Mountain</span></li>
+                        <li><b data-es="Avispa Joya:" data-en="Jewel Wasp:">Avispa Joya:</b> <span data-es="Insecto de colores metálicos brillantes" data-en="Insect with bright metallic colors">Insecto de colores metálicos brillantes</span></li>
+                        <li><b data-es="Ciclido:" data-en="Cichlid:">Ciclido:</b> <span data-es="Peces de colores en lagos africanos" data-en="Colorful fish in African lakes">Peces de colores en lagos africanos</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CULTURA - Solo mostramos una sección como ejemplo, el resto sigue el mismo patrón -->
+        <div id="cultura" class="tab-content">
+            <h2 data-es="🎭 Cultura Sudafricana" data-en="🎭 South African Culture">🎭 Cultura Sudafricana</h2>
+            <div class="content-grid">
+                <div class="culture-category">
+                    <h3 data-es="Grupos Étnicos" data-en="Ethnic Groups">Grupos Étnicos</h3>
+                    <ul>
+                        <li><b data-es="Zulú:" data-en="Zulu:">Zulú:</b> <span data-es="Grupo más numeroso, rica tradición guerrera" data-en="Largest group, rich warrior tradition">Grupo más numeroso, rica tradición guerrera</span></li>
+                        <li><b data-es="Xhosa:" data-en="Xhosa:">Xhosa:</b> <span data-es="Conocidos por el lenguaje de clics y Nelson Mandela" data-en="Known for click language and Nelson Mandela">Conocidos por el lenguaje de clics y Nelson Mandela</span></li>
+                        <li><b data-es="Afrikáner:" data-en="Afrikaner:">Afrikáner:</b> <span data-es="Descendientes de colonos holandeses" data-en="Descendants of Dutch settlers">Descendientes de colonos holandeses</span></li>
+                        <li><b data-es="Sotho:" data-en="Sotho:">Sotho:</b> <span data-es="Tradiciones ancestrales del interior" data-en="Ancestral traditions from the interior">Tradiciones ancestrales del interior</span></li>
+                        <li><b data-es="Venda:" data-en="Venda:">Venda:</b> <span data-es="Cultura mística y artes únicas" data-en="Mystical culture and unique arts">Cultura mística y artes únicas</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Resto de las secciones de cultura con atributos similares -->
+            </div>
+        </div>
+
+        <!-- HISTORIA -->
+        <div id="historia" class="tab-content">
+            <h2 data-es="📜 Historia de Sudáfrica" data-en="📜 History of South Africa">📜 Historia de Sudáfrica</h2>
+            <div class="content-grid">
+                <!-- Contenido histórico con atributos de traducción -->
+            </div>
+        </div>
+
+        <!-- GASTRONOMÍA -->
+        <div id="gastronomia" class="tab-content">
+            <h2 data-es="🍴 Gastronomía Sudafricana" data-en="🍴 South African Cuisine">🍴 Gastronomía Sudafricana</h2>
+            <div class="content-grid">
+                <!-- Contenido gastronómico con atributos de traducción -->
+            </div>
+        </div>
+
+        <!-- TURISMO -->
+        <div id="turismo" class="tab-content">
+            <h2 data-es="🗺️ Turismo en Sudáfrica" data-en="🗺️ Tourism in South Africa">🗺️ Turismo en Sudáfrica</h2>
+            <div class="content-grid">
+                <!-- Contenido turístico con atributos de traducción -->
+            </div>
+        </div>
+
+        <!-- IDIOMAS -->
+        <div id="idiomas" class="tab-content">
+            <h2 data-es="🗣️ Idiomas de Sudáfrica" data-en="🗣️ Languages of South Africa">🗣️ Idiomas de Sudáfrica</h2>
+            <div class="content-grid">
+                <!-- Contenido de idiomas con atributos de traducción -->
+            </div>
+        </div>
+
+        <!-- PERSONAJES -->
+        <div id="personajes" class="tab-content">
+            <h2 data-es="🌟 Personajes Sudafricanos" data-en="🌟 Famous South Africans">🌟 Personajes Sudafricanos</h2>
+            <div class="content-grid">
+                <!-- Contenido de personajes con atributos de traducción -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p data-es="&copy;  2025 ADSO. Todos los derechos reservados. | Centro de la Innovación Agroindustrial." 
+               data-en="&copy;  2025 ADSO. All rights reserved. | Center for Agroindustrial Innovation.">&copy; © 2025 ADSO. All rights reserved. | Center for Agroindustrial Innovation.</p>
+            <p data-es="Descubre la belleza y diversidad de la Nación del Arcoíris" 
+               data-en="Discover the beauty and diversity of the Rainbow Nation">Descubre la belleza y diversidad de la Nación del Arcoíris</p>
+            <p data-es="Un país, once idiomas oficiales, innumerables culturas" 
+               data-en="One country, eleven official languages, countless cultures">Un país, once idiomas oficiales, innumerables culturas 🌈</p>
+        </div>
+    </footer>
+
+   <script>
+        // Lógica para cambiar de pestaña
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                // Desactivar todos
+                tabButtons.forEach(btn => btn.classList.remove("active"));
+                tabContents.forEach(content => content.classList.remove("active"));
+
+                // Activar el seleccionado
+                button.classList.add("active");
+                document.getElementById(button.dataset.tab).classList.add("active");
+                
+                // Efecto de scroll suave
+                document.querySelector('.container').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Efecto parallax para el header
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('.header-sudafrica');
+            header.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+
+        // Animación para elementos al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar todas las tarjetas
+        document.querySelectorAll('.food-category, .wildlife-category, .culture-category, .history-category, .tourism-category, .language-category, .people-category').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Efecto de escritura para el título
+        const title = document.querySelector('.titulo-sudafrica');
+        const originalText = title.textContent;
+        title.textContent = '';
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < originalText.length) {
+                title.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        // Iniciar efecto después de cargar la página
+        window.addEventListener('load', typeWriter);
+
+        // LÓGICA DE TRADUCCIÓN
+        const languageButtons = document.querySelectorAll('.language-btn');
+        let currentLanguage = 'es'; // Idioma por defecto
+
+        // Función para cambiar el idioma
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Actualizar botones de idioma
+            languageButtons.forEach(btn => {
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Actualizar elementos con atributos de traducción
+            document.querySelectorAll('[data-es], [data-en]').forEach(element => {
+                if (element.dataset[lang]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.value = element.dataset[lang];
+                    } else {
+                        element.textContent = element.dataset[lang];
+                    }
+                }
+            });
+            
+            // Actualizar el atributo lang del documento
+            document.documentElement.lang = lang;
+            
+            // Guardar preferencia de idioma
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Event listeners para botones de idioma
+        languageButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                changeLanguage(button.dataset.lang);
+            });
+        });
+
+        // Cargar idioma guardado al iniciar
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            if (savedLanguage) {
+                changeLanguage(savedLanguage);
+            }
+        });
+    </script>
+</body>
+</html>

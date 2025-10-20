@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>United Kingdom: Tradition & Innovation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Assets/css/ReinoUnido.css">
+  <link rel="stylesheet" href="../Assets/css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Floating Buttons -->
+  <div class="floating-buttons">
+    <button class="float-btn menu-btn" onclick="window.location.href='../index.html'">
+      ← <span id="menuText">Menu</span>
+    </button>
+    <button class="float-btn lang-btn" id="langBtn" onclick="toggleLanguage()">
+      <span id="flagIcon">🇺🇸</span>
+      <span id="langText">English</span>
+    </button>
+    <a href="../Pasaporte/Login.php">
+        <button class="float-btn">
+            <span id="passportText">Passport</span>
+        </button>
+    </a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="union-jack"></div>
+      <h1 id="mainTitle">UNITED KINGDOM</h1>
+      <p class="hero-subtitle" id="heroSubtitle">Tradition Meets Innovation • Heart of the Commonwealth</p>
+      <div class="hero-badges">
+        <div class="hero-badge">🏰 <span id="badge1">Royal Heritage</span></div>
+        <div class="hero-badge">💂 <span id="badge2">Cultural Icon</span></div>
+        <div class="hero-badge">🌍 <span id="badge3">Global Influence</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Overview Section -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon">🇬🇧</span> <span id="titleOverview">Overview</span></h2>
+      
+      <div class="facts-grid">
+        <div class="fact-card">
+          <strong id="factPop">Population (2025)</strong>
+          <p id="factPopText">68 million people across four nations, making it Europe's third-most populous country with rich cultural diversity and heritage.</p>
+        </div>
+        <div class="fact-card">
+          <strong id="factLoc">Location & Geography</strong>
+          <p id="factLocText">Island nation in Northwestern Europe, comprising England, Scotland, Wales, and Northern Ireland. Surrounded by the Atlantic Ocean, North Sea, English Channel, and Irish Sea.</p>
+        </div>
+        <div class="fact-card">
+          <strong id="factCap">Capital & Major Cities</strong>
+          <p id="factCapText">London (capital). Major cities: Edinburgh, Cardiff, Belfast, Manchester, Birmingham, Glasgow, Liverpool.</p>
+        </div>
+        <div class="fact-card">
+          <strong id="factGov">Government</strong>
+          <p id="factGovText">Constitutional monarchy with parliamentary democracy. Head of State: King Charles III. Head of Government: Prime Minister.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3 id="highlightTitle1">Global Influence & Legacy</h3>
+        <p id="highlightText1">The United Kingdom has shaped global history through the British Empire, now transformed into the Commonwealth of Nations. It remains a permanent member of the UN Security Council, nuclear power, and leading financial center with enduring cultural impact worldwide.</p>
+      </div>
+    </section>
+
+    <!-- Four Nations Section -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon"></span> <span id="titleNations">Four Nations United</span></h2>
+      
+      <div class="highlight-box" style="background: linear-gradient(135deg, var(--uk-blue) 0%, #001a4d 100%);">
+        <h3 id="nationsTitle">Union of Diversity</h3>
+        <p id="nationsText">The United Kingdom comprises four distinct countries, each with its own unique identity, culture, and in some cases, separate legal and education systems, all united under one sovereign government.</p>
+      </div>
+
+      <div class="nations-grid">
+        <div class="nation-card england">
+          
+          <div class="name">England</div>
+          <p>Capital: London<br>Population: 56M</p>
+        </div>
+        <div class="nation-card scotland">
+          
+          <div class="name">Scotland</div>
+          <p>Capital: Edinburgh<br>Population: 5.5M</p>
+        </div>
+        <div class="nation-card wales">
+          
+          <div class="name">Wales</div>
+          <p>Capital: Cardiff<br>Population: 3.1M</p>
+        </div>
+        <div class="nation-card ni">
+          <span class="icon"></span>
+          <div class="name">Northern Ireland</div>
+          <p>Capital: Belfast<br>Population: 1.9M</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Royal Heritage -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon"></span> <span id="titleRoyal">Royal Heritage</span></h2>
+      
+      <div class="split-layout">
+        <div class="split-content">
+          <h3 id="monarchyTitle">The British Monarchy</h3>
+          <p id="monarchyText1">The UK is a constitutional monarchy with over 1,000 years of royal history. The current monarch, King Charles III, ascended to the throne in 2022 following the historic 70-year reign of Queen Elizabeth II.</p>
+          <p id="monarchyText2">The Royal Family represents national unity and tradition, while the UK Parliament holds legislative power. This unique balance has inspired constitutional systems worldwide.</p>
+        </div>
+        <div class="split-image">🏰</div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="number">1,000+</span>
+          <span class="label" id="stat1">Years of Monarchy</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">16</span>
+          <span class="label" id="stat2">Commonwealth Realms</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">54</span>
+          <span class="label" id="stat3">Commonwealth Nations</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">6</span>
+          <span class="label" id="stat4">Royal Residences</span>
+        </div>
+      </div>
+
+      <div class="split-layout" style="margin-top: 70px;">
+        <div class="split-image">🎭</div>
+        <div class="split-content">
+          <h3 id="cultureTitle">Cultural Landmarks</h3>
+          <ul class="icon-list">
+            <li id="cult1">Buckingham Palace — Official royal residence in London</li>
+            <li id="cult2">Westminster Abbey — Coronation church since 1066</li>
+            <li id="cult3">Tower of London — Historic castle and Crown Jewels</li>
+            <li id="cult4">Stonehenge — Prehistoric monument over 5,000 years old</li>
+            <li id="cult5">Edinburgh Castle — Iconic Scottish fortress</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Economy & Innovation -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon"></span> <span id="titleEconomy">Economy & Innovation</span></h2>
+      
+      <div class="split-layout">
+        <div class="split-content">
+          <h3 id="ecoTitle">Global Economic Power</h3>
+          <p id="ecoText1">The UK has the world's sixth-largest economy by nominal GDP ($3.1 trillion USD) and is a global leader in finance, technology, and creative industries. London is Europe's premier financial center.</p>
+          <ul class="icon-list" style="margin-top: 30px;">
+            <li id="eco1">Financial Services — London Stock Exchange, global banking hub</li>
+            <li id="eco2">Technology & AI — European leader in tech startups</li>
+            <li id="eco3">Creative Industries — Music, film, and design exports</li>
+            <li id="eco4">Pharmaceuticals — AstraZeneca, GSK leading medical research</li>
+            <li id="eco5">Higher Education — Oxford, Cambridge among world's best</li>
+          </ul>
+        </div>
+        <div class="split-image">🏦</div>
+      </div>
+
+      <div class="highlight-box">
+        <h3 id="innovationTitle">Innovation Legacy</h3>
+        <p id="innovationText">The UK has given the world revolutionary inventions including the World Wide Web, steam engine, television, penicillin, and the telephone. It continues to lead in scientific research with 4 of the world's top 10 universities.</p>
+      </div>
+    </section>
+
+    <!-- Culture & Lifestyle -->
+    <section class="feature-section">
+      <h2 class="section-title"><span class="icon"> </span> <span id="titleCulture">Culture & Lifestyle</span></h2>
+      
+      <div class="split-layout">
+        <div class="split-image">⚽</div>
+        <div class="split-content">
+          <h3 id="lifestyleTitle">British Way of Life</h3>
+          <ul class="icon-list">
+            <li id="life1">Pub Culture — Traditional public houses as social hubs</li>
+            <li id="life2">Football — Invented modern soccer, Premier League global phenomenon</li>
+            <li id="life3">Afternoon Tea — Quintessential British tradition</li>
+            <li id="life4">Music Heritage — The Beatles, Rolling Stones, Adele</li>
+            <li id="life5">Literature — Shakespeare, Dickens, Rowling</li>
+            <li id="life6">Theatre — West End rivaling Broadway</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stats-bar" style="margin-top: 70px;">
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--uk-red), #a00d25);">
+          <span class="number">#6</span>
+          <span class="label" id="lifeStat1">World Economy</span>
+        </div>
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--royal-gold), #b8860b);">
+          <span class="number">4</span>
+          <span class="label" id="lifeStat2">Top 10 Universities</span>
+        </div>
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--uk-blue), #001a4d);">
+          <span class="number">#2</span>
+          <span class="label" id="lifeStat3">Soft Power</span>
+        </div>
+        <div class="stat-item" style="background: linear-gradient(135deg, var(--british-green), #003018);">
+          <span class="number">67M</span>
+          <span class="label" id="lifeStat4">Tourists Yearly</span>
+        </div>
+      </div>
+
+      <div class="highlight-box" style="background: linear-gradient(135deg, var(--british-green) 0%, #002d14 100%);">
+        <h3 id="globalTitle">Global Cultural Impact</h3>
+        <p id="globalText">British culture has profoundly influenced the world through the English language, legal systems, parliamentary democracy, sports, music, and literature. From Shakespeare to the Premier League, British innovations continue to shape global culture and entertainment.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    
+    <p><strong id="footerTitle">Made with British Tradition & Global Vision</strong></p>
+    <p id="footerCopy">© 2025 ADSO. All rights reserved. | Center for Agroindustrial Innovation</p>
+  </footer>
+
+  <script>
+    let currentLang = 'en';
+
+    const translations = {
+      en: {
+        menuText: 'Menu',
+        flagIcon: '🇺🇸',
+        langText: 'English',
+        passportText: 'Passport',
+        mainTitle: 'UNITED KINGDOM',
+        heroSubtitle: 'Tradition Meets Innovation • Heart of the Commonwealth',
+        badge1: 'Royal Heritage',
+        badge2: 'Cultural Icon',
+        badge3: 'Global Influence',
+        titleOverview: 'Overview',
+        factPop: 'Population (2025)',
+        factPopText: '68 million people across four nations, making it Europe\'s third-most populous country with rich cultural diversity and heritage.',
+        factLoc: 'Location & Geography',
+        factLocText: 'Island nation in Northwestern Europe, comprising England, Scotland, Wales, and Northern Ireland. Surrounded by the Atlantic Ocean, North Sea, English Channel, and Irish Sea.',
+        factCap: 'Capital & Major Cities',
+        factCapText: 'London (capital). Major cities: Edinburgh, Cardiff, Belfast, Manchester, Birmingham, Glasgow, Liverpool.',
+        factGov: 'Government',
+        factGovText: 'Constitutional monarchy with parliamentary democracy. Head of State: King Charles III. Head of Government: Prime Minister.',
+        highlightTitle1: 'Global Influence & Legacy',
+        highlightText1: 'The United Kingdom has shaped global history through the British Empire, now transformed into the Commonwealth of Nations. It remains a permanent member of the UN Security Council, nuclear power, and leading financial center with enduring cultural impact worldwide.',
+        titleNations: 'Four Nations United',
+        nationsTitle: 'Union of Diversity',
+        nationsText: 'The United Kingdom comprises four distinct countries, each with its own unique identity, culture, and in some cases, separate legal and education systems, all united under one sovereign government.',
+        titleRoyal: 'Royal Heritage',
+        monarchyTitle: 'The British Monarchy',
+        monarchyText1: 'The UK is a constitutional monarchy with over 1,000 years of royal history. The current monarch, King Charles III, ascended to the throne in 2022 following the historic 70-year reign of Queen Elizabeth II.',
+        monarchyText2: 'The Royal Family represents national unity and tradition, while the UK Parliament holds legislative power. This unique balance has inspired constitutional systems worldwide.',
+        stat1: 'Years of Monarchy',
+        stat2: 'Commonwealth Realms',
+        stat3: 'Commonwealth Nations',
+        stat4: 'Royal Residences',
+        cultureTitle: 'Cultural Landmarks',
+        cult1: 'Buckingham Palace — Official royal residence in London',
+        cult2: 'Westminster Abbey — Coronation church since 1066',
+        cult3: 'Tower of London — Historic castle and Crown Jewels',
+        cult4: 'Stonehenge — Prehistoric monument over 5,000 years old',
+        cult5: 'Edinburgh Castle — Iconic Scottish fortress',
+        titleEconomy: 'Economy & Innovation',
+        ecoTitle: 'Global Economic Power',
+        ecoText1: 'The UK has the world\'s sixth-largest economy by nominal GDP ($3.1 trillion USD) and is a global leader in finance, technology, and creative industries. London is Europe\'s premier financial center.',
+        eco1: 'Financial Services — London Stock Exchange, global banking hub',
+        eco2: 'Technology & AI — European leader in tech startups',
+        eco3: 'Creative Industries — Music, film, and design exports',
+        eco4: 'Pharmaceuticals — AstraZeneca, GSK leading medical research',
+        eco5: 'Higher Education — Oxford, Cambridge among world\'s best',
+        innovationTitle: 'Innovation Legacy',
+        innovationText: 'The UK has given the world revolutionary inventions including the World Wide Web, steam engine, television, penicillin, and the telephone. It continues to lead in scientific research with 4 of the world\'s top 10 universities.',
+        titleCulture: 'Culture & Lifestyle',
+        lifestyleTitle: 'British Way of Life',
+        life1: 'Pub Culture — Traditional public houses as social hubs',
+        life2: 'Football — Invented modern soccer, Premier League global phenomenon',
+        life3: 'Afternoon Tea — Quintessential British tradition',
+        life4: 'Music Heritage — The Beatles, Rolling Stones, Adele',
+        life5: 'Literature — Shakespeare, Dickens, Rowling',
+        life6: 'Theatre — West End rivaling Broadway',
+        lifeStat1: 'World Economy',
+        lifeStat2: 'Top 10 Universities',
+        lifeStat3: 'Soft Power',
+        lifeStat4: 'Tourists Yearly',
+        globalTitle: 'Global Cultural Impact',
+        globalText: 'British culture has profoundly influenced the world through the English language, legal systems, parliamentary democracy, sports, music, and literature. From Shakespeare to the Premier League, British innovations continue to shape global culture and entertainment.',
+        footerTitle: 'Made with British Tradition & Global Vision',
+        footerCopy: '© 2025 ADSO. All rights reserved. | Center for Agroindustrial Innovation'
+      },
+      es: {
+        menuText: 'Menú',
+        flagIcon: '🇪🇸',
+        langText: 'Español',
+        passportText: 'Pasaporte',
+        mainTitle: 'REINO UNIDO',
+        heroSubtitle: 'Tradición e Innovación • Corazón de la Mancomunidad',
+        badge1: 'Herencia Real',
+        badge2: 'Icono Cultural',
+        badge3: 'Influencia Global',
+        titleOverview: 'Descripción General',
+        factPop: 'Población (2025)',
+        factPopText: '68 millones de personas en cuatro naciones, siendo el tercer país más poblado de Europa con rica diversidad cultural y patrimonio.',
+        factLoc: 'Ubicación y Geografía',
+        factLocText: 'Nación insular en el noroeste de Europa, que comprende Inglaterra, Escocia, Gales e Irlanda del Norte. Rodeado por el Océano Atlántico, Mar del Norte, Canal de la Mancha y Mar de Irlanda.',
+        factCap: 'Capital y Ciudades Principales',
+        factCapText: 'Londres (capital). Ciudades principales: Edimburgo, Cardiff, Belfast, Mánchester, Birmingham, Glasgow, Liverpool.',
+        factGov: 'Gobierno',
+        factGovText: 'Monarquía constitucional con democracia parlamentaria. Jefe de Estado: Rey Carlos III. Jefe de Gobierno: Primer Ministro.',
+        highlightTitle1: 'Influencia y Legado Global',
+        highlightText1: 'El Reino Unido ha moldeado la historia global a través del Imperio Británico, ahora transformado en la Mancomunidad de Naciones. Permanece como miembro permanente del Consejo de Seguridad de la ONU, potencia nuclear y principal centro financiero con impacto cultural duradero mundial.',
+        titleNations: 'Cuatro Naciones Unidas',
+        nationsTitle: 'Unión en la Diversidad',
+        nationsText: 'El Reino Unido comprende cuatro países distintos, cada uno con su propia identidad única, cultura y, en algunos casos, sistemas legales y educativos separados, todos unidos bajo un gobierno soberano.',
+        titleRoyal: 'Herencia Real',
+        monarchyTitle: 'La Monarquía Británica',
+        monarchyText1: 'El Reino Unido es una monarquía constitucional con más de 1,000 años de historia real. El monarca actual, Rey Carlos III, ascendió al trono en 2022 tras el histórico reinado de 70 años de la Reina Isabel II.',
+        monarchyText2: 'La Familia Real representa la unidad nacional y la tradición, mientras que el Parlamento del Reino Unido ostenta el poder legislativo. Este equilibrio único ha inspirado sistemas constitucionales en todo el mundo.',
+        stat1: 'Años de Monarquía',
+        stat2: 'Reinos de la Mancomunidad',
+        stat3: 'Naciones de la Mancomunidad',
+        stat4: 'Residencias Reales',
+        cultureTitle: 'Monumentos Culturales',
+        cult1: 'Palacio de Buckingham — Residencia real oficial en Londres',
+        cult2: 'Abadía de Westminster — Iglesia de coronación desde 1066',
+        cult3: 'Torre de Londres — Castillo histórico y Joyas de la Corona',
+        cult4: 'Stonehenge — Monumento prehistórico de más de 5,000 años',
+        cult5: 'Castillo de Edimburgo — Fortaleza escocesa icónica',
+        titleEconomy: 'Economía e Innovación',
+        ecoTitle: 'Poder Económico Global',
+        ecoText1: 'El Reino Unido tiene la sexta economía más grande del mundo por PIB nominal ($3.1 billones USD) y es líder global en finanzas, tecnología e industrias creativas. Londres es el principal centro financiero de Europa.',
+        eco1: 'Servicios Financieros — Bolsa de Londres, centro bancario global',
+        eco2: 'Tecnología e IA — Líder europeo en startups tecnológicas',
+        eco3: 'Industrias Creativas — Exportaciones de música, cine y diseño',
+        eco4: 'Farmacéutica — AstraZeneca, GSK liderando investigación médica',
+        eco5: 'Educación Superior — Oxford, Cambridge entre las mejores del mundo',
+        innovationTitle: 'Legado de Innovación',
+        innovationText: 'El Reino Unido ha dado al mundo inventos revolucionarios incluyendo la World Wide Web, máquina de vapor, televisión, penicilina y teléfono. Continúa liderando en investigación científica con 4 de las 10 mejores universidades del mundo.',
+        titleCulture: 'Cultura y Estilo de Vida',
+        lifestyleTitle: 'Estilo de Vida Británico',
+        life1: 'Cultura de Pub — Casas públicas tradicionales como centros sociales',
+        life2: 'Fútbol — Inventó el fútbol moderno, Premier League fenómeno global',
+        life3: 'Té de la Tarde — Tradición británica por excelencia',
+        life4: 'Herencia Musical — The Beatles, Rolling Stones, Adele',
+        life5: 'Literatura — Shakespeare, Dickens, Rowling',
+        life6: 'Teatro — West End rivalizando con Broadway',
+        lifeStat1: 'Economía Mundial',
+        lifeStat2: 'Top 10 Universidades',
+        lifeStat3: 'Poder Blando',
+        lifeStat4: 'Turistas Anuales',
+        globalTitle: 'Impacto Cultural Global',
+        globalText: 'La cultura británica ha influido profundamente en el mundo a través del idioma inglés, sistemas legales, democracia parlamentaria, deportes, música y literatura. Desde Shakespeare hasta la Premier League, las innovaciones británicas continúan moldeando la cultura y el entretenimiento global.',
+        footerTitle: 'Hecho con Tradición Británica y Visión Global',
+        footerCopy: '© 2025 ADSO. Todos los derechos reservados. | Centro de la Innovación Agroindustrial'
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      updateContent();
+    }
+
+    function updateContent() {
+      const t = translations[currentLang];
+      
+      Object.keys(t).forEach(key => {
+        const element = document.getElementById(key);
+        if (element) {
+          element.textContent = t[key];
+        }
+      });
+    }
+  </script>
+</body>
+</html>

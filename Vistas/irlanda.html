@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irlanda: El Alma Esmeralda</title>
+    <link rel="stylesheet" href="../Assets/css/irlanda.css">
+    <link rel="stylesheet" href="../Assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* === ESTILO PARA BOTÓN VOLVER AL MENÚ === */
+        .menu-return-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.9);
+            color: #004225;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid rgba(0, 66, 37, 0.2);
+            font-family: 'Poppins', sans-serif;
+            backdrop-filter: blur(5px);
+        }
+
+        .menu-return-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 1);
+            color: #002814;
+        }
+
+        .menu-return-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Posicionamiento del botón */
+        .menu-return-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-return-container {
+                top: 15px;
+                left: 15px;
+            }
+            
+            .menu-return-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-return-container {
+                top: 10px;
+                left: 10px;
+            }
+            
+            .menu-return-btn {
+                padding: 5px 10px;
+                font-size: 0.75rem;
+                border-radius: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón Volver al Menú -->
+    <div class="menu-return-container">
+        <a href="../index.html" class="menu-return-btn" data-lang-key="menu_return_text">
+             Volver al Menú
+        </a>
+    </div>
+    <div class="top-controls">
+        <a href="../Pasaporte/Login.php" class="passport-link" target="_blank" data-lang-key="passport_link_text">Pasaporte</a>
+        <div class="lang-switcher">
+            <button id="lang-es" class="active">ES</button>
+            <button id="lang-en">EN</button>
+        </div>
+    </div>
+
+    <header class="hero">
+        <video class="hero-video" autoplay muted loop poster="https://images.unsplash.com/photo-1547441038-0113c2f0f858?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-flying-over-the-cliffs-of-moher-in-ireland-42206-large.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+        <div class="hero-content">
+            <h1 data-lang-key="hero_title">Irlanda</h1>
+            <p data-lang-key="hero_subtitle">El Alma Esmeralda</p>
+        </div>
+        <div class="scroll-down" data-lang-key="hero_scroll">Desliza para explorar ▼</div>
+    </header>
+
+    <main>
+        <section id="geografia" class="section">
+            <h2 class="section-title" data-lang-key="geo_title">Geografía Mágica</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;" data-lang-key="geo_text">Desde los épicos Acantilados de Moher hasta los misteriosos paisajes kársticos de El Burren, la geografía de Irlanda es un personaje en sí misma. Una tierra esculpida por gigantes y tiempo, que invita a ser descubierta en cada colina y cada bahía.</p>
+        </section>
+
+        <section class="parallax-section">
+            <div class="parallax-text" data-lang-key="parallax_text">Una tierra de contrastes y belleza eterna.</div>
+        </section>
+
+        <section id="fauna" class="section">
+            <h2 class="section-title" data-lang-key="fauna_title">Fauna Autóctona</h2>
+            <div class="fauna-container">
+                 <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('../Assets/img/1.webp');">
+                            <h3 data-lang-key="puffin_name">Frailecillo Atlántico</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 data-lang-key="puffin_name_back">Puffin o Frailecillo</h3>
+                            <p data-lang-key="puffin_desc">Conocido como el "loro de mar" por su pico colorido, este carismático pájaro anida en los acantilados de las costas irlandesas, como en las Islas Skellig.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('../Assets/img/2.jpg');">
+                            <h3 data-lang-key="deer_name">Ciervo Rojo</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 data-lang-key="deer_name_back">Ciervo Rojo</h3>
+                            <p data-lang-key="deer_desc">El mamífero terrestre más grande de Irlanda, un símbolo de la naturaleza salvaje. Se pueden encontrar en parques nacionales como el de Killarney.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('../Assets/img/3.jpeg');">
+                            <h3 data-lang-key="seal_name">Foca Gris</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 data-lang-key="seal_name_back">Foca Gris</h3>
+                            <p data-lang-key="seal_desc">Habitantes comunes de las costas irlandesas, estas curiosas criaturas a menudo pueden ser vistas descansando en las rocas o asomando sus cabezas fuera del agua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gastronomia" class="section">
+            <h2 class="section-title" data-lang-key="food_title">Comida tipica Irlanda</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3 data-lang-key="food_stew_name">Irish Stew (Estofado Irlandés)</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <img src="../Assets/img/4.jpg" alt="Irish Stew">
+                            <p data-lang-key="food_stew_desc">El plato nacional por excelencia. Un reconfortante guiso tradicionalmente hecho con cordero o ternera, patatas, cebollas y perejil. Caliente y sustancioso, es el sabor del hogar irlandés.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3 data-lang-key="food_boxty_name">Boxty (Pan de Patata)</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                         <div class="accordion-content-inner">
+                            <img src="../Assets/img/5.jpg" alt="Boxty">
+                            <p data-lang-key="food_boxty_desc">Un tipo de panqueque de patata, crujiente por fuera y tierno por dentro. Su nombre proviene del gaélico "bacstaí". Puede servirse en el desayuno o como plato principal relleno de carne o salmón.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3 data-lang-key="food_coddle_name">Coddle (Guiso de Dublín)</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                         <div class="accordion-content-inner">
+                            <img src="../Assets/img/6.jpg" alt="Coddle">
+                            <p data-lang-key="food_coddle_desc">Un guiso típico de Dublín, cocido a fuego lento, que tradicionalmente se hacía para usar las sobras. Contiene salchichas de cerdo, beicon, patatas y cebolla. Un plato con historia y mucho sabor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="music" class="section">
+            <h2 class="section-title" data-lang-key="music_title">El Ritmo del Corazón Celta</h2>
+            <div class="music-container">
+                <div class="music-text">
+                    <p data-lang-key="music_text_1">La música es el alma de Irlanda. Desde las animadas sesiones en los pubs de Dublín hasta las melancólicas baladas en gaélico, el sonido de violines, flautas y el bodhrán (tambor irlandés) cuenta historias de amor, pérdida y rebelión. Es una tradición viva que se transmite de generación en generación.</p>
+                    <br>
+                    <p data-lang-key="music_text_2">Y junto a la música, la danza. El "Irish Dance", popularizado mundialmente por espectáculos como Riverdance, es conocido por su rápido juego de pies y la rigidez del torso, creando un espectáculo de energía y precisión hipnótico.</p>
+                </div>
+                <div class="music-video">
+                    <iframe src="https://www.youtube.com/embed/sEMR16gOXLM" title="Video de YouTube de música y danza irlandesa" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="literature" class="section">
+            <h2 class="section-title" data-lang-key="lit_title">Gigantes de la Literatura</h2>
+            <div class="literature-container">
+                <div class="author-card">
+                    <img src="../Assets/img/7.jpeg" alt="James Joyce">
+                    <h3>James Joyce</h3>
+                    <p data-lang-key="joyce_work">"Ulises", "Dublineses"</p>
+                </div>
+                <div class="author-card">
+                    <img src="../Assets/img/8.jpeg" alt="W.B. Yeats">
+                    <h3>W.B. Yeats</h3>
+                    <p data-lang-key="yeats_work">"La Torre", "Bizancio"</p>
+                </div>
+                <div class="author-card">
+                    <img src="../Assets/img/9.jpeg" alt="Oscar Wilde">
+                    <h3>Oscar Wilde</h3>
+                    <p data-lang-key="wilde_work">"El Retrato de Dorian Gray"</p>
+                </div>
+                 <div class="author-card">
+                    <img src="../Assets/img/10.jpeg" alt="Samuel Beckett">
+                    <h3>Samuel Beckett</h3>
+                    <p data-lang-key="beckett_work">"Esperando a Godot"</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="bandera" class="section">
+              <h2 class="section-title" data-lang-key="flag_title">El Alma de la Bandera</h2>
+              <div class="bandera-section">
+                  <div class="bandera-info">
+                      <p data-lang-key="flag_desc_1">La bandera de Irlanda, conocida como la Tricolor, es un profundo símbolo de paz y unión. Cada color cuenta una parte de la historia y la esperanza de la nación.</p>
+                      <p><strong data-lang-key="flag_desc_2">Pasa el ratón sobre cada color</strong> para descubrir su significado.</p>
+                  </div>
+                  <div class="bandera-container">
+                      <div class="color-block" id="verde" data-lang-key="flag_green">Verde</div>
+                      <div class="color-block" id="blanco" data-lang-key="flag_white">Blanco</div>
+                      <div class="color-block" id="naranja" data-lang-key="flag_orange">Naranja</div>
+                  </div>
+              </div>
+        </section>
+    </main>
+    
+    <script>
+        const translations = {
+            es: {
+                passport_link_text: "pasaporte",
+                hero_title: "Irlanda",
+                hero_subtitle: "El Alma Esmeralda",
+                hero_scroll: "Desliza para explorar ▼",
+                geo_title: "Geografía Mágica",
+                geo_text: "Desde los épicos Acantilados de Moher hasta los misteriosos paisajes kársticos de El Burren, la geografía de Irlanda es un personaje en sí misma. Una tierra esculpida por gigantes y tiempo, que invita a ser descubierta en cada colina y cada bahía.",
+                parallax_text: "Una tierra de contrastes y belleza eterna.",
+                fauna_title: "Fauna Autóctona",
+                puffin_name: "Frailecillo Atlántico",
+                puffin_name_back: "Puffin o Frailecillo",
+                puffin_desc: "Conocido como el \"loro de mar\" por su pico colorido, este carismático pájaro anida en los acantilados de las costas irlandesas, como en las Islas Skellig.",
+                deer_name: "Ciervo Rojo",
+                deer_name_back: "Ciervo Rojo",
+                deer_desc: "El mamífero terrestre más grande de Irlanda, un símbolo de la naturaleza salvaje. Se pueden encontrar en parques nacionales como el de Killarney.",
+                seal_name: "Foca Gris",
+                seal_name_back: "Foca Gris",
+                seal_desc: "Habitantes comunes de las costas irlandesas, estas curiosas criaturas a menudo pueden ser vistas descansando en las rocas o asomando sus cabezas fuera del agua.",
+                food_title: "Sabores de Irlanda",
+                food_stew_name: "Irish Stew (Estofado Irlandés)",
+                food_stew_desc: "El plato nacional por excelencia. Un reconfortante guiso tradicionalmente hecho con cordero o ternera, patatas, cebollas y perejil. Caliente y sustancioso, es el sabor del hogar irlandés.",
+                food_boxty_name: "Boxty (Pan de Patata)",
+                food_boxty_desc: "Un tipo de panqueque de patata, crujiente por fuera y tierno por dentro. Su nombre proviene del gaélico \"bacstaí\". Puede servirse en el desayuno o como plato principal relleno de carne o salmón.",
+                food_coddle_name: "Coddle (Guiso de Dublín)",
+                food_coddle_desc: "Un guiso típico de Dublín, cocido a fuego lento, que tradicionalmente se hacía para usar las sobras. Contiene salchichas de cerdo, beicon, patatas y cebolla. Un plato con historia y mucho sabor.",
+                music_title: "El Ritmo del Corazón Celta",
+                music_text_1: "La música es el alma de Irlanda. Desde las animadas sesiones en los pubs de Dublín hasta las melancólicas baladas en gaélico, el sonido de violines, flautas y el bodhrán (tambor irlandés) cuenta historias de amor, pérdida y rebelión. Es una tradición viva que se transmite de generación en generación.",
+                music_text_2: "Y junto a la música, la danza. El \"Irish Dance\", popularizado mundialmente por espectáculos como Riverdance, es conocido por su rápido juego de pies y la rigidez del torso, creando un espectáculo de energía y precisión hipnótico.",
+                lit_title: "Gigantes de la Literatura",
+                joyce_work: "\"Ulises\", \"Dublineses\"",
+                yeats_work: "\"La Torre\", \"Bizancio\"",
+                wilde_work: "\"El Retrato de Dorian Gray\"",
+                beckett_work: "\"Esperando a Godot\"",
+                flag_title: "El Alma de la Bandera",
+                flag_desc_1: "La bandera de Irlanda, conocida como la Tricolor, es un profundo símbolo de paz y unión. Cada color cuenta una parte de la historia y la esperanza de la nación.",
+                flag_desc_2: "Pasa el ratón sobre cada color",
+                flag_green: "Verde", flag_white: "Blanco", flag_orange: "Naranja",
+                flag_meaning_green: "El <strong>Verde</strong> representa a la tradición gaélica y a los católicos de Irlanda.",
+                flag_meaning_white: "El <strong>Blanco</strong> en el centro simboliza la paz duradera y la unión entre las dos tradiciones.",
+                flag_meaning_orange: "El <strong>Naranja</strong> representa a los seguidores de William de Orange, la comunidad protestante.",
+                flag_original_info: "<p data-lang-key=\"flag_desc_1\">La bandera de Irlanda, conocida como la Tricolor, es un profundo símbolo de paz y unión...</p><p><strong data-lang-key=\"flag_desc_2\">Pasa el ratón sobre cada color</strong>...</p>"
+            },
+            en: {
+                passport_link_text: "passport",
+                hero_title: "Ireland",
+                hero_subtitle: "The Emerald Soul",
+                hero_scroll: "Scroll to explore ▼",
+                geo_title: "Magical Geography",
+                geo_text: "From the epic Cliffs of Moher to the mysterious karstic landscapes of The Burren, Ireland's geography is a character in itself. A land sculpted by giants and time, inviting discovery on every hill and in every bay.",
+                parallax_text: "A land of contrasts and eternal beauty.",
+                fauna_title: "Native Fauna",
+                puffin_name: "Atlantic Puffin",
+                puffin_name_back: "Puffin",
+                puffin_desc: "Known as the \"sea parrot\" for its colorful beak, this charismatic bird nests on the cliffs of the Irish coasts, such as on the Skellig Islands.",
+                deer_name: "Red Deer",
+                deer_name_back: "Red Deer",
+                deer_desc: "The largest native land mammal in Ireland, a symbol of the wild. They can be found in national parks like Killarney.",
+                seal_name: "Grey Seal",
+                seal_name_back: "Grey Seal",
+                seal_desc: "Common inhabitants of the Irish coasts, these curious creatures can often be seen resting on rocks or poking their heads out of the water.",
+                food_title: "Flavors of Ireland",
+                food_stew_name: "Irish Stew",
+                food_stew_desc: "The quintessential national dish. A comforting stew traditionally made with lamb or beef, potatoes, onions, and parsley. Hearty and warm, it's the taste of an Irish home.",
+                food_boxty_name: "Boxty (Potato Pancake)",
+                food_boxty_desc: "A type of potato pancake, crispy on the outside and tender on the inside. Its name comes from the Gaelic \"bacstaí\". It can be served for breakfast or as a main course filled with meat or salmon.",
+                food_coddle_name: "Dublin Coddle",
+                food_coddle_desc: "A typical Dublin stew, slow-cooked, traditionally made to use up leftovers. It contains pork sausages, bacon, potatoes, and onions. A dish with history and a lot of flavor.",
+                music_title: "The Rhythm of the Celtic Heart",
+                music_text_1: "Music is the soul of Ireland. From the lively sessions in Dublin's pubs to the melancholic Gaelic ballads, the sound of fiddles, flutes, and the bodhrán (Irish drum) tells stories of love, loss, and rebellion. It is a living tradition passed down from generation to generation.",
+                music_text_2: "And alongside the music, the dance. Irish Dance, popularized worldwide by shows like Riverdance, is known for its rapid footwork and rigid torso, creating a mesmerizing spectacle of energy and precision.",
+                lit_title: "Giants of Literature",
+                joyce_work: "\"Ulysses\", \"Dubliners\"",
+                yeats_work: "\"The Tower\", \"Byzantium\"",
+                wilde_work: "\"The Picture of Dorian Gray\"",
+                beckett_work: "\"Waiting for Godot\"",
+                flag_title: "The Soul of the Flag",
+                flag_desc_1: "The flag of Ireland, known as the Tricolour, is a profound symbol of peace and union. Each color tells a part of the nation's history and hope.",
+                flag_desc_2: "Hover over each color",
+                flag_green: "Green", flag_white: "White", flag_orange: "Orange",
+                flag_meaning_green: "The <strong>Green</strong> represents the Gaelic tradition and the Catholics of Ireland.",
+                flag_meaning_white: "The <strong>White</strong> in the center symbolizes the lasting peace and union between the two traditions.",
+                flag_meaning_orange: "The <strong>Orange</strong> represents the followers of William of Orange, the Protestant community.",
+                flag_original_info: "<p data-lang-key=\"flag_desc_1\">The flag of Ireland, known as the Tricolour, is a profound symbol of peace and union...</p><p><strong data-lang-key=\"flag_desc_2\">Hover over each color</strong>...</p>"
+            }
+        };
+
+        let currentLang = 'es';
+        const setLanguage = (lang) => {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-lang-key]').forEach(el => {
+                const key = el.getAttribute('data-lang-key');
+                if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
+            });
+            document.getElementById('lang-es').classList.toggle('active', lang === 'es');
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+        };
+
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        sections.forEach(section => observer.observe(section));
+
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const wasActive = header.classList.contains('active');
+                
+                document.querySelectorAll('.accordion-header.active').forEach(activeHeader => {
+                    if (activeHeader !== header) {
+                        activeHeader.classList.remove('active');
+                        activeHeader.nextElementSibling.style.maxHeight = null;
+                    }
+                });
+
+                if (!wasActive) {
+                    header.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } else {
+                    header.classList.remove('active');
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+        
+        const infoBox = document.querySelector('.bandera-info');
+        const originalInfoHTML = infoBox.innerHTML; 
+
+        document.querySelectorAll('.color-block').forEach(block => {
+            block.addEventListener('mouseover', () => {
+                let meaningKey;
+                if (block.id === 'verde') meaningKey = 'flag_meaning_green';
+                if (block.id === 'blanco') meaningKey = 'flag_meaning_white';
+                if (block.id === 'naranja') meaningKey = 'flag_meaning_orange';
+                infoBox.innerHTML = translations[currentLang][meaningKey];
+            });
+            block.addEventListener('mouseout', () => {
+                infoBox.innerHTML = originalInfoHTML;
+                // Re-apply translation to the restored content
+                infoBox.querySelectorAll('[data-lang-key]').forEach(el => {
+                    const key = el.getAttribute('data-lang-key');
+                    if (translations[currentLang] && translations[currentLang][key]) {
+                        el.innerHTML = translations[currentLang][key];
+                    }
+                });
+            });
+        });
+
+        document.getElementById('lang-es').addEventListener('click', () => setLanguage('es'));
+        document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+        
+        // Initial language set
+        setLanguage('es');
+    </script>
+</body>
+</html>
