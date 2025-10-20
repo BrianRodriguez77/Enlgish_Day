@@ -424,3 +424,96 @@ footer strong {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* ========== ESTILOS PARA IMÁGENES REALES ========== */
+
+/* Bandera Union Jack en el hero */
+.union-jack-img {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto 30px;
+    display: block;
+    border: 3px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Iconos de sección */
+.section-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Banderas de naciones */
+.nation-flag {
+    width: 80px;
+    height: 50px;
+    margin-bottom: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Imágenes de contenido */
+.content-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.content-image:hover {
+    transform: scale(1.02);
+}
+
+/* Iconos del footer */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-icon {
+    width: 50px;
+    height: 30px;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+/* Responsive para imágenes */
+@media (max-width: 768px) {
+    .union-jack-img {
+        width: 150px;
+        height: 75px;
+    }
+    
+    .nation-flag {
+        width: 60px;
+        height: 40px;
+    }
+    
+    .content-image {
+        height: 200px;
+    }
+    
+    .section-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .union-jack-img {
+        width: 120px;
+        height: 60px;
+    }
+    
+    .content-image {
+        height: 150px;
+    }
+}
